@@ -1,1 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOUSYS: Decode Your Mind's OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D4AF37; /* Gold */
+            --dark: #0f172a;    /* Deep Blue/Black */
+            --light: #f8fafc;
+            --accent: #ef4444;  /* Red for errors */
+            --glass: rgba(30, 41, 59, 0.85);
+        }
+        
+        * { box-sizing: border-box; }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 50% 10%, #1e293b 0%, #020617 100%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            padding: 2.5rem;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        p { line-height: 1.6; color: #cbd5e1; }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Question Styles */
+        .question-card {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .question-card.active {
+            display: block;
+        }
+        .question-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .option-label {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px 5px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        .option-label:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .option-label input {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            margin-bottom: 8px;
+            display: grid;
+            place-content: center;
+        }
+        .option-label input::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+            transform: scale(0);
+            transition: 0.15s transform ease-in-out;
+        }
+        .option-label input:checked::before {
+            transform: scale(1);
+        }
+
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #b4932a 100%);
+            color: #0f172a;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Result Styles */
+        .result-view {
+            display: none;
+            text-align: left;
+        }
+        .card-image {
+            width: 100%;
+            border-radius: 16px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+            margin: 1.5rem 0;
+            display: block;
+        }
+        
+        .stat-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+        .stat-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .stat-label { width: 80px; font-weight: 600; }
+        .stat-track {
+            flex: 1;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        .stat-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .content-block {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .section-title {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pain-point {
+            background: rgba(220, 38, 38, 0.1); /* Red tint */
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+        .solution {
+            background: rgba(16, 185, 129, 0.1); /* Green tint */
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; margin: 10px; }
+            h1 { font-size: 1.8rem; }
+            .option-label span { font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="intro-screen">
+        <h1>NOUSYS</h1>
+        <h3 style="font-family: 'Inter'; font-weight: 300; letter-spacing: 2px; font-size: 1rem;">ARCHETYPE DECODER</h3>
+        <p style="text-align: center; margin: 2rem 0;">
+            Every mind runs on an Operating System. Some are built for war, others for creation, others for control.<br><br>
+            This 16-point diagnostic tool will analyze your <strong>Energy</strong>, <strong>Control</strong>, and <strong>Threat</strong> response systems to reveal your mythical archetype and your fatal system error.
+        </p>
+        <button class="btn" onclick="startQuiz()">Initialize System</button>
+    </div>
+
+    <div id="quiz-screen" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-fill" id="progress-bar"></div>
+        </div>
+        <form id="quiz-form">
+            </form>
+        <button class="btn" onclick="nextQuestion()">Next Command</button>
+    </div>
+
+    <div id="result-screen" class="result-view">
+        <div style="text-align: center;">
+            <p style="letter-spacing: 3px; font-size: 0.8rem; opacity: 0.6; text-transform: uppercase;">System Identification Complete</p>
+            <h2 id="result-name" style="font-size: 2.5rem; margin: 0;">ARCHETYPE</h2>
+            <p id="result-role" style="color: var(--primary); font-style: italic; margin-top: 5px;">The Role</p>
+        </div>
+
+        <img id="result-img" class="card-image" src="" alt="Archetype Card">
+
+        <div class="stat-group">
+            <div class="stat-row">
+                <span class="stat-label">ENERGY</span>
+                <div class="stat-track"><div id="bar-e" class="stat-fill" style="width: 0%"></div></div>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">CONTROL</span>
+                <div class="stat-track"><div id="bar-c" class="stat-fill" style="width: 0%"></div></div>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">THREAT</span>
+                <div class="stat-track"><div id="bar-t" class="stat-fill" style="width: 0%"></div></div>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">STRETCH</span>
+                <div class="stat-track"><div id="bar-s" class="stat-fill" style="width: 0%; background: #10b981;"></div></div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="section-title">🖥️ THE OPERATING SYSTEM</div>
+            <p id="result-desc">Loading...</p>
+        </div>
+
+        <div class="content-block pain-point">
+            <div class="section-title" style="color: #f87171;">⚠️ SYSTEM CRASH (The Bug)</div>
+            <p id="result-bug">Loading...</p>
+        </div>
+
+        <div class="content-block solution">
+            <div class="section-title" style="color: #34d399;">🛠️ THE PATCH (The Fix)</div>
+            <p id="result-fix">Loading...</p>
+        </div>
+
+        <button class="btn" onclick="window.location.reload()" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); margin-top: 30px; color: #cbd5e1;">Restart Diagnostic</button>
+    </div>
+</div>
+
+<script>
+    // --- 1. CONFIGURATION (QUESTIONS) ---
+    const questions = [
+        // ENERGY (1-4)
+        { id: "e1", type: "E", text: "I feel drained or bored if my daily routine stays exactly the same for too long.", reverse: false },
+        { id: "e2", type: "E", text: "Socializing and meeting new people energizes me rather than exhausts me.", reverse: false },
+        { id: "e3", type: "E", text: "I prefer quiet, private environments over loud and busy ones.", reverse: true },
+        { id: "e4", type: "E", text: "Tight deadlines make me feel excited and focused, rather than panicked.", reverse: false },
+        // CONTROL (5-8)
+        { id: "c1", type: "C", text: "I need a clear, detailed plan or roadmap before I start working on anything.", reverse: false },
+        { id: "c2", type: "C", text: "I prefer to 'go with the flow' and improvise rather than following a strict schedule.", reverse: true },
+        { id: "c3", type: "C", text: "I feel stuck or paralyzed when instructions are vague or unclear.", reverse: false },
+        { id: "c4", type: "C", text: "I prefer to launch a 'rough draft' quickly and fix it later, rather than waiting for perfection.", reverse: true },
+        // THREAT (9-12)
+        { id: "t1", type: "T", text: "Uncertainty about the future often keeps me awake at night or affects my focus.", reverse: false },
+        { id: "t2", type: "T", text: "I easily feel overwhelmed or 'freeze up' when facing too many tasks at once.", reverse: false },
+        { id: "t3", type: "T", text: "I stay calm and clear-headed even in high-pressure situations.", reverse: true },
+        { id: "t4", type: "T", text: "I tend to overthink negative feedback or criticism for a long time.", reverse: false },
+        // STRETCH (13-16)
+        { id: "s1", type: "S", text: "I can function well even in environments that I dislike (e.g., too noisy or boring).", reverse: false },
+        { id: "s2", type: "S", text: "I can easily switch between detailed planning mode and fast action mode.", reverse: false },
+        { id: "s3", type: "S", text: "I recover my mental energy quickly (within 1-2 days) after a stressful event.", reverse: false },
+        { id: "s4", type: "S", text: "When I fall off track, I bounce back quickly instead of spiraling downward.", reverse: false }
+    ];
+
+    // --- 2. THE CONTENT DATABASE (12 PROFILES - LONG FORM) ---
+    const archetypes = {
+        // --- MATRIX TYPES ---
+        "HERA": {
+            name: "HERA", role: "THE SOVEREIGN ARCHITECT", img: "img/Hera.png",
+            desc: "You operate on the 'Sovereign' OS. High Energy drives your ambition, and High Control demands perfection. You see life not as a playground, but as a kingdom to be built, structured, and ruled. You possess an innate authority that makes others naturally look to you for direction. You don't just participate in groups; you organize them. Your mind is a chessboard where every move is calculated for maximum efficiency and status.",
+            bug: "<strong>The Perfection Paradox.</strong> Your standards are so impossibly high that they become a prison. You struggle to delegate because, deep down, you believe 'nobody can do it as well as I can.' This isn't arrogance; it's a burden. You end up micromanaging details that are beneath your pay grade, leading to exhaustion and resentment. You are carrying the weight of the world because you refuse to let anyone else help lift it.",
+            fix: "<strong>The 80% Rule.</strong> If someone can do a task 80% as well as you, you must delegate it. Your quest for 100% perfection is the bottleneck of your own empire. To scale, you must allow for small imperfections in others. Trust is a risk, but it is a necessary investment."
+        },
+        "ARES": { 
+            name: "ARES", role: "THE WARRIOR", img: "img/Ares.png",
+            desc: "Your system is built for conflict and conquest. With High Energy and High Control but Low Threat perception, you are fearless. You don't just solve problems; you attack them. You thrive in high-stakes environments where hesitation means failure. You are decisive, blunt, and incredibly effective in short bursts. While others are paralyzed by potential risks, you are already charging forward. You are the engine of execution.",
+            bug: "<strong>Collateral Damage.</strong> You treat everything as a battle to be won, including conversations with loved ones. Your directness is often perceived as aggression. You bulldoze over people's feelings without noticing, leaving you victorious but isolated. You view empathy as inefficiency, not realizing that 'winning' an argument often means losing the relationship.",
+            fix: "<strong>Tactical Empathy.</strong> You need to install a 'Diplomacy' patch. Pause for exactly 3 seconds before responding in anger. Realize that not every disagreement is a declaration of war. Soft power is often more effective than brute force."
+        },
+        "APHRODITE": {
+            name: "APHRODITE", role: "THE MUSE", img: "img/Aphrodite.png",
+            desc: "You operate on pure emotional voltage. High Energy and High Threat sensitivity create a vibrant, chaotic, and magnetic personality. You feel everything deeply—joy, sorrow, beauty, and rejection. You can read the emotional temperature of a room instantly. You are the spark that ignites others, the creator of vibes, and the aesthetic soul of any group. You live for connection and expression.",
+            bug: "<strong>Emotional Volatility.</strong> Your system lacks the 'Control' module. You are prone to dramatic highs and crushing lows. You struggle with discipline and routine, often abandoning projects when the emotional excitement fades. You are easily hurt by criticism, letting one negative comment ruin an entire week. Your identity fluctuates based on how others perceive you.",
+            fix: "<strong>External Structure.</strong> You cannot rely on willpower or 'feeling like it.' You need external systems (deadlines, accountability partners, rigid schedules) to keep you grounded. Learn to separate your self-worth from your momentary emotions. You are not your feelings."
+        },
+        "APOLLO": {
+            name: "APOLLO", role: "THE STAR", img: "img/Apollo.png",
+            desc: "Your OS is designed for radiance. High Energy combined with Low Control and Low Threat makes you naturally optimistic, charismatic, and lucky. You breeze through life, attracting opportunities and people without seemingly trying hard. You are the life of the party, the generator of ideas, and the eternal optimist. You bring light wherever you go, and people love to bask in it.",
+            bug: "<strong>Shiny Object Syndrome.</strong> You lack depth and persistence. You are addicted to the 'new'—new hobbies, new projects, new people. When things get difficult, boring, or require deep grinding, you vanish. You have incredible potential but rarely finish what you start. You fear that committing to one thing means missing out on everything else.",
+            fix: "<strong>The Deep Dive.</strong> Commit to one boring, difficult thing for 30 days. Force your system to endure the discomfort of depth. Talent is cheap; discipline is expensive. You need to buy some discipline to turn your potential into kinetic power."
+        },
+        "ATHENA": {
+            name: "ATHENA", role: "THE STRATEGIST", img: "img/Athena.png",
+            desc: "You are the master of logic. Low Energy (Introversion) mixed with High Control and High Threat makes you a brilliant planner. You see risks miles away. You don't guess; you calculate. You are the brain behind the operation, the architect of systems, and the debugger of reality. You value competence above all else and have little patience for stupidity or emotional outbursts.",
+            bug: "<strong>Analysis Paralysis.</strong> You spend 90% of your RAM preparing for scenarios that have a 1% chance of happening. Your fear of failure masquerades as 'preparation.' You struggle to pull the trigger because you are waiting for perfect certainty, which does not exist. You live in your head, often forgetting to actually live in the real world.",
+            fix: "<strong>The Beta Launch.</strong> Adopt a 'Ship It' mentality. Action cures fear. Force yourself to execute when you are only 70% ready. You can fix bugs later, but you can't fix a product that doesn't exist. Get out of your head and into the arena."
+        },
+        "HEPHAESTUS": {
+            name: "HEPHAESTUS", role: "THE MAKER", img: "img/Hephaestus.png",
+            desc: "You are the stoic builder. Low Energy and Low Threat but High Control means you are steady, reliable, and incredibly focused. You don't need the spotlight; you just want to do the work and do it right. You find peace in process and craftsmanship. You are the backbone of any team, the one who actually gets things done while others are just talking about it.",
+            bug: "<strong>The Silo Trap.</strong> You isolate yourself. You believe that asking for help is a sign of weakness or incompetence. You silently resent people who talk more than they work, but you never voice this frustration. Your rigidity makes it hard for you to adapt when the plan changes, and you often burn out in silence.",
+            fix: "<strong>Open Source.</strong> Connect with the network. Share your work before it's finished. Realize that soft skills (communication) are just as important as hard skills (technical execution). Asking for help is an efficiency tool, not a weakness."
+        },
+        "ARTEMIS": {
+            name: "ARTEMIS", role: "THE HUNTER", img: "img/Artemis.png",
+            desc: "Your system is optimized for independence. Low Energy and Low Control but High Threat makes you hyper-vigilant and self-reliant. You value freedom above all else. You are sharp, observant, and impossible to tame. You are comfortable in the wild (metaphorically or literally) and trust your instincts more than you trust society's rules. You are a survivor.",
+            bug: "<strong>Defensive Walls.</strong> Your 'Threat' radar is too sensitive. You interpret intimacy as a trap and reliance on others as a weakness. You push people away before they can hurt you, leading to a safe but lonely existence. You mistake hyper-independence for strength, when it is actually a trauma response.",
+            fix: "<strong>Trust Protocol.</strong> Independence is a survival tactic, not a lifestyle. Pick one person to trust completely this month. Lower the drawbridge just a little bit. You don't have to hunt alone forever."
+        },
+        "HESTIA": {
+            name: "HESTIA", role: "THE KEEPER", img: "img/Hestia.png",
+            desc: "You are the calm in the chaos. Low Energy, Low Control, and Low Threat create a Zen-like operating system. You are content, peaceful, and a great listener. You don't seek drama, status, or conflict. You create a safe harbor for others, offering warmth and acceptance without judgment. You are the grounding force in a frantic world.",
+            bug: "<strong>The Comfort Coma.</strong> You are so conflict-averse that you become passive. You let life happen *to* you rather than making it happen. You suppress your own desires and needs to keep the peace, slowly fading into the background. You risk waking up one day realizing you lived everyone else's life but your own.",
+            fix: "<strong>Ignite the Fire.</strong> Assertiveness is not aggression. Pick one thing you want this week and demand it. Your voice matters, but only if you use it. Conflict is necessary for growth."
+        },
+        
+        // --- STRETCH TYPES (High Adaptability) ---
+        "HERMES": {
+            name: "HERMES", role: "THE ALCHEMIST", img: "img/Hermes.png",
+            desc: "You are a shapeshifter. Your High Stretch score indicates a fluid operating system. You can hack into any environment—High Energy, Low Energy, Chaos, or Order—and mimic the necessary protocols. You are the ultimate survivor, the diplomat, and the connector. You can speak the language of kings and thieves alike.",
+            bug: "<strong>Identity Fragmentation.</strong> You are so good at adapting that you've forgotten who you actually are. You are a mirror reflecting everyone else. You lack a core foundation, making you feel hollow despite your success. You are a 'Jack of all trades, master of none,' and people may perceive you as slippery or untrustworthy.",
+            fix: "<strong>Core Kernel.</strong> Define your non-negotiables. What will you *never* do, regardless of the situation? Build a solid center so you can shape-shift without losing yourself. Commit to a singular identity when no one is watching."
+        },
+        "DEMETER": {
+            name: "DEMETER", role: "THE NURTURER", img: "img/Demeter.png",
+            desc: "You possess a regenerative OS. Your High Stretch (Recovery) score means you have an endless capacity to heal, forgive, and grow. You are the soil from which others grow. You provide stability and sustenance to the ecosystem. You are the first person people call when they are in trouble because they know you will handle it.",
+            bug: "<strong>The Savior Complex.</strong> You give until you are empty. You attract broken people because they know you will fix them. You equate 'love' with 'sacrifice,' leaving your own battery constantly critically low. You feel guilty when you take time for yourself.",
+            fix: "<strong>The Fence.</strong> Boundaries are not mean; they are necessary. You cannot pour from an empty cup. Prioritize your own recovery before you attempt to save the world. Learn to say 'No' without explaining yourself."
+        },
+
+        // --- BOSS TYPES (Special Overrides) ---
+        "ZEUS": {
+            name: "ZEUS", role: "THE OLYMPIAN", img: "img/Zeus.png",
+            desc: "CRITICAL ALERT: Your stats are maxed out. High Energy, High Control, High Threat. You are a force of nature. You have the vision of a god, the discipline of a soldier, and the paranoia of a dictator. You are built for empire. You can outwork, outthink, and outlast almost anyone. You are the CEO, the Founder, the Commander.",
+            bug: "<strong>Total System Overload.</strong> You are untethered from reality. You expect superhuman performance from yourself and others 24/7. You are likely lonely, sleep-deprived, and on the verge of a massive cardiac or existential crash. You believe you are indispensable, which is a dangerous delusion.",
+            fix: "<strong>Mortal Mode.</strong> You are human. Accept it. If you don't schedule rest, your body will schedule it for you (in a hospital). Delegate power or collapse. The world will spin without you for a few hours."
+        },
+        "POSEIDON": { 
+            name: "POSEIDON", role: "THE TEMPEST", img: "img/Poseidon.png",
+            desc: "You are the storm. Your Energy and Threat levels are critical, but Control is low. You are raw power without a steering wheel. You feel emotions with terrifying intensity—passion, rage, joy, grief. You are deeply creative and destructive in equal measure. You are the artist who burns down the studio to paint the fire.",
+            bug: "<strong>Tsunami Damage.</strong> Your mood swings are destructive. You flood the people around you with your intensity. You struggle to regulate your internal weather, making you unpredictable and exhausting to be around. You make permanent decisions based on temporary emotions.",
+            fix: "<strong>Build Levees.</strong> You need emotional regulation techniques immediately (meditation, therapy, journaling). Do not act on a feeling until 24 hours have passed. Use your intensity for creation, not destruction."
+        },
+        "HADES": { 
+            name: "HADES", role: "THE SHADOW", img: "img/Hades.png",
+            desc: "You dwell in the deep. Your Threat perception is off the charts. You see the worst-case scenario in 4K resolution while everyone else is blind. You are a deep thinker, uncomfortably realistic, and protective. You understand the darker side of human nature and aren't afraid to look at it.",
+            bug: "<strong>The Bunker.</strong> You have retreated so far into your mind that you are disconnected from the light. Cynicism is your shield. You reject joy because you are waiting for the other shoe to drop. You are safe, but you are not alive.",
+            fix: "<strong>Surface Time.</strong> Force yourself to engage in 'trivial' fun. Optimism is not stupidity; it's a survival tool. Come up for air. Not everyone is out to get you."
+        }
+    };
+
+    // --- 3. THE LOGIC ---
+    let currentQ = 0;
+    const form = document.getElementById('quiz-form');
+    
+    function initQuiz() {
+        questions.forEach((q, index) => {
+            const div = document.createElement('div');
+            div.className = `question-card`;
+            div.id = `q-${index}`;
+            div.innerHTML = `
+                <div class="question-text">${index + 1}/16: ${q.text}</div>
+                <div class="options">
+                    ${[1, 2, 3, 4, 5].map(val => `
+                        <label class="option-label">
+                            <input type="radio" name="${q.id}" value="${val}">
+                            <span>${val}</span>
+                        </label>
+                    `).join('')}
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size: 0.8rem; opacity: 0.5; padding: 0 5px;">
+                    <span>Disagree</span>
+                    <span>Agree</span>
+                </div>
+            `;
+            form.appendChild(div);
+        });
+        document.getElementById('q-0').classList.add('active');
+    }
+
+    function startQuiz() {
+        document.getElementById('intro-screen').style.display = 'none';
+        document.getElementById('quiz-screen').style.display = 'block';
+        initQuiz();
+    }
+
+    function nextQuestion() {
+        const inputs = document.getElementsByName(questions[currentQ].id);
+        let selected = false;
+        for (let input of inputs) if (input.checked) selected = true;
+        
+        if (!selected) { alert("Please select an option."); return; }
+
+        document.getElementById(`q-${currentQ}`).classList.remove('active');
+        currentQ++;
+        document.getElementById('progress-bar').style.width = `${(currentQ / questions.length) * 100}%`;
+
+        if (currentQ < questions.length) {
+            document.getElementById(`q-${currentQ}`).classList.add('active');
+        } else {
+            document.getElementById('quiz-screen').style.display = 'none';
+            calculateResult();
+        }
+    }
+
+    function calculateResult() {
+        let sE = 0, sC = 0, sT = 0, sS = 0;
+        let sRange = 0, sRecovery = 0;
+
+        const formData = new FormData(form);
+        questions.forEach(q => {
+            let val = parseInt(formData.get(q.id));
+            if (q.reverse) val = 6 - val;
+            
+            if (q.type === 'E') sE += val;
+            if (q.type === 'C') sC += val;
+            if (q.type === 'T') sT += val;
+            if (q.type === 'S') {
+                sS += val;
+                if (q.id === 's1' || q.id === 's2') sRange += val;
+                if (q.id === 's3' || q.id === 's4') sRecovery += val;
+            }
+        });
+
+        // ALGORITHM
+        let type = "";
+        const H = 12; // Midpoint (4 questions * 3 = 12)
+        
+        // 1. Check Stretch (Priority 1)
+        if (sS >= 15) {
+            type = (sRange > sRecovery) ? "HERMES" : "DEMETER";
+        }
+        // 2. Check Bosses (Priority 2)
+        else if (sE >= 16 && sC >= 16 && sT >= 16) type = "ZEUS";
+        else if (sE >= 16 && sT >= 15 && sC <= 11) type = "POSEIDON";
+        else if (sT >= 17 && sE <= 11) type = "HADES";
+        // 3. Check Matrix (Priority 3)
+        else {
+            const E = sE > H;
+            const C = sC > H;
+            const T = sT > H;
+
+            if (E && C && T) type = "HERA"; // Fallback from Zeus
+            else if (E && C && !T) type = "ARES";
+            else if (E && !C && T) type = "APHRODITE";
+            else if (E && !C && !T) type = "APOLLO";
+            else if (!E && C && T) type = "ATHENA";
+            else if (!E && C && !T) type = "HEPHAESTUS";
+            else if (!E && !C && T) type = "ARTEMIS";
+            else type = "HESTIA";
+        }
+
+        // RENDER
+        const data = archetypes[type];
+        const resScreen = document.getElementById('result-screen');
+        resScreen.style.display = 'block';
+        
+        document.getElementById('result-name').innerText = data.name;
+        document.getElementById('result-role').innerText = data.role;
+        document.getElementById('result-img').src = data.img;
+        document.getElementById('result-desc').innerHTML = data.desc;
+        document.getElementById('result-bug').innerHTML = data.bug;
+        document.getElementById('result-fix').innerHTML = data.fix;
+
+        // Render Bars (Max 20)
+        document.getElementById('bar-e').style.width = `${(sE/20)*100}%`;
+        document.getElementById('bar-c').style.width = `${(sC/20)*100}%`;
+        document.getElementById('bar-t').style.width = `${(sT/20)*100}%`;
+        document.getElementById('bar-s').style.width = `${(sS/20)*100}%`;
+
+        // Send Data
+        submitToGoogle(sE, sC, sT, sS, type);
+    }
+
+    function submitToGoogle(e, c, t, s, type) {
+        // --- YOUR FORM ID ---
+        const formID = "1FAIpQLScEWdwVaCJC-K7C_Ek7eQFWg8IaGiNvx-6txv8cTP6-x8drIQ"; 
+        const submitURL = `https://docs.google.com/forms/d/e/${formID}/formResponse`;
+
+        // --- PRE-FILLED IDs (EXTRACTED FROM YOUR LINK) ---
+        const ENTRY_E = "entry.484401858"; 
+        const ENTRY_C = "entry.1614447615";
+        const ENTRY_T = "entry.2008857398";
+        const ENTRY_S = "entry.2035459769";
+
+        const data = new FormData();
+        data.append(ENTRY_E, e);
+        data.append(ENTRY_C, c);
+        data.append(ENTRY_T, t);
+        data.append(ENTRY_S, `${type} (S=${s})`); 
+
+        fetch(submitURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: data
+        }).catch(err => console.log('Headless submit error', err));
+    }
+</script>
+
+</body>
+</html>
