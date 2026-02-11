@@ -1,10 +1,46 @@
 export const archetypes = {
     // --- MATRIX TYPES ---
     "HERA": {
-        name: "HERA", role: "THE SOVEREIGN ARCHITECT", img: "img/Hera.png",
-        desc: "You operate on the 'Sovereign' OS. High Energy drives your ambition, and High Control demands perfection. You see life not as a playground, but as a kingdom to be built, structured, and ruled. You possess an innate authority that makes others naturally look to you for direction. You don't just participate in groups; you organize them. Your mind is a chessboard where every move is calculated for maximum efficiency and status.",
-        bug: "<strong>The Perfection Paradox.</strong> Your standards are so impossibly high that they become a prison. You struggle to delegate because, deep down, you believe 'nobody can do it as well as I can.' This isn't arrogance; it's a burden. You end up micromanaging details that are beneath your pay grade, leading to exhaustion and resentment. You are carrying the weight of the world because you refuse to let anyone else help lift it.",
-        fix: "<strong>The 80% Rule.</strong> If someone can do a task 80% as well as you, you must delegate it. Your quest for 100% perfection is the bottleneck of your own empire. To scale, you must allow for small imperfections in others. Trust is a risk, but it is a necessary investment."
+        name: "HERA",
+        role: "THE SOVEREIGN ARCHITECT",
+        img: "img/Hera.png",
+
+        // Sử dụng dấu backtick (`) để viết nhiều dòng và chứa HTML
+        desc: `
+            <p><strong>(High Control • High Energy)</strong></p>
+            <p><em>"Order is not something that happens naturally. Order is something that is enforced."</em></p>
+            
+            <br>
+            <strong>🏛️ The Operating System</strong>
+            <p>You operate on the <strong>Sovereign OS</strong>. While others drift through life reacting to circumstances, you are actively terraforming your environment to fit your vision. To a Hera, the world is not a playground—it is a construction site, and you are the only one with the blueprints.</p>
+            <p>You possess a rare combination of visionary energy and meticulous control. You don’t just want to lead the team; you want to <em>design</em> the team. You have an innate authority that makes you the gravitational center of any room. People look to you for direction not because you ask for it, but because you are usually the only one with a clear plan.</p>
+
+            <br>
+            <strong>⚖️ The Burden of Competence</strong>
+            <p>Your greatest strength—and your heaviest burden—is your terrifying level of competence. You have a "high-resolution" mind; you spot inefficiencies, risks, and errors seconds after walking into a room.</p>
+            <p>This often creates a sense of isolation. You stay late to fix the formatting on the group presentation because "good enough" is physically painful for you. You are the "Parent" of your social group—not the nurturing kind who bakes cookies, but the pragmatic kind who ensures nobody misses their flight.</p>
+            
+            <br>
+            <strong>🔒 The "High Standards" Paradox</strong>
+            <p>You value loyalty and efficiency above all else. If someone is in your "inner circle," you will move mountains for them. However, the price of admission is high. You would rather work alone and exhaust yourself than work with people who slow you down.</p>
+        `,
+
+        bug: `
+            <strong>⛔ System Error: The "Atlas Complex"</strong>
+            <p>Your code has a critical glitch: <strong>You do not know how to trust.</strong></p>
+            <p>Deep down, you harbor a secret belief: <em>"If I stop pushing, everything will collapse."</em> You carry the weight of the world (like Atlas) because you refuse to let anyone else help lift it. You micromanage not because you enjoy power, but because you are terrified of the chaos that ensues when you let go.</p>
+            <p>This creates a self-fulfilling prophecy: Because you fix everything, people around you become dependent. You then think, "See? They are useless," and take on even more work. This leads to <strong>Hera-Burnout</strong>: exhaustion mixed with resentment.</p>
+        `,
+
+        fix: `
+            <strong>🛠️ Patch v1.0: The 80% Rule</strong>
+            <p>Your growth path is not about doing <em>more</em>; it is about doing <em>less</em>.</p>
+            <ul style="text-align: left; margin-top: 10px;">
+                <li><strong>The 80% Rule:</strong> If someone can do a task 80% as well as you, delegate it. That missing 20% of quality is not worth your sanity.</li>
+                <li><strong>Let It Break:</strong> Sometimes, you have to let the glass fall. If you always catch it, others will never learn to hold it themselves.</li>
+                <li><strong>Define "Done," Not "How":</strong> Tell people the result you want, but ban yourself from telling them how to get there. It’s painful, but it’s the only way you scale.</li>
+            </ul>
+        `
     },
     "ARES": { 
         name: "ARES", role: "THE WARRIOR", img: "img/Ares.png",
