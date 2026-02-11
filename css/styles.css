@@ -252,3 +252,178 @@ p { line-height: 1.6; color: #cbd5e1; }
     .option-label span { font-size: 0.8rem; }
     .question-text { font-size: 1.05rem; }
 }
+
+/* --- Split-Card Layout --- */
+
+.q-top {
+  max-width: 60ch;
+  margin: 0 auto 14px;
+}
+
+.q-tag {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(203, 213, 225, 0.65);
+  margin-bottom: 10px;
+}
+
+.q-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--light);
+}
+
+.q-scene {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* Two choice cards */
+.q-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0 14px;
+}
+
+.q-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 14px 14px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--light);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.q-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.10);
+  background: rgba(212, 175, 55, 0.06);
+  transform: translateY(-1px);
+}
+
+.q-card-label {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.q-card-body {
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Highlight cards when 1 or 5 is selected */
+.question-card:has(input[value="1"]:checked) .q-card-left,
+.question-card:has(input[value="5"]:checked) .q-card-right {
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.14);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* Center the 1-5 buttons under the cards */
+.options-centered {
+  justify-content: center;
+}
+
+/* Left/right labels under the scale */
+.q-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.55;
+  padding: 0 5px;
+  margin-top: 6px;
+}
+
+/* Mobile: stack cards */
+@media (max-width: 600px) {
+  .q-cards {
+    grid-template-columns: 1fr;
+  }
+  .q-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Intro instruction grid --- */
+.instruction-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+
+.instruction-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 14px 12px;
+  text-align: center;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.instruction-card:hover{
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.10);
+  transform: translateY(-1px);
+}
+
+.inst-icon{
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.inst-title{
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.inst-desc{
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #cbd5e1;
+}
+
+/* Mobile: stack to 1 column */
+@media (max-width: 600px){
+  .instruction-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Quiz corner navigation --- */
+#quiz-screen { position: relative; padding-bottom: 120px; }
+
+#btn-prev, #btn-next {
+  position: absolute;
+  bottom: 16px;
+  width: calc(50% - 10px);
+  margin-top: 0;
+}
+
+#btn-prev { left: 0; }
+#btn-next { right: 0; }
+
+@media (max-width: 600px) {
+  #quiz-screen { padding-bottom: 160px; }
+  #btn-prev, #btn-next {
+    position: static;
+    width: 100%;
+  }
+}
+

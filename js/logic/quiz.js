@@ -45,25 +45,89 @@ function initQuiz() {
   if (form && form.dataset.initialized === '1') return;
   if (form) form.dataset.initialized = '1';
 
+  const TYPE_TO_SYSTEM = {
+    T: 'SYSTEM: THREAT',
+    C: 'SYSTEM: CONTROL',
+    E: 'SYSTEM: ENERGY',
+    S: 'SYSTEM: STRETCH',
+  };
+
   questions.forEach((q, index) => {
     const div = document.createElement('div');
     div.className = `question-card`;
     div.id = `q-${index}`;
-    div.innerHTML = `
-      <div class="question-text">${q.text}</div>
-      <div class="options">
-        ${[1, 2, 3, 4, 5].map(val => `
-          <label class="option-label">
-            <input type="radio" name="${q.id}" value="${val}">
-            <span>${val}</span>
-          </label>
-        `).join('')}
-      </div>
-      <div style="display:flex; justify-content:space-between; font-size: 0.8rem; opacity: 0.5; padding: 0 5px;">
-        <span>${q.leftLabel || 'Disagree'}</span>
-        <span>${q.rightLabel || 'Agree'}</span>
-      </div>
-    `;
+
+    const hasSplitFields = q.title && q.scene && q.leftOption && q.rightOption;
+
+    if (!hasSplitFields) {
+      // Fallback: your old layout (so you can migrate questions gradually)
+      div.innerHTML = `
+        <div class="question-text">${q.text}</div>
+        <div class="options">
+          ${[1, 2, 3, 4, 5].map(val => `
+            <label class="option-label">
+              <input type="radio" name="${q.id}" value="${val}">
+              <span>${val}</span>
+            </label>
+          `).join('')}
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size: 0.8rem; opacity: 0.5; padding: 0 5px;">
+          <span>${q.leftLabel || 'Disagree'}</span>
+          <span>${q.rightLabel || 'Agree'}</span>
+        </div>
+      `;
+    } else {
+      const systemTag = q.systemTag || TYPE_TO_SYSTEM[q.type] || 'SYSTEM';
+      div.innerHTML = `
+        <div class="q-top">
+          <div class="q-tag">${systemTag}</div>
+          <div class="q-title">${q.title}</div>
+          <div class="q-scene">
+            <strong>Scene:</strong> ${q.scene}
+          </div>
+        </div>
+
+        <div class="q-cards">
+          <button type="button" class="q-card q-card-left" data-value="1">
+            <div class="q-card-label">Option 1 (Left)</div>
+            <div class="q-card-body">${q.leftOption}</div>
+          </button>
+
+          <button type="button" class="q-card q-card-right" data-value="5">
+            <div class="q-card-label">Option 5 (Right)</div>
+            <div class="q-card-body">${q.rightOption}</div>
+          </button>
+        </div>
+
+        <div class="options options-centered">
+          ${[1, 2, 3, 4, 5].map(val => `
+            <label class="option-label">
+              <input type="radio" name="${q.id}" value="${val}">
+              <span>${val}</span>
+            </label>
+          `).join('')}
+        </div>
+
+        <div class="q-scale">
+          <span>${q.leftLabel || 'Left'}</span>
+          <span>${q.rightLabel || 'Right'}</span>
+        </div>
+      `;
+
+      // Hook: clicking left/right card selects 1 or 5
+      div.querySelectorAll('.q-card').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-value');
+          const input = div.querySelector(`input[name="${q.id}"][value="${val}"]`);
+          if (input) {
+            input.checked = true;
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+          if (typeof showWarning === 'function') showWarning(false);
+        });
+      });
+    }
+
     form.appendChild(div);
   });
 
@@ -75,6 +139,7 @@ function initQuiz() {
 
   track('question_view', { question_index: 1 });
 }
+
 
 function startQuiz() {
   document.getElementById('intro-screen').style.display = 'none';
