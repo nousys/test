@@ -83,8 +83,6 @@ function prevQuestion() {
 
 function calculateResult() {
   let sE = 0, sC = 0, sT = 0, sS = 0;
-
-  // New S split for 3 questions: s1 adapt; s2+s3 tenacity
   let sAdapt = 0;
   let sTenacity = 0;
 
@@ -103,31 +101,41 @@ function calculateResult() {
     }
   });
 
-  // New scale: 3 questions per axis, max=15, midpoint=9
   let type = "";
-  const H = 9;
+  const MID = 9;   // Ngưỡng trung bình
+  const PEAK = 13; // Ngưỡng cực cao cho các Type hiếm
 
-  // Stretch priority: ~75% of max => 12/15
-  if (sS >= 12) {
-    type = (sAdapt >= (sTenacity / 2)) ? "HERMES" : "DEMETER";
+  // TIER 1: THE BIG THREE (Cực hiếm - Đòi hỏi ít nhất 2 chỉ số chạm đỉnh)
+  if (sE >= PEAK && sC >= PEAK && sT >= 12) {
+    type = "ZEUS";
+  } else if (sE >= PEAK && sT >= PEAK && sC <= 7) {
+    type = "POSEIDON";
+  } else if (sT >= PEAK && sE <= 7 && sC >= 10) {
+    type = "HADES";
+  } 
+  
+  // TIER 2: THE STRETCH HEROES (Chỉ xuất hiện khi chỉ số S thực sự áp đảo phần còn lại)
+  else if (sS >= 13 && sS > (sE + sC + sT) / 2.5) {
+    type = (sAdapt > (sTenacity / 2)) ? "HERMES" : "DEMETER";
   }
-  // Boss thresholds scaled to max=15
-  else if (sE >= 12 && sC >= 12 && sT >= 12) type = "ZEUS";
-  else if (sE >= 12 && sT >= 12 && sC <= 8) type = "POSEIDON";
-  else if (sT >= 13 && sE <= 8) type = "HADES";
+  
+  // TIER 3: THE OLYMPIANS (Dựa trên ma trận E-C-T)
   else {
-    const E = sE > H;
-    const C = sC > H;
-    const T = sT > H;
+    const E = sE > MID;
+    const C = sC > MID;
+    const T = sT > MID;
 
     if (E && C && T) type = "HERA";
     else if (E && C && !T) type = "ARES";
     else if (E && !C && T) type = "APHRODITE";
     else if (E && !C && !T) type = "APOLLO";
-    else if (!E && C && T) type = "ATHENA";
+    else if (!E && C && T) {
+      // Lọc Athena: Cần C hoặc T thực sự cao để không bị rơi vào Hestia
+      type = (sC >= 11 || sT >= 11) ? "ATHENA" : "HESTIA";
+    }
     else if (!E && C && !T) type = "HEPHAESTUS";
     else if (!E && !C && T) type = "ARTEMIS";
-    else type = "HESTIA";
+    else type = "HESTIA"; // Thùng rác cuối cùng cho các chỉ số thấp/trung bình
   }
 
   lastResult = { sE, sC, sT, sS, type };
