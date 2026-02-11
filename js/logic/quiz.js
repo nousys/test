@@ -1,9 +1,11 @@
 import { questions } from '../config/questions.js';
 import { archetypes } from '../data/archetypes.js';
 import { submitToGoogle } from '../services/google.js';
+import { track } from '../services/analytics.js';
 
 // --- 3. THE LOGIC ---
 let currentQ = 0;
+let quizStarted = false;
 const form = document.getElementById('quiz-form');
 
 function initQuiz() {
@@ -29,11 +31,16 @@ function initQuiz() {
         form.appendChild(div);
     });
     document.getElementById('q-0').classList.add('active');
+
+    // Track first question view (1-indexed)
+    track('question_view', { question_index: 1 });
 }
 
 function startQuiz() {
     document.getElementById('intro-screen').style.display = 'none';
     document.getElementById('quiz-screen').style.display = 'block';
+    quizStarted = true;
+    track('quiz_start');
     initQuiz();
 }
 
@@ -50,6 +57,9 @@ function nextQuestion() {
 
     if (currentQ < questions.length) {
         document.getElementById(`q-${currentQ}`).classList.add('active');
+
+        // Track question view (1-indexed)
+        track('question_view', { question_index: currentQ + 1 });
     } else {
         document.getElementById('quiz-screen').style.display = 'none';
         calculateResult();
@@ -103,6 +113,9 @@ function calculateResult() {
         else type = "HESTIA";
     }
 
+    // Track completion
+    track('quiz_complete', { archetype: type });
+
     // RENDER
     const data = archetypes[type];
     const resScreen = document.getElementById('result-screen');
@@ -124,5 +137,12 @@ function calculateResult() {
     // Send Data
     submitToGoogle(sE, sC, sT, sS, type);
 }
+
+// Best-effort abandon tracking (fires when user leaves page mid-quiz)
+window.addEventListener('pagehide', () => {
+    if (!quizStarted) return;
+    if (currentQ >= questions.length) return;
+    track('quiz_abandon', { last_question_index: currentQ + 1 });
+});
 
 export { startQuiz, nextQuestion };
