@@ -83,10 +83,17 @@ function prevQuestion() {
 
 function calculateResult() {
   let sE = 0, sC = 0, sT = 0, sS = 0;
-  let sAdapt = 0;
-  let sTenacity = 0;
+  let sRange = 0, nRange = 0;       // Added counter
+  let sRecovery = 0, nRecovery = 0; // Added counter
 
   const formData = new FormData(form);
+
+  // Dynamic Counters for Core
+  const nE = questions.filter(q => q.type === 'E').length;
+  const nC = questions.filter(q => q.type === 'C').length;
+  const nT = questions.filter(q => q.type === 'T').length;
+  const nS = questions.filter(q => q.type === 'S').length;
+
   questions.forEach(q => {
     let val = parseInt(formData.get(q.id), 10);
     if (q.reverse) val = 6 - val;
@@ -94,48 +101,77 @@ function calculateResult() {
     if (q.type === 'E') sE += val;
     if (q.type === 'C') sC += val;
     if (q.type === 'T') sT += val;
+
     if (q.type === 'S') {
       sS += val;
-      if (q.id === 's1') sAdapt += val;
-      if (q.id === 's2' || q.id === 's3') sTenacity += val;
+      // Dynamic split based on IDs
+      if (['s1', 's4', 's5'].includes(q.id)) {
+        sRange += val;
+        nRange++;
+      }
+      if (['s2', 's3', 's6'].includes(q.id)) {
+        sRecovery += val;
+        nRecovery++;
+      }
     }
   });
 
+  // Safe Averages
+  const avgE = nE ? sE / nE : 0;
+  const avgC = nC ? sC / nC : 0;
+  const avgT = nT ? sT / nT : 0;
+  const avgS = nS ? sS / nS : 0;
+  const avgRange = nRange ? sRange / nRange : 0;
+  const avgRecovery = nRecovery ? sRecovery / nRecovery : 0;
+
+  // --- TUNED THRESHOLDS ---
+  const MID = 3.0;       
+  const PEAK = 4.1;      // Hard, but possible (requires mostly 4s and 5s)
+  const LOW = 2.75;      // Realistic low
+  const STRONG = 3.5;    // Threshold for Hades/Athena distinctness
+
   let type = "";
-  const MID = 9;   // Ngưỡng trung bình
-  const PEAK = 13; // Ngưỡng cực cao cho các Type hiếm
 
-  // TIER 1: THE BIG THREE (Cực hiếm - Đòi hỏi ít nhất 2 chỉ số chạm đỉnh)
-  if (sE >= PEAK && sC >= PEAK && sT >= 12) {
+  // TIER 1: THE BIG THREE (Legendary)
+  // Zeus: Needs high energy/control/threat
+  if (avgE >= PEAK && avgC >= PEAK && avgT >= 3.8) { 
     type = "ZEUS";
-  } else if (sE >= PEAK && sT >= PEAK && sC <= 7) {
-    type = "POSEIDON";
-  } else if (sT >= PEAK && sE <= 7 && sC >= 10) {
-    type = "HADES";
   } 
-  
-  // TIER 2: THE STRETCH HEROES (Chỉ xuất hiện khi chỉ số S thực sự áp đảo phần còn lại)
-  else if (sS >= 13 && sS > (sE + sC + sT) / 2.5) {
-    type = (sAdapt > (sTenacity / 2)) ? "HERMES" : "DEMETER";
+  // Poseidon: High Energy/Threat, but Chaos (Low Control)
+  else if (avgE >= PEAK && avgT >= PEAK && avgC <= LOW) {
+    type = "POSEIDON";
+  } 
+  // Hades: High Threat, Low Energy (Dark/Quiet), High Control (Rigid)
+  else if (avgT >= PEAK && avgE <= LOW && avgC >= STRONG) {
+    type = "HADES";
   }
-  
-  // TIER 3: THE OLYMPIANS (Dựa trên ma trận E-C-T)
-  else {
-    const E = sE > MID;
-    const C = sC > MID;
-    const T = sT > MID;
 
-    if (E && C && T) type = "HERA";
-    else if (E && C && !T) type = "ARES";
-    else if (E && !C && T) type = "APHRODITE";
-    else if (E && !C && !T) type = "APOLLO";
-    else if (!E && C && T) {
-      // Lọc Athena: Cần C hoặc T thực sự cao để không bị rơi vào Hestia
-      type = (sC >= 11 || sT >= 11) ? "ATHENA" : "HESTIA";
+  // TIER 2: STRETCH HEROES
+  else {
+    const avgCore = (avgE + avgC + avgT) / 3;
+    // Stretch must be high AND significantly higher than core traits
+    const stretchDominates = (avgS >= 4.0) && (avgS > avgCore * 1.15);
+
+    if (stretchDominates) {
+      type = (avgRange >= avgRecovery) ? "HERMES" : "DEMETER";
+    } else {
+      // TIER 3: THE OLYMPIANS (Matrix)
+      const E = avgE > MID;
+      const C = avgC > MID;
+      const T = avgT > MID;
+
+      if (E && C && T) type = "HERA";
+      else if (E && C && !T) type = "ARES";
+      else if (E && !C && T) type = "APHRODITE";
+      else if (E && !C && !T) type = "APOLLO";
+      else if (!E && C && T) {
+        // Athena needs to be distinct from Hestia
+        type = (avgC >= STRONG || avgT >= STRONG) ? "ATHENA" : "HESTIA";
+      }
+      else if (!E && C && !T) type = "HEPHAESTUS";
+      else if (!E && !C && T) type = "ARTEMIS";
+      else type = "HESTIA";
     }
-    else if (!E && C && !T) type = "HEPHAESTUS";
-    else if (!E && !C && T) type = "ARTEMIS";
-    else type = "HESTIA"; // Thùng rác cuối cùng cho các chỉ số thấp/trung bình
   }
 
   lastResult = { sE, sC, sT, sS, type };
@@ -152,14 +188,20 @@ function calculateResult() {
   document.getElementById('result-bug').innerHTML = data.bug;
   document.getElementById('result-fix').innerHTML = data.fix;
 
-  // Bars (max=15)
-  document.getElementById('bar-e').style.width = `${(sE / 15) * 100}%`;
-  document.getElementById('bar-c').style.width = `${(sC / 15) * 100}%`;
-  document.getElementById('bar-t').style.width = `${(sT / 15) * 100}%`;
-  document.getElementById('bar-s').style.width = `${(sS / 15) * 100}%`;
+  // Bars (dynamic max)
+  const maxE = nE * 5;
+  const maxC = nC * 5;
+  const maxT = nT * 5;
+  const maxS = nS * 5;
+
+  document.getElementById('bar-e').style.width = `${(sE / maxE) * 100}%`;
+  document.getElementById('bar-c').style.width = `${(sC / maxC) * 100}%`;
+  document.getElementById('bar-t').style.width = `${(sT / maxT) * 100}%`;
+  document.getElementById('bar-s').style.width = `${(sS / maxS) * 100}%`;
 
   submitToGoogle(sE, sC, sT, sS, type);
 }
+
 
 window.addEventListener('pagehide', () => {
   if (!quizStarted) return;

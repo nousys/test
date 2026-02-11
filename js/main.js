@@ -11,6 +11,12 @@ window.shareResult = shareResult;
 window.followFacebook = followFacebook;
 window.submitFeedback = submitFeedback;
 
+function clampInt(v, lo, hi) {
+  const n = parseInt(v, 10);
+  if (Number.isNaN(n)) return 0;
+  return Math.max(lo, Math.min(hi, n));
+}
+
 function renderArchetypeFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const a = params.get('a');
@@ -37,10 +43,18 @@ function renderArchetypeFromUrl() {
   document.getElementById('result-fix').innerHTML = data.fix;
 
   // Bars unknown without quiz scores (deep link), set 0
-  document.getElementById('bar-e').style.width = `0%`;
-  document.getElementById('bar-c').style.width = `0%`;
-  document.getElementById('bar-t').style.width = `0%`;
-  document.getElementById('bar-s').style.width = `0%`;
+  const MAX = 72; // your new scale (3 questions * 5)
+
+  const e = clampInt(params.get('e'), 0, MAX);
+  const c = clampInt(params.get('c'), 0, MAX);
+  const t = clampInt(params.get('t'), 0, MAX);
+  const s = clampInt(params.get('s'), 0, MAX);
+
+  // If scores exist, render them; otherwise keep 0
+  document.getElementById('bar-e').style.width = `${(e / MAX) * 100}%`;
+  document.getElementById('bar-c').style.width = `${(c / MAX) * 100}%`;
+  document.getElementById('bar-t').style.width = `${(t / MAX) * 100}%`;
+  document.getElementById('bar-s').style.width = `${(s / MAX) * 100}%`;
 }
 
 // Run once on load

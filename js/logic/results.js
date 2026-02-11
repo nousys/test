@@ -18,7 +18,11 @@ if (ratingEl) {
 export async function shareResult() {
     const res = getLastResult();
     const archetype = res?.type || 'NOUSYS';
-    const url = `${window.location.origin}${window.location.pathname}?a=${encodeURIComponent(archetype)}`;
+
+    const base = `${window.location.origin}${window.location.pathname}`;
+    const url = res
+        ? `${base}?a=${encodeURIComponent(archetype)}&e=${res.sE}&c=${res.sC}&t=${res.sT}&s=${res.sS}`
+        : `${base}?a=${encodeURIComponent(archetype)}`;
 
     const title = 'NOUSYS Result';
     const text = `My NOUSYS Archetype: ${archetype}`;
@@ -26,20 +30,19 @@ export async function shareResult() {
     track('share_click', { archetype });
 
     try {
-        // Best UX (mobile + some desktop)
         if (navigator.share) {
             await navigator.share({ title, text, url });
             track('share_success', { archetype, method: 'webshare' });
             return;
         }
 
-        // Fallback: open platform picker (instead of only copying)
         openShareMenu({ title, text, url, archetype });
     } catch (err) {
         console.log('Share cancelled/error:', err);
         track('share_fail', { archetype });
     }
 }
+
 
 export function followFacebook() {
     track('follow_facebook_click');
