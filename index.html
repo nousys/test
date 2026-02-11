@@ -133,6 +133,16 @@
             </div>
         </div>
 
+        <div style="position: relative; height: 300px; width: 100%; margin: 18px auto 0;">
+            <canvas id="radarChart"></canvas>
+        </div>
+
+        <!-- Adaptability Wing (secondary overlay) -->
+        <p id="result-wing" style="text-align:center; margin: 14px 0 0; opacity: 0.85;"></p>
+        <img id="wing-img" class="card-image"
+            src="" alt="Wing Card"
+            style="display:none; max-width: 280px; margin: 12px auto 0; border-width: 1px;">
+
         <div class="content-block">
             <div class="section-title">🖥️ THE OPERATING SYSTEM</div>
             <p id="result-desc">Loading...</p>
@@ -175,6 +185,7 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script type="module" src="js/main.js"></script>
 
 </body>

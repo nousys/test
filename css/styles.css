@@ -447,3 +447,38 @@ p { line-height: 1.6; color: #cbd5e1; }
     width: 100%;
   }
 }
+
+/* REPORT STYLING (For the long description) */
+.report-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.report-section:last-child {
+    border-bottom: none;
+}
+
+.report-header {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37; /* Gold */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-align: left; /* Keep headers left aligned */
+    border-left: 3px solid #D4AF37;
+    padding-left: 10px;
+}
+
+#result-desc p, #result-desc li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+#result-desc strong {
+    color: #fff;
+    font-weight: 600;
+}

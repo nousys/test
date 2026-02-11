@@ -6,156 +6,77 @@ export const archetypes = {
         img: "img/Hera.png",
 
         desc: `
-            <p><strong>(High Control • High Energy)</strong></p>
-            <p><em>"Order is not something that happens naturally. Order is something that is enforced."</em></p>
+            <div class="report-section">
+                <h3 class="report-header">💀 THE ROAST (Start Here)</h3>
+                <p>Let’s be honest: <strong>You are exhausted, and you think it’s everyone else’s fault.</strong></p>
+                <p>You walk through life with a silent scoreboard in your head, tracking how much <em>you</em> do versus how little <em>they</em> do. You are the "Designated Adult" in every room. You secretly believe that if you stopped pushing, the entire world would grind to a halt—and the tragic part is, you’ve probably rigged your life so that’s actually true.</p>
+                <p>You aren’t just "organized." You are <strong>addicted to certainty</strong>. You try to pre-plan conversations, pre-feel emotions, and pre-solve problems that haven't happened yet. You call this "being prepared." Psychology calls it "High-Functioning Anxiety wearing a suit."</p>
+            </div>
 
             <br>
-            <strong>🏛️ The Operating System</strong>
-            <p>You operate on the <strong>Sovereign OS</strong>—a psychological system built for governance, structure, and outcome ownership. While others negotiate with reality, you <em>edit</em> it. You don’t merely “have standards.” You are standards. You don’t wait for the world to align—your nervous system naturally moves toward <strong>alignment</strong>: roles clarified, priorities ranked, resources allocated, chaos reduced.</p>
-            <p>In behavioral science terms, you lean toward a <strong>high internal locus of control</strong>: you assume your actions matter, so you act. You’re not addicted to control because you’re power-hungry. You’re attached to control because it’s the most reliable bridge between <em>vision</em> and <em>reality</em>.</p>
+            <div class="report-section">
+                <h3 class="report-header">🏛️ THE OPERATING SYSTEM</h3>
+                <p><strong>System Core: Entropy Reduction.</strong></p>
+                <p>Your brain has a biological intolerance for chaos. While Ares thrives in the fog and Apollo ignores it, you <em>must</em> clear it. You don't just see a messy room; you see a failure of character. You don't just see a missed deadline; you see a lack of respect.</p>
+                <p><strong>Your Superpower: Operational Simulation.</strong></p>
+                <p>Before a project starts, you have already simulated the next 20 steps. You see the bottlenecks, the risks, and the logistical gaps that everyone else is ignoring. This makes you incredibly valuable, but it also makes you incredibly annoying to people who just want to "vibes it out."</p>
+            </div>
 
             <br>
-            <strong>🧠 Cognitive Engine: The High-Resolution Mind</strong>
-            <p>Your mind scans environments like a risk radar. You notice inefficiencies, weak links, unclear instructions, social dynamics, and long-term consequences within minutes. This often looks like “intuition,” but it’s frequently a blend of:</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Pattern recognition:</strong> You detect repeating failure cycles early.</li>
-            <li><strong>Executive function strength:</strong> Planning, sequencing, and prioritizing come naturally.</li>
-            <li><strong>Low tolerance for ambiguity:</strong> Unclear = unsafe, so you clarify.</li>
-            <li><strong>Systems thinking:</strong> You see how small problems cascade into big ones.</li>
-            </ul>
-            <p>This “high-resolution” processing is a gift. It’s also why you can feel tired in rooms where everyone else feels fine. You aren’t just present—you are <em>processing</em>.</p>
+            <div class="report-section">
+                <h3 class="report-header">🧨 THE FATAL ERROR: "THE MARTYR TRAP"</h3>
+                <p>Your "Bug" is a toxic relational loop called <strong>Over-Functioning</strong>.</p>
+                <p>Here is the cycle you are trapped in:</p>
+                <ol style="text-align: left; margin-top: 10px; padding-left: 20px;">
+                    <li>You see a gap (a dirty dish, a flawed plan, a silent pause).</li>
+                    <li>Anxiety spikes. You think: <em>"If I don't fix it, nobody will."</em></li>
+                    <li>You rush in to fix it immediately (High Energy).</li>
+                    <li>The people around you realize they don't need to try, so they step back (Under-Functioning).</li>
+                    <li>You resent them for being "lazy" or "incompetent."</li>
+                    <li>You vow to do <em>everything</em> yourself next time.</li>
+                    <li><strong>Repeat until burnout.</strong></li>
+                </ol>
+                <p><strong>The Hard Truth:</strong> You are not a victim of people’s incompetence. You are an enabler of it. You steal their struggle, so you steal their growth.</p>
+            </div>
 
             <br>
-            <strong>👑 Social Gravity: Authority Without Asking</strong>
-            <p>You often become the gravitational center of a group, even when you never applied for the job. People defer to you because you radiate <strong>directional certainty</strong>. You offer structure in uncertain situations, which makes others feel safer. In leadership research terms, you naturally provide:</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Clarity:</strong> “Here’s what matters. Here’s what doesn’t.”</li>
-            <li><strong>Containment:</strong> You absorb chaos so others can function.</li>
-            <li><strong>Decisiveness:</strong> You reduce decision fatigue for the group.</li>
-            </ul>
-            <p>But there’s a hidden cost: when you become the default “operator,” everyone else unconsciously becomes a “passenger.”</p>
+            <div class="report-section">
+                <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+                <p><strong>Love Language: Logistics.</strong></p>
+                <p>You don't say "I love you" with poetry. You say it by updating their resume, reminding them of their dentist appointment, and buying them the *correct* ergonomic pillow. To you, <strong>Care = Competence</strong>.</p>
+                <p><strong>The Conflict Pattern:</strong></p>
+                <p>You tend to partner with "Projects"—people with potential who need "fixing." Then you get mad when they don't follow your optimization plan. You want a partner, but you act like a parent. Nothing kills romance faster than the phrase: <em>"Did you remember to do that thing I told you about?"</em></p>
+            </div>
 
             <br>
-            <strong>⚖️ The Burden of Competence</strong>
-            <p>Your greatest strength—and your heaviest burden—is your terrifying competence. You do not merely want to succeed. You want to succeed <em>cleanly</em>: with minimal waste, minimal error, and maximal reliability. “Good enough” isn’t neutral to you—it’s irritating, sometimes even physically stressful.</p>
-            <p>This can create isolation. You may secretly feel like you live on a different frequency: you see the cracks in the plan, the loopholes in the logic, the missing step in the process, while everyone else is celebrating the idea of progress. You’re often the one staying late to fix the formatting, rewrite the structure, or do the “last 10%” that separates amateur from elite.</p>
-            <p>You become the “Parent” of your environment—not the cozy parent, but the operational parent. The one who checks the passport, books the correct flight, reminds everyone of the deadline, and still apologizes for being “too much.”</p>
-
-            <br>
-            <strong>🧬 The Biology of Control (Why You Feel This So Strongly)</strong>
-            <p>Control is not just a preference—it can be a <strong>nervous system strategy</strong>. When you organize the external world, your internal world calms down. Structure reduces uncertainty; uncertainty increases stress. Your body learns this equation early:</p>
-            <p><em>Order → Predictability → Safety → Energy</em></p>
-            <p>So when things are disorganized, it’s not merely annoying. It can feel like a threat signal—like the ground is unreliable. That’s why you don’t “relax” easily until everything is handled. Your rest is often conditional.</p>
-
-            <br>
-            <strong>🔒 The “High Standards” Paradox</strong>
-            <p>You value loyalty and efficiency above all else. If someone makes it into your inner circle, you will move mountains for them. You are protective, strategic, and intensely committed.</p>
-            <p>But the price of admission is high. You are not demanding because you want obedience—you are demanding because you want <strong>competence</strong>. You don’t want to babysit. You want to build with equals.</p>
-            <p>So you face a brutal tradeoff:</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Trust others</strong> and risk disappointment…</li>
-            <li>or <strong>do it yourself</strong> and guarantee the outcome.</li>
-            </ul>
-            <p>This is where your archetype becomes both magnificent and dangerous: your independence can become a fortress.</p>
-
-            <br>
-            <strong>💞 Attachment Pattern: Love Through Structure</strong>
-            <p>You often express care through responsibility: solving, organizing, protecting, planning, improving. You might not always say “I love you” in soft language—but you say it in logistics:</p>
-            <p><em>“I handled it.” “I made sure you’re safe.” “I thought ahead.”</em></p>
-            <p>At your best, this is devotion. At your worst, it becomes control disguised as care—where you over-function, and others under-function.</p>
-
-            <br>
-            <strong>🌟 When You’re Healthy</strong>
-            <p>Healthy Hera is not cold. She is <strong>regal</strong>. She leads without crushing. She builds without burning. She becomes the rare kind of authority that makes people feel both safe and empowered.</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li>You create systems that allow others to succeed.</li>
-            <li>You mentor instead of micromanage.</li>
-            <li>You hold standards without holding people hostage to perfection.</li>
-            <li>You become a builder of kingdoms—not a prisoner of them.</li>
-            </ul>
+            <div class="report-section">
+                <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+                <p><strong>The "Empire Builder."</strong></p>
+                <p>You are the backbone of any organization. You are the one who actually reads the T&C. You are the one who saves the project at 11:00 PM because the "visionary" forgot about compliance laws.</p>
+                <p><strong>Your Ceiling:</strong> You struggle to delegate because you believe <em>"It will take me longer to explain it than to just do it myself."</em> This belief is why you are overworked and why your team is scared of you. You don't lead; you micromanage with good intentions.</p>
+            </div>
         `,
 
         bug: `
-            <strong>⛔ System Error: The “Atlas Complex”</strong>
-            <p>Your code has a critical glitch: <strong>You do not know how to trust.</strong></p>
-            <p>Deep down, you carry a private belief that operates like a hidden line of code:</p>
-            <p><em>"If I stop pushing, everything will collapse."</em></p>
-
-            <br>
-            <strong>🧨 The Control Loop (How the Bug Runs)</strong>
-            <p>This bug isn’t personality—it’s a feedback loop:</p>
-            <ol style="text-align: left; margin-top: 10px;">
-            <li><strong>High standards</strong> create pressure.</li>
-            <li>Pressure makes you <strong>take over</strong>.</li>
-            <li>When you take over, others contribute less.</li>
-            <li>Less contribution confirms your belief: <em>“See? It’s on me.”</em></li>
-            <li>Then you raise standards even higher, because you feel alone.</li>
-            </ol>
-
-            <br>
-            <strong>🧠 The Cognitive Distortions Hidden Inside</strong>
-            <p>Under stress, Hera often defaults to these distortions (they feel true, but they are exaggerated):</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Catastrophizing:</strong> “If I don’t manage this, disaster.”</li>
-            <li><strong>All-or-nothing thinking:</strong> “Perfect or pointless.”</li>
-            <li><strong>Control fallacy:</strong> “If it failed, I should’ve prevented it.”</li>
-            <li><strong>Over-responsibility:</strong> “I’m responsible for everyone’s outcomes.”</li>
-            </ul>
-
-            <br>
-            <strong>🔥 Hera-Burnout</strong>
-            <p>The end-stage symptom is <strong>exhaustion mixed with resentment</strong>. You don’t just feel tired—you feel <em>betrayed</em> by the fact that life requires other people. Your body becomes a power plant running without maintenance. Your mind stays online while your soul quietly logs off.</p>
-
-            <br>
-            <strong>🧊 The Hidden Emotional Cost</strong>
-            <p>Underneath the competence is a quieter grief: the fear that if you’re not useful, you’re not valued. So you keep proving. You keep carrying. You keep controlling. And the world applauds you—while your inner system slowly overheats.</p>
+            <strong>⛔ CRITICAL FAILURE: The "Perfect or Nothing" Binary</strong>
+            <p>You live in a binary world: Success or Failure. Perfect or Garbage. On Time or Late.</p>
+            <p>This allows you to achieve great things, but it makes you brittle. You cannot bend, so you break. When you fail, you don't just feel disappointment; you feel a total collapse of self-worth. You are terrifyingly hard on others, but you are absolutely abusive to yourself.</p>
         `,
 
         fix: `
-            <strong>🛠️ Patch v1.0: The 80% Rule</strong>
-            <p>Your growth path is not about doing <em>more</em>. It is about building a system where you don’t have to be the engine for everything.</p>
-
-            <br>
-            <strong>✅ Core Upgrade: Replace Control With Design</strong>
-            <p>Control is you holding every lever. Design is you building a machine that works without your hands on it. That is your real evolution: from <strong>operator</strong> to <strong>architect</strong>.</p>
-
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>The 80% Rule:</strong> If someone can do a task 80% as well as you, delegate it. That missing 20% is the cost of scalability—and the price of your sanity.</li>
-            <li><strong>Define “Done,” Not “How”:</strong> Specify outcomes and constraints, then let people choose the method. This develops their competence instead of reinforcing dependency.</li>
-            <li><strong>Let It Be Messy:</strong> Skill acquisition requires error. If you erase every mistake, you erase everyone’s growth.</li>
-            </ul>
-
-            <br>
-            <strong>🧪 Patch v1.1: The Trust Experiments (Scientific Method for Relationships)</strong>
-            <p>Don’t “try to trust.” <strong>Test trust</strong>. Run small experiments:</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Low-stakes delegation:</strong> Give away tasks that won’t destroy anything if done imperfectly.</li>
-            <li><strong>Clear feedback loops:</strong> Agree on checkpoints (not surveillance). Example: “Send me a draft by Thursday.”</li>
-            <li><strong>Post-mortem reviews:</strong> If something fails, analyze process—not blame identity.</li>
-            </ul>
-            <p>This calms your nervous system because the risk becomes <strong>measurable</strong> instead of vague.</p>
-
-            <br>
-            <strong>🧠 Patch v1.2: Rewire the Internal Law</strong>
-            <p>Your inner law currently says:</p>
-            <p><em>“If I can do it better, I must.”</em></p>
-            <p>Replace it with a higher law:</p>
-            <p><em>“If I do everything, I make everyone weaker—including myself.”</em></p>
-
-            <br>
-            <strong>🧘 Patch v1.3: Nervous System Off-Ramps</strong>
-            <p>Because your control instinct is partly physiological, you need <strong>body-level exits</strong> from hyper-responsibility:</p>
-            <ul style="text-align: left; margin-top: 10px;">
-            <li><strong>Two-minute downshift:</strong> Slow exhale breathing (longer exhale than inhale) to signal safety.</li>
-            <li><strong>Boundary language:</strong> “I can do X, not Y.” Short, clean, non-negotiable.</li>
-            <li><strong>Completion rituals:</strong> A small action that marks “done” so your brain stops running the task in the background.</li>
-            </ul>
-
-            <br>
-            <strong>🏆 Patch v2.0: Your True Mission</strong>
-            <p>Hera is not here to carry everything. Hera is here to <strong>build a world where excellence is shared</strong>. Your final form is leadership that creates leaders. A kingdom that doesn’t collapse when you rest.</p>
+            <div class="report-section">
+                <h3 class="report-header">🛠️ THE PATCH: "STRATEGIC NEGLECT"</h3>
+                <p>To upgrade your system, you must do the most painful thing imaginable: <strong>Let small fires burn.</strong></p>
+                
+                <ul style="text-align: left; margin-top: 15px;">
+                    <li><strong>The 15-Minute Rule:</strong> When you see a problem, wait 15 minutes before acting. Create a vacuum. Give others space to step up. If you fill the space instantly, they never will.</li>
+                    <li><strong>Accept "B+" Work:</strong> Your "A+" standard is expensive—it costs you your sanity. "B+" work from a team is sustainable. "A+" work from you alone is a death sentence.</li>
+                    <li><strong>Stop "Helping":</strong> Ask yourself: <em>"Did they ask for my help? Or am I just managing my own anxiety by taking over?"</em> If they didn't ask, don't help.</li>
+                </ul>
+                <p><strong>Final Command:</strong> A Queen does not scrub the floors of the castle just because the maid missed a spot. Stop operating. Start governing.</p>
+            </div>
         `
-        },
+    },
 
     "ARES": {
         name: "ARES",
