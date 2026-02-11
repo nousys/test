@@ -18,7 +18,7 @@ if (ratingEl) {
 export async function shareResult() {
     const res = getLastResult();
     const archetype = res?.type || 'NOUSYS';
-    const url = window.location.href;
+    const url = `${window.location.origin}${window.location.pathname}?a=${encodeURIComponent(archetype)}`;
 
     const title = 'NOUSYS Result';
     const text = `My NOUSYS Archetype: ${archetype}`;
