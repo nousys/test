@@ -183,12 +183,12 @@ export const questions = [
   // SET 6
   // =========================
   {
-    id: "t6", type: "T", reverse: false, // ✅ PATCHED: Right = Caution (High T)
-    leftLabel: "Flow State", rightLabel: "Self-Check",
-    text: `Interlude: Judgment of Olympus<br><br>
-          <strong>Scene:</strong> You must demonstrate your skill before the gods to earn passage. They watch in silence—no feedback, no clues. A shaky performance costs <strong>Honor</strong> and delays <strong>Progress</strong>.<br><br>
-          <strong>1 (Left):</strong> I trust my training and flow; I don't look back.<br>
-          <strong>5 (Right):</strong> I constantly self-monitor to ensure I'm not making a mistake.`
+    id: "s6", type: "S", reverse: true, // Left = Reset (High S)
+    leftLabel: "Reset", rightLabel: "Process",
+    text: `Interlude: The Wound of Words<br><br>
+          <strong>Scene:</strong> After a public mistake, an ally criticizes you sharply in front of everyone. If you spiral, you lose <strong>Time</strong> and <strong>Progress</strong> on the next trial.<br><br>
+          <strong>1 (Left):</strong> I ignore the noise; results will speak louder than their words.<br>
+          <strong>5 (Right):</strong> I take it seriously; I need to resolve the accusation before moving on.`
   },
   {
     id: "c6", type: "C", reverse: true, // Left = Map First (High C)
@@ -207,11 +207,11 @@ export const questions = [
           <strong>5 (Right):</strong> This chaos energizes me; rapid change keeps me sharp and switched on.`
   },
   {
-    id: "s6", type: "S", reverse: true, // Left = Reset (High S)
-    leftLabel: "Reset", rightLabel: "Process",
-    text: `Interlude: The Wound of Words<br><br>
-          <strong>Scene:</strong> After a public mistake, an ally criticizes you sharply in front of everyone. If you spiral, you lose <strong>Time</strong> and <strong>Progress</strong> on the next trial.<br><br>
-          <strong>1 (Left):</strong> I ignore the noise; results will speak louder than their words.<br>
-          <strong>5 (Right):</strong> I take it seriously; I need to resolve the accusation before moving on.`
+    id: "t6", type: "T", reverse: false, // ✅ PATCHED: Right = Caution (High T)
+    leftLabel: "Flow State", rightLabel: "Self-Check",
+    text: `Interlude: Judgment of Olympus<br><br>
+          <strong>Scene:</strong> You must demonstrate your skill before the gods to earn passage. They watch in silence—no feedback, no clues. A shaky performance costs <strong>Honor</strong> and delays <strong>Progress</strong>.<br><br>
+          <strong>1 (Left):</strong> I trust my training and flow; I don't look back.<br>
+          <strong>5 (Right):</strong> I constantly self-monitor to ensure I'm not making a mistake.`
   }
 ];

@@ -14,7 +14,37 @@ export function getLastResult() {
   return lastResult;
 }
 
+// --- UI helpers (minimal) ---
+function setProgressUI() {
+  const total = questions.length;
+
+  // Progress bar: show position (1..N)
+  const bar = document.getElementById('progress-bar');
+  if (bar) {
+    const pct = total ? ((currentQ + 1) / total) * 100 : 0;
+    bar.style.width = `${Math.max(0, Math.min(100, pct))}%`;
+  }
+
+  // Progress text: "X / N"
+  const pt = document.getElementById('progress-text');
+  if (pt) pt.textContent = `${currentQ + 1} / ${total}`;
+
+  // Disable Previous on first question
+  const prevBtn = document.getElementById('btn-prev');
+  if (prevBtn) prevBtn.disabled = (currentQ === 0);
+}
+
+function showWarning(show) {
+  const warn = document.getElementById('quiz-warning');
+  if (!warn) return;
+  warn.style.display = show ? 'block' : 'none';
+}
+
 function initQuiz() {
+  // Prevent duplicate render if startQuiz called again
+  if (form && form.dataset.initialized === '1') return;
+  if (form) form.dataset.initialized = '1';
+
   questions.forEach((q, index) => {
     const div = document.createElement('div');
     div.className = `question-card`;
@@ -37,15 +67,22 @@ function initQuiz() {
     form.appendChild(div);
   });
 
-  document.getElementById('q-0').classList.add('active');
+  currentQ = 0;
+  document.getElementById('q-0')?.classList.add('active');
+
+  showWarning(false);
+  setProgressUI();
+
   track('question_view', { question_index: 1 });
 }
 
 function startQuiz() {
   document.getElementById('intro-screen').style.display = 'none';
   document.getElementById('quiz-screen').style.display = 'block';
+
   quizStarted = true;
   track('quiz_start');
+
   initQuiz();
 }
 
@@ -54,16 +91,24 @@ function nextQuestion() {
   let selected = false;
   for (let input of inputs) if (input.checked) selected = true;
 
-  if (!selected) { alert("Please select an option."); return; }
+  if (!selected) {
+    showWarning(true);
+    return;
+  }
+  showWarning(false);
 
-  document.getElementById(`q-${currentQ}`).classList.remove('active');
+  document.getElementById(`q-${currentQ}`)?.classList.remove('active');
   currentQ++;
-  document.getElementById('progress-bar').style.width = `${(currentQ / questions.length) * 100}%`;
 
   if (currentQ < questions.length) {
-    document.getElementById(`q-${currentQ}`).classList.add('active');
+    document.getElementById(`q-${currentQ}`)?.classList.add('active');
+    setProgressUI();
     track('question_view', { question_index: currentQ + 1 });
   } else {
+    // Complete
+    const bar = document.getElementById('progress-bar');
+    if (bar) bar.style.width = `100%`;
+
     document.getElementById('quiz-screen').style.display = 'none';
     calculateResult();
   }
@@ -72,19 +117,21 @@ function nextQuestion() {
 function prevQuestion() {
   if (currentQ <= 0) return;
 
-  document.getElementById(`q-${currentQ}`).classList.remove('active');
+  showWarning(false);
+
+  document.getElementById(`q-${currentQ}`)?.classList.remove('active');
   currentQ--;
 
-  document.getElementById(`q-${currentQ}`).classList.add('active');
-  document.getElementById('progress-bar').style.width = `${(currentQ / questions.length) * 100}%`;
+  document.getElementById(`q-${currentQ}`)?.classList.add('active');
+  setProgressUI();
 
   track('question_view', { question_index: currentQ + 1, nav: 'back' });
 }
 
 function calculateResult() {
   let sE = 0, sC = 0, sT = 0, sS = 0;
-  let sRange = 0, nRange = 0;       // Added counter
-  let sRecovery = 0, nRecovery = 0; // Added counter
+  let sRange = 0, nRange = 0;
+  let sRecovery = 0, nRecovery = 0;
 
   const formData = new FormData(form);
 
@@ -104,7 +151,7 @@ function calculateResult() {
 
     if (q.type === 'S') {
       sS += val;
-      // Dynamic split based on IDs
+
       if (['s1', 's4', 's5'].includes(q.id)) {
         sRange += val;
         nRange++;
@@ -125,37 +172,29 @@ function calculateResult() {
   const avgRecovery = nRecovery ? sRecovery / nRecovery : 0;
 
   // --- TUNED THRESHOLDS ---
-  const MID = 3.0;       
-  const PEAK = 4.1;      // Hard, but possible (requires mostly 4s and 5s)
-  const LOW = 2.75;      // Realistic low
-  const STRONG = 3.5;    // Threshold for Hades/Athena distinctness
+  const MID = 3.0;
+  const PEAK = 4.1;
+  const LOW = 2.75;
+  const STRONG = 3.5;
 
   let type = "";
 
-  // TIER 1: THE BIG THREE (Legendary)
-  // Zeus: Needs high energy/control/threat
-  if (avgE >= PEAK && avgC >= PEAK && avgT >= 3.8) { 
+  // TIER 1: THE BIG THREE
+  if (avgE >= PEAK && avgC >= PEAK && avgT >= 3.8) {
     type = "ZEUS";
-  } 
-  // Poseidon: High Energy/Threat, but Chaos (Low Control)
-  else if (avgE >= PEAK && avgT >= PEAK && avgC <= LOW) {
+  } else if (avgE >= PEAK && avgT >= PEAK && avgC <= LOW) {
     type = "POSEIDON";
-  } 
-  // Hades: High Threat, Low Energy (Dark/Quiet), High Control (Rigid)
-  else if (avgT >= PEAK && avgE <= LOW && avgC >= STRONG) {
+  } else if (avgT >= PEAK && avgE <= LOW && avgC >= STRONG) {
     type = "HADES";
-  }
-
-  // TIER 2: STRETCH HEROES
-  else {
+  } else {
+    // TIER 2: STRETCH HEROES
     const avgCore = (avgE + avgC + avgT) / 3;
-    // Stretch must be high AND significantly higher than core traits
     const stretchDominates = (avgS >= 4.0) && (avgS > avgCore * 1.15);
 
     if (stretchDominates) {
       type = (avgRange >= avgRecovery) ? "HERMES" : "DEMETER";
     } else {
-      // TIER 3: THE OLYMPIANS (Matrix)
+      // TIER 3: MATRIX
       const E = avgE > MID;
       const C = avgC > MID;
       const T = avgT > MID;
@@ -165,7 +204,6 @@ function calculateResult() {
       else if (E && !C && T) type = "APHRODITE";
       else if (E && !C && !T) type = "APOLLO";
       else if (!E && C && T) {
-        // Athena needs to be distinct from Hestia
         type = (avgC >= STRONG || avgT >= STRONG) ? "ATHENA" : "HESTIA";
       }
       else if (!E && C && !T) type = "HEPHAESTUS";
@@ -201,7 +239,6 @@ function calculateResult() {
 
   submitToGoogle(sE, sC, sT, sS, type);
 }
-
 
 window.addEventListener('pagehide', () => {
   if (!quizStarted) return;
