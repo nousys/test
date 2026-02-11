@@ -30,8 +30,8 @@ export const questions = [
     text: `Trial of the Nemean Lion<br><br>
           <strong>Scenario:</strong> You face a beast with impenetrable golden fur. Your sword snaps upon impact, and your usual methods have failed.<br><br>
           <strong>Your Instinct:</strong><br>
-          (1) Tactical Retreat: "My weapons are useless. I must withdraw to rethink my strategy rather than fight a losing battle."<br>
-          (5) Close Combat: "If weapons fail, I will adapt and grapple it with my bare hands."`
+          <strong>Left instinct:</strong> Tactical Retreat: "My weapons are useless. I must withdraw to rethink my strategy rather than fight a losing battle."<br>
+          <strong>Right instinct:</strong> Close Combat: "If weapons fail, I will adapt and grapple it with my bare hands."`
   },
   {
     id: "t2", type: "T", reverse: false,
@@ -39,8 +39,8 @@ export const questions = [
     text: `Trial of the Stymphalian Birds<br><br>
           <strong>Scenario:</strong> The sky darkens as thousands of bronze-beaked birds descend. The swarm is overwhelming and toxic.<br><br>
           <strong>Your Instinct:</strong><br>
-          (1) Shield & Cover: "Prioritize survival. Find cover immediately to weather the storm."<br>
-          (5) Disrupt & Attack: "Create chaos. Use noise to scare them into the air, then pick them off."`
+          <strong>Left instinct:</strong> Shield & Cover: "Prioritize survival. Find cover immediately to weather the storm."<br>
+          <strong>Right instinct:</strong> Disrupt & Attack: "Create chaos. Use noise to scare them into the air, then pick them off."`
   },
   {
     id: "t3", type: "T", reverse: false,
@@ -48,8 +48,8 @@ export const questions = [
     text: `Trial of Cerberus<br><br>
           <strong>Scenario:</strong> To complete the mission, you must voluntarily enter the Underworld—a realm of high stakes from which few return.<br><br>
           <strong>Your Instinct:</strong><br>
-          (1) Risk Aversion: "The cost of failure is eternal entrapment. I would look for a safer alternative."<br>
-          (5) Risk Acceptance: "High risk yields high rewards. I am willing to step into the unknown."`
+          <strong>Left instinct:</strong> Risk Aversion: "The cost of failure is eternal entrapment. I would look for a safer alternative."<br>
+          <strong>Right instinct:</strong> Risk Acceptance: "High risk yields high rewards. I am willing to step into the unknown."`
   },
 
   // GROUP 2: CONTROL (C)
@@ -59,8 +59,8 @@ export const questions = [
     text: `Trial of the Augean Stables<br><br>
           <strong>Scenario:</strong> You are tasked with cleaning 30 years of accumulated filth in a single day. The volume is impossible for normal means.<br><br>
           <strong>Your Approach:</strong><br>
-          (1) Rapid Execution: "Start shoveling immediately. Speed and intensity are the only ways to finish."<br>
-          (5) System Re-engineering: "Stop and plan. I will divert a nearby river to wash it all out automatically."`
+          <strong>Left instinct:</strong> Rapid Execution: "Start shoveling immediately. Speed and intensity are the only ways to finish."<br>
+          <strong>Right instinct:</strong> System Re-engineering: "Stop and plan. I will divert a nearby river to wash it all out automatically."`
   },
   {
     id: "c2", type: "C", reverse: false,
@@ -68,8 +68,8 @@ export const questions = [
     text: `Trial of the Mares of Diomedes<br><br>
           <strong>Scenario:</strong> You are given charge of a team of powerful, wild horses. You are unaware of their true nature.<br><br>
           <strong>Your Approach:</strong><br>
-          (1) Trust & Delegate: "I give them freedom and trust things will work out naturally."<br>
-          (5) Verify & Contain: "I restrain them first to check for hidden dangers before releasing them."`
+          <strong>Left instinct:</strong> Trust & Delegate: "I give them freedom and trust things will work out naturally."<br>
+          <strong>Right instinct:</strong> Verify & Contain: "I restrain them first to check for hidden dangers before releasing them."`
   },
   {
     id: "c3", type: "C", reverse: false,
@@ -77,8 +77,8 @@ export const questions = [
     text: `Trial of the Cretan Bull<br><br>
           <strong>Scenario:</strong> A raging bull is destroying the city infrastructure. It is a force of pure chaos.<br><br>
           <strong>Your Approach:</strong><br>
-          (1) Head-On: "I will meet its force with my own and wrestle it down."<br>
-          (5) Outsmart: "I will set a trap or lure it into a corner to subdue it without a fight."`
+          <strong>Left instinct:</strong> Head-On: "I will meet its force with my own and wrestle it down."<br>
+          <strong>Right instinct:</strong> Outsmart: "I will set a trap or lure it into a corner to subdue it without a fight."`
   },
 
   // GROUP 3: ENERGY (E)
@@ -88,8 +88,8 @@ export const questions = [
     text: `Trial of Hippolyta's Belt<br><br>
           <strong>Scenario:</strong> You need an item from a stranger (The Queen). Rumors circulate that her people might be hostile.<br><br>
           <strong>Your Reaction:</strong><br>
-          (1) Guarded: "Trust no one. I keep my hand on my weapon just in case."<br>
-          (5) Open: "I approach with open arms to clear up any misunderstandings."`
+          <strong>Left instinct:</strong> Guarded: "Trust no one. I keep my hand on my weapon just in case."<br>
+          <strong>Right instinct:</strong> Open: "I approach with open arms to clear up any misunderstandings."`
   },
   {
     id: "e2", type: "E", reverse: false,
@@ -97,8 +97,8 @@ export const questions = [
     text: `Trial of the Erymanthian Boar<br><br>
           <strong>Scenario:</strong> You are hunting in a snowy, unfamiliar mountain range and have lost the track.<br><br>
           <strong>Your Reaction:</strong><br>
-          (1) Self-Reliant: "I will figure it out myself. I work best when I focus alone."<br>
-          (5) Seek Counsel: "I will find a local Centaur (mentor) to ask for guidance."`
+          <strong>Left instinct:</strong> Self-Reliant: "I will figure it out myself. I work best when I focus alone."<br>
+          <strong>Right instinct:</strong> Seek Counsel: "I will find a local Centaur (mentor) to ask for guidance."`
   },
   {
     id: "e3", type: "E", reverse: false,
@@ -106,8 +106,8 @@ export const questions = [
     text: `Trial of Geryon's Cattle<br><br>
           <strong>Scenario:</strong> The journey is long and plagued by constant small annoyances (gadflies, heat, detours).<br><br>
           <strong>Your Reaction:</strong><br>
-          (1) Result-Focused: "I find these distractions draining. I just want to finish the job."<br>
-          (5) Journey-Focused: "The chaos is part of the adventure. I take it in stride."`
+          <strong>Left instinct:</strong> Result-Focused: "I find these distractions draining. I just want to finish the job."<br>
+          <strong>Right instinct:</strong> Journey-Focused: "The chaos is part of the adventure. I take it in stride."`
   },
 
   // GROUP 4: STRETCH (S)
@@ -117,8 +117,8 @@ export const questions = [
     text: `Trial of the Hydra<br><br>
           <strong>Scenario:</strong> The problem evolves. When you cut off one head, two more grow back. Your current tactic is backfiring.<br><br>
           <strong>Your Mindset:</strong><br>
-          (1) Pragmatic Stop: "This approach is futile. Better to stop now than waste more energy."<br>
-          (5) Adaptive Pivot: "If the sword fails, I will try fire. I will keep changing tactics until I win."`
+          <strong>Left instinct:</strong> Pragmatic Stop: "This approach is futile. Better to stop now than waste more energy."<br>
+          <strong>Right instinct:</strong> Adaptive Pivot: "If the sword fails, I will try fire. I will keep changing tactics until I win."`
   },
   {
     id: "s2", type: "S", reverse: false,
@@ -126,8 +126,8 @@ export const questions = [
     text: `Trial of the Ceryneian Hind<br><br>
           <strong>Scenario:</strong> Your goal is elusive and faster than an arrow. You have been chasing it for a year.<br><br>
           <strong>Your Mindset:</strong><br>
-          (1) Opportunity Cost: "A year is too long. It is smarter to switch to a more achievable target."<br>
-          (5) Relentless: "I don't care how long it takes. I will not stop until I catch it."`
+          <strong>Left instinct:</strong> Opportunity Cost: "A year is too long. It is smarter to switch to a more achievable target."<br>
+          <strong>Right instinct:</strong> Relentless: "I don't care how long it takes. I will not stop until I catch it."`
   },
   {
     id: "s3", type: "S", reverse: false,
@@ -135,7 +135,7 @@ export const questions = [
     text: `Trial of the Golden Apples<br><br>
           <strong>Scenario:</strong> To gain the prize, you must temporarily bear the crushing weight of the entire Sky on your shoulders.<br><br>
           <strong>Your Mindset:</strong><br>
-          (1) Know Your Limits: "That is too much weight. I will not destroy myself for a prize."<br>
-          (5) Endure: "I will grit my teeth and hold it. I can handle the pressure."`
+          <strong>Left instinct:</strong> Know Your Limits: "That is too much weight. I will not destroy myself for a prize."<br>
+          <strong>Right instinct:</strong> Endure: "I will grit my teeth and hold it. I can handle the pressure."`
   }
 ];

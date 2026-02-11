@@ -18,8 +18,8 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nousys.github.io/test/">
-    <meta property="og:title" content="NOUSYS: Bạn là vị thần nào?">
-    <meta property="og:description" content="Click để giải mã Hệ điều hành tâm trí của bạn ngay! ⚡">
+    <meta property="og:title" content="NOUSYS: Which Archetype Are You?">
+    <meta property="og:description" content="Decode your mind’s Operating System in 60 seconds. ⚡">
     
     <meta property="og:image" content="https://nousys.github.io/test/img/Background.png">
     
@@ -27,9 +27,8 @@
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NOUSYS: Bạn là vị thần nào?">
-    <meta name="twitter:description" content="Click để giải mã Hệ điều hành tâm trí của bạn ngay! ⚡">
-    <meta name="twitter:image" content="https://nousys.github.io/test/img/Background.png">
+    <meta name="twitter:title" content="NOUSYS: Which Archetype Are You?">
+<meta name="twitter:description" content="Decode your mind’s Operating System in 60 seconds. ⚡">
 </head>
 <body>
 
@@ -41,6 +40,11 @@
             Every mind runs on an Operating System. Some are built for war, others for creation, others for control.<br><br>
             This diagnostic tool will analyze your <strong>Energy</strong>, <strong>Control</strong>, and <strong>Threat</strong> response systems to reveal your mythical archetype and your fatal system error.
         </p>
+        <p style="text-align:center; margin: -1rem 0 2rem; font-family:'Inter'; font-weight: 300; opacity: 0.85; line-height: 1.6;">
+            <strong>How to answer:</strong> Each question has <strong>two instincts</strong> (Left vs Right).<br>
+            Choose how you lean: <strong>1</strong>=Strongly Left, <strong>2</strong>=Lean Left, <strong>3</strong>=Neutral, <strong>4</strong>=Lean Right, <strong>5</strong>=Strongly Right.<br>
+            Answer your <strong>first instinct</strong>. There is <strong>no correct answer</strong>.
+        </p>
         <button type="button" class="btn" onclick="startQuiz()">Initialize System</button>
     </div>
 
@@ -48,6 +52,10 @@
         <div class="progress-container">
             <div class="progress-fill" id="progress-bar"></div>
         </div>
+        <div style="text-align:center; margin: 14px 0 18px; font-family:'Inter'; font-weight: 300; opacity: 0.85;">
+            Pick your lean: <strong>1</strong> = Left · <strong>3</strong> = Neutral · <strong>5</strong> = Right <span style="opacity:0.75;">(2/4 = slight lean)</span>
+        </div>
+
         <form id="quiz-form"></form>
 
         <button type="button" class="btn" onclick="prevQuestion()" style="background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #cbd5e1;">
