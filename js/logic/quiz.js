@@ -72,6 +72,19 @@ function nextQuestion() {
     }
 }
 
+function prevQuestion() {
+    if (currentQ <= 0) return;
+
+    document.getElementById(`q-${currentQ}`).classList.remove('active');
+    currentQ--;
+
+    document.getElementById(`q-${currentQ}`).classList.add('active');
+    document.getElementById('progress-bar').style.width = `${(currentQ / questions.length) * 100}%`;
+
+    // Optional: tracking (useful)
+    track('question_view', { question_index: currentQ + 1, nav: 'back' });
+}
+
 function calculateResult() {
     let sE = 0, sC = 0, sT = 0, sS = 0;
     let sRange = 0, sRecovery = 0;
@@ -137,10 +150,11 @@ function calculateResult() {
     document.getElementById('result-fix').innerHTML = data.fix;
 
     // Render Bars (Max 20)
-    document.getElementById('bar-e').style.width = `${(sE/20)*100}%`;
-    document.getElementById('bar-c').style.width = `${(sC/20)*100}%`;
-    document.getElementById('bar-t').style.width = `${(sT/20)*100}%`;
-    document.getElementById('bar-s').style.width = `${(sS/20)*100}%`;
+    document.getElementById('bar-e').style.width = `${(sE/15)*100}%`;
+    document.getElementById('bar-c').style.width = `${(sC/15)*100}%`;
+    document.getElementById('bar-t').style.width = `${(sT/15)*100}%`;
+    document.getElementById('bar-s').style.width = `${(sS/15)*100}%`;
+
 
     // Send Data
     submitToGoogle(sE, sC, sT, sS, type);
@@ -153,4 +167,4 @@ window.addEventListener('pagehide', () => {
     track('quiz_abandon', { last_question_index: currentQ + 1 });
 });
 
-export { startQuiz, nextQuestion };
+export { startQuiz, nextQuestion, prevQuestion };

@@ -52,13 +52,13 @@ export const archetypes = {
     // --- STRETCH TYPES (High Adaptability) ---
     "HERMES": {
         name: "HERMES", role: "THE ALCHEMIST", img: "img/Hermes.png",
-        desc: "You are a shapeshifter. Your High Stretch score indicates a fluid operating system. You can hack into any environment—High Energy, Low Energy, Chaos, or Order—and mimic the necessary protocols. You are the ultimate survivor, the diplomat, and the connector. You can speak the language of kings and thieves alike.",
+        desc: "You are a shapeshifter. Your High Adaptability score indicates a fluid operating system. You can hack into any environment—High Energy, Low Energy, Chaos, or Order—and mimic the necessary protocols. You are the ultimate survivor, the diplomat, and the connector. You can speak the language of kings and thieves alike.",
         bug: "<strong>Identity Fragmentation.</strong> You are so good at adapting that you've forgotten who you actually are. You are a mirror reflecting everyone else. You lack a core foundation, making you feel hollow despite your success. You are a 'Jack of all trades, master of none,' and people may perceive you as slippery or untrustworthy.",
         fix: "<strong>Core Kernel.</strong> Define your non-negotiables. What will you *never* do, regardless of the situation? Build a solid center so you can shape-shift without losing yourself. Commit to a singular identity when no one is watching."
     },
     "DEMETER": {
         name: "DEMETER", role: "THE NURTURER", img: "img/Demeter.png",
-        desc: "You possess a regenerative OS. Your High Stretch (Recovery) score means you have an endless capacity to heal, forgive, and grow. You are the soil from which others grow. You provide stability and sustenance to the ecosystem. You are the first person people call when they are in trouble because they know you will handle it.",
+        desc: "You possess a regenerative OS. Your High Adaptability (Recovery) score means you have an endless capacity to heal, forgive, and grow. You are the soil from which others grow. You provide stability and sustenance to the ecosystem. You are the first person people call when they are in trouble because they know you will handle it.",
         bug: "<strong>The Savior Complex.</strong> You give until you are empty. You attract broken people because they know you will fix them. You equate 'love' with 'sacrifice,' leaving your own battery constantly critically low. You feel guilty when you take time for yourself.",
         fix: "<strong>The Fence.</strong> Boundaries are not mean; they are necessary. You cannot pour from an empty cup. Prioritize your own recovery before you attempt to save the world. Learn to say 'No' without explaining yourself."
     },
