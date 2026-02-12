@@ -482,3 +482,25 @@ p { line-height: 1.6; color: #cbd5e1; }
     color: #fff;
     font-weight: 600;
 }
+
+/* LEGENDARY BADGE */
+.legendary-banner {
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid #D4AF37;
+    color: #D4AF37;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    animation: pulseGold 3s infinite;
+}
+
+@keyframes pulseGold {
+    0% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+}
