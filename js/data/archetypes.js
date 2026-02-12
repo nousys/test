@@ -157,50 +157,57 @@ export const archetypes = {
         desc: `
             <div class="report-section">
                 <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You don't just feel emotions; you become weather patterns.</strong></p>
-                <p>You are addicted to "The Spark." You chase the beginning of things—relationships, projects, eras—because that is when reality feels magical. But the moment the magic fades and the mundane work begins, you feel a physical crash that resembles withdrawal.</p>
-                <p>You treat your own life like a movie, and you get anxious if the plot isn't moving fast enough. You are magnetic, yes. But you are also exhausting, because you require constant "inputs" (attention, validation, drama, novelty) to feel alive.</p>
+                <p><strong>You don't just "have feelings." You are held hostage by them.</strong></p>
+                <p>You treat your own life like a movie, and you get anxious if the plot isn't moving fast enough. You are addicted to "The Spark"—the beginning of relationships, projects, or eras—because that’s when reality feels magical. But the moment the magic fades and the mundane work begins, you feel a physical crash that resembles withdrawal.</p>
+                <p>You are magnetic, yes. But you are also exhausting, because you require constant external "inputs" (attention, validation, drama, novelty) just to feel okay. You use other people as emotional regulators because you have no internal thermostat.</p>
             </div>
 
             <br>
             <div class="report-section">
                 <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
                 <p><strong>System Core: High Voltage / Low Insulation.</strong></p>
-                <p>You operate on the <strong>Muse OS</strong>. You have <strong>High Energy</strong> (you want to engage) combined with <strong>High Threat</strong> (you are terrified of rejection). This makes you hypersensitive. You can read a room instantly, but you also over-read every micro-expression. If someone is quiet, you assume they hate you.</p>
-                <p><strong>The Superpower: Resonance.</strong></p>
-                <p>You make people feel <em>seen</em>. You have a gift for bypassing small talk and hitting the emotional core. You inspire people, not through logic, but through sheer <strong>Vibrancy</strong>. You are the color in a black-and-white world.</p>
+                <p>You operate on the <strong>Muse OS</strong>. Psychologically, this is a rare combination of <strong>High Sensation Seeking</strong> (Energy) and <strong>High Rejection Sensitivity</strong> (Threat). You are wired to feel everything at 10x volume. You don't just walk into a room; you absorb its emotional temperature instantly.</p>
+                <p><strong>Cognitive Style: The Resonance Engine.</strong></p>
+                <p>You make people feel <em>seen</em> because you bypass logic and hit the emotional core. You inspire people not through structures, but through sheer <strong>Vibrancy</strong>. You are the color in a black-and-white world. But this openness means you have thin skin; a single critical comment can derail your entire week.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">🌪️ THE FATAL ERROR: "THE ROLLERCOASTER"</h3>
+                <h3 class="report-header">🌪️ THE FATAL ERROR: "THE VIBE SHIFT"</h3>
                 <p>Your bug is <strong>Emotional Volatility</strong>.</p>
-                <p>You lack a "Control" module to regulate your inputs. When you are up, you are manic-pixie-dream-perfect. When you are down, the world is ending. You don't have "bad days"; you have tragedies.</p>
-                <p><strong>The Glitch:</strong> <em>"If I am not feeling it intensely, it isn't real."</em> This makes stability feel boring to you, so you subconsciously create chaos just to feel something.</p>
+                <p>Because you lack a strong "Control" module to regulate your inputs, you live in a binary state: Euphoria or Devastation. You don't have "bad days"; you have Greek Tragedies.</p>
+                <p><strong>The "Crash" Loop:</strong></p>
+                <ol style="text-align: left; margin-top: 10px; padding-left: 20px;">
+                    <li>You find a new source of intensity (a person, an idea).</li>
+                    <li>You idealize it and pour all your energy in (Manic phase).</li>
+                    <li>The novelty wears off, or they disappoint you slightly.</li>
+                    <li>Your brain interprets this lack of intensity as abandonment.</li>
+                    <li>You crash, detach, and immediately scan for a new spark.</li>
+                </ol>
             </div>
 
             <br>
             <div class="report-section">
                 <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-                <p><strong>Love Language: Intensity.</strong></p>
-                <p>You merge with people fast. You idealize them, put them on a pedestal, and then crash when they turn out to be human. You are prone to "Limerence"—addictive obsession with a person—rather than real, grounded love.</p>
+                <p><strong>Love Language: Merging.</strong></p>
+                <p>You don't want a partnership; you want a fusion. You are prone to <strong>Limerence</strong>—an addictive, obsessive infatuation that feels like love but is actually just high-anxiety attachment. You tend to lose your identity in others because it’s easier than maintaining your own boundaries.</p>
             </div>
         `,
 
         bug: `
-            <strong>⛔ CRITICAL FAILURE: The "Validation Trap"</strong>
-            <p>You have outsourced your self-worth to the market. You check for likes, texts, and eyes on you to know if you exist. If the mirror doesn't reflect you back, you panic. You are a masterpiece, but you are trying to be a mirror.</p>
+            <strong>⛔ CRITICAL FAILURE: The "External Battery" Problem</strong>
+            <p>You have outsourced your self-worth to the market. You check for texts, likes, and eyes on you to verify that you exist. You are a masterpiece, but you are trying to use yourself as a mirror, constantly asking others: "Do you see me? Am I okay?"</p>
         `,
 
         fix: `
             <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "THE ANCHOR"</h3>
-                <p>You have enough sails. You need an anchor.</p>
+                <h3 class="report-header">🛠️ THE PATCH: "BUILDING THE CONTAINER"</h3>
+                <p>You have enough raw energy (sails). You need stability (an anchor).</p>
                 
                 <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The 24-Hour Rule:</strong> When you feel a sudden urge to text, post, or quit—wait 24 hours. Your emotions are data, not directives. Let the storm pass before you steer the ship.</li>
-                    <li><strong>Boredom Tolerance:</strong> Practice doing nothing. No phone. No music. Just sit. You need to relearn that "Peace" is not "Boredom." Peace is the absence of drama.</li>
-                    <li><strong>Separate Art from Self:</strong> If they hate your work, they don't hate you. You must build a wall between your Soul and your Output.</li>
+                    <li><strong>The 24-Hour Rule:</strong> Impulse control is your weakest muscle. When you feel a sudden urge to send a dramatic text, launch a new life plan, or burn a bridge—wait 24 hours. Your emotions are data, not directives.</li>
+                    <li><strong>Boredom Tolerance:</strong> Practice doing nothing. No phone, no music, no socializing for 15 minutes. You need to relearn that peace is not boredom; peace is just the absence of chaos.</li>
+                    <li><strong>The "Two-Identity" Rule:</strong> Separate your *Self* from your *Performance*. If someone dislikes your work or isn't attracted to you, it is not a referendum on your worth as a human being.</li>
                 </ul>
                 <p><strong>Final Command:</strong> You are not the weather. You are the sky. The weather passes; the sky remains.</p>
             </div>
