@@ -481,36 +481,39 @@ export const archetypes = {
         desc: `
             <div class="report-section">
                 <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You are so low-maintenance that you are practically invisible.</strong></p>
-                <p>You have confused "being easygoing" with "having no needs." You pride yourself on being the person who never complains, never asks for anything, and never causes drama. But this isn't peace; it's <strong>Self-Erasure</strong>. You are slowly fading out of your own life because you are terrified that if you take up space, you will be rejected.</p>
+                <p><strong>You are the "NPC" (Non-Playable Character) of your own life.</strong></p>
+                <p>You have confused "being chill" with "being dormant." You pride yourself on being low-maintenance, never complaining, and always going with the flow. But deep down, this isn't spiritual peace; it is <strong>Self-Erasure</strong>.</p>
+                <p>You are slowly fading out of existence because you believe that having needs makes you a burden. You sit in the passenger seat of reality, letting other people drive, pick the music, and choose the destination—and then you tell yourself you didn't care anyway. You <em>did</em> care. You just didn't speak.</p>
             </div>
 
             <br>
             <div class="report-section">
                 <h3 class="report-header">🕯️ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: The Zero Point.</strong></p>
-                <p>You operate on the <strong>Hearth OS</strong>. You are the "Eye of the Storm." In a world addicted to dopamine (More! Faster!), you are the biological counter-balance. Your nervous system broadcasts a silent signal: <em>"You are safe here."</em></p>
-                <p><strong>The Superpower: Regulation.</strong></p>
-                <p>You don't lead by shouting; you lead by <strong>Atmosphere</strong>. You enter a chaotic room, and without saying a word, the energy settles. You are the human equivalent of a weighted blanket.</p>
+                <p><strong>System Core: Homeostasis (The Zero Point).</strong></p>
+                <p>You operate on the <strong>Hearth OS</strong>. In a world of high-voltage anxiety (High Threat) and manic productivity (High Energy), you are the biological anchor. Your nervous system broadcasts a silent signal: <em>"Safety."</em></p>
+                <p><strong>The Superpower: Atmospheric Regulation.</strong></p>
+                <p>You don't change the world by fighting it; you change it by stabilizing it. You are the "Weighted Blanket" in human form. You can absorb the chaos of a room and neutralize it without saying a word. You are the eye of the storm.</p>
             </div>
+        `,
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🫧 THE FATAL ERROR: "THE COMFORT COMA"</h3>
-                <p>Your bug is <strong>Passive Drift</strong>.</p>
-                <p>You don't make bad choices; you just don't make <em>any</em> choices. You let life happen to you. You stay in the wrong job because it's "fine." You stay in the lukewarm relationship because it's "safe." You are slowly suffocating in your own comfort zone.</p>
-                <p><strong>The Glitch:</strong> <em>"If I ask for what I want, I will lose my peace."</em> So you want nothing.</p>
-            </div>
+        bug: `
+            <strong>⛔ CRITICAL FAILURE: "The Beige Trap"</strong>
+            <p>Your bug is <strong>Passive Drift</strong>.</p>
+            <p>You don't make bad decisions; you make <em>no</em> decisions. You stay in the lukewarm relationship, the boring job, or the mediocre routine because the pain of staying is less scary than the friction of leaving.</p>
+            <p><strong>The Glitch:</strong> <em>"If I assert myself, I create conflict. Conflict is dangerous."</em> So you choose numbness over friction.</p>
+        `,
 
-            <br>
+        fix: `
             <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "IGNITE THE FIRE"</h3>
-                <p>Peace without a spine is just submission. You need to burn a little.</p>
+                <h3 class="report-header">🛠️ THE PATCH: "EXISTENTIAL VOLUME"</h3>
+                <p>You need to turn your volume up from 0 to 1. Just 1.</p>
+                
                 <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The "One Want" Rule:</strong> Once a day, you must voice a preference. "I want pizza." "I don't like this movie." Start small. Train your brain that your voice doesn't destroy the world.</li>
-                    <li><strong>Disappoint Someone:</strong> Intentionally say "No" to a small request. Watch how the world doesn't end. You need to build tolerance for other people's mild displeasure.</li>
-                    <li><strong>Anger Access:</strong> You likely repress anger. Find a safe outlet (journaling, movement). Anger is not "bad"; it is the energy of self-protection. You need it.</li>
+                    <li><strong>The "Micro-Opinion" Protocol:</strong> Stop saying "I don't care" or "Whatever you want." Force yourself to pick the restaurant. Pick the movie. Have an opinion on the pizza topping. Train your brain that your preferences matter.</li>
+                    <li><strong>Disappoint Someone Daily:</strong> Your fear of disappointing others runs your life. Break it. Say "No" to a small favor. Watch the world <em>not</em> end.</li>
+                    <li><strong>Access Anger:</strong> You likely repress anger until it becomes apathy. Anger is just the energy of self-protection. Find a safe way to let it out (scream in a pillow, run, write). You need your fire back.</li>
                 </ul>
+                <p><strong>Final Command:</strong> Peace that costs you your identity is not peace. It is just silence.</p>
             </div>
         `
     },
@@ -520,44 +523,46 @@ export const archetypes = {
         name: "HERMES",
         role: "THE ALCHEMIST",
         img: "img/Hermes.png",
-        code: "Variable E • Variable C • Low T", // The "Wildcard" Code
+        code: "Variable E • Variable C • Low T", // The Wildcard
 
         desc: `
             <div class="legendary-banner">✨ SPECIAL ARCHETYPE: THE WILDCARD</div>
 
             <div class="report-section">
                 <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You are a mirror. If I took away the people around you, would you still exist?</strong></p>
-                <p>You are the "Universal Adapter" of the human race. You can be the "Bro" at the gym, the "Intellectual" at the cafe, and the "Shark" in the boardroom—all in the same afternoon. You call this "Adaptability." Psychology calls it <strong>Identity Diffusion</strong>.</p>
-                <p>People love you, but they don't <em>trust</em> you deep down. They sense that you are performing. You are slick, slippery, and terrified of being pinned down to a single truth. You treat your own personality like a costume that you change to survive the room.</p>
+                <p><strong>You are a social mercenary.</strong></p>
+                <p>You have confused "being likable" with "having a personality." You are so terrified of friction that you have become a mirror—reflecting back whatever people want to see. You call this "diplomacy." Reality calls it <strong>manipulation</strong>.</p>
+                <p>You are everyone’s "Best Friend," which means you are nobody’s friend. Because you never show your true cards, you never form deep bonds. You have 1,000 acquaintances who think you are great, and 0 people who know what you are actually afraid of. You are slick, slippery, and fundamentally lonely.</p>
             </div>
 
             <br>
             <div class="report-section">
                 <h3 class="report-header">🌀 THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: The Interface Layer.</strong></p>
-                <p>You operate on the <strong>Alchemy OS</strong>. You are a social hacker. You decode the "hidden rules" of a group within 30 seconds and rewrite your behavior to fit. While Zeus rules the hierarchy, you <em>exploit</em> the hierarchy.</p>
-                <p><strong>The Superpower: Context Switching.</strong></p>
-                <p>Most people break when their environment changes. You thrive. Chaos is your ladder. You are the only archetype that can talk to Kings and Criminals with equal comfort because you don't judge; you just <strong>translate</strong>.</p>
+                <p><strong>System Core: The Universal API.</strong></p>
+                <p>You operate on the <strong>Alchemy OS</strong>. Psychologically, you score off the charts in <strong>Self-Monitoring</strong>. You can decode the "hidden rules" of a group within 30 seconds and rewrite your behavior to fit. You speak every language: Corporate, Street, Emotional, Logical.</p>
+                <p><strong>Cognitive Style: Cold Empathy.</strong></p>
+                <p>Unlike Aphrodite (who <em>feels</em> what others feel), you <em>analyze</em> what others feel. You use <strong>Cognitive Empathy</strong> as a tool to navigate hierarchies and open doors. Chaos is your ladder. You thrive in uncertainty because you have no fixed shape to break.</p>
             </div>
+        `,
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🪞 THE FATAL ERROR: "THE HOLLOW MAN"</h3>
-                <p>Your bug is <strong>The Shapeshifter Paradox</strong>.</p>
-                <p>You have 100 masks but no face. You feel lonely even when you are the life of the party because you know they are applauding the <em>performance</em>, not the <em>person</em>.</p>
-                <p><strong>The Glitch:</strong> <em>"If I define myself, I lose my leverage."</em> So you stay vague. You keep your options open until you realize you have built nothing real.</p>
-            </div>
+        bug: `
+            <strong>⛔ CRITICAL FAILURE: "The Imposter Paradox"</strong>
+            <p>Your bug is <strong>Identity Diffusion</strong>.</p>
+            <p>Because you are always performing, you assume everyone else is too. You can't trust people because you know how easy it is to fake sincerity. You live in a hall of mirrors, wondering if anyone is real—including yourself.</p>
+            <p><strong>The Glitch:</strong> <em>"If I define myself, I lose my leverage."</em> So you stay vague. You keep your options open until you realize you have built nothing solid.</p>
+        `,
 
-            <br>
+        fix: `
             <div class="report-section">
                 <h3 class="report-header">🛠️ THE PATCH: "THE KERNEL INSTALL"</h3>
-                <p>You need to install a permanent identity (A Kernel) that does not change.</p>
+                <p>You have an Interface, but you lack a Database. You need to install a Core.</p>
+                
                 <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The "Non-Negotiables":</strong> Pick 3 values that you will never compromise, no matter who is in the room. This is your skeleton. Without it, you are just a jellyfish.</li>
-                    <li><strong>The Truth Tax:</strong> You manipulate truth to make things smooth. Stop. Pay the "Truth Tax" early. Be blunt even if it causes friction. Friction creates traction.</li>
-                    <li><strong>Stop "Optimizing":</strong> You view relationships as transactions to be optimized. Try viewing them as commitments to be honored.</li>
+                    <li><strong>The "Truth Tax":</strong> You manipulate truth to make things smooth. Stop. Pay the "Truth Tax" early. Be blunt even if it causes friction. Friction is the only way to get traction.</li>
+                    <li><strong>The Non-Negotiables:</strong> Pick 3 values that you will never compromise, no matter who is in the room. This is your skeleton. Without it, you are just a jellyfish.</li>
+                    <li><strong>Intimacy over Optimization:</strong> You view relationships as transactions to be optimized ("How do I make them like me?"). Try viewing them as commitments ("How do I let them see me?").</li>
                 </ul>
+                <p><strong>Final Command:</strong> Hermes becomes legendary when he stops being a perfect mirror and becomes a clear signal.</p>
             </div>
         `
     },
