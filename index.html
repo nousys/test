@@ -32,22 +32,24 @@
 </head>
 <body>
 
+<div id="app-settings">
+  <button id="settings-btn" type="button" aria-label="Settings" aria-haspopup="menu" aria-expanded="false">
+    ⋯
+  </button>
+
+  <div id="settings-menu" role="menu" hidden>
+    <button class="settings-item" type="button" data-lang="en" role="menuitemradio">English <span class="check">✓</span></button>
+    <button class="settings-item" type="button" data-lang="vi" role="menuitemradio">Tiếng Việt <span class="check">✓</span></button>
+
+    <div class="settings-sep"></div>
+
+    <button class="settings-item" type="button" id="settings-restart">Restart</button>
+  </div>
+</div>
+
 <div class="container">
     <div id="intro-screen">
         <h1>NOUSYS</h1>
-
-        <div style="display:flex; justify-content:center; gap:10px; margin: 10px 0 0;">
-        <button type="button"
-            onclick="setLang('en')"
-            style="background:transparent; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; padding:8px 12px; border-radius:999px; cursor:pointer;">
-            EN
-        </button>
-        <button type="button"
-            onclick="setLang('vi')"
-            style="background:transparent; border:1px solid rgba(255,255,255,0.15); color:#cbd5e1; padding:8px 12px; border-radius:999px; cursor:pointer;">
-            VI
-        </button>
-        </div>
 
         <!-- Headline -->
         <h3 style="font-family: 'Inter'; font-weight: 300; letter-spacing: 2px; font-size: 1rem;">
@@ -206,6 +208,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script type="module" src="js/main.js"></script>
+<script type="module" src="js/ui/settingsMenu.js"></script>
 
 </body>
 </html>

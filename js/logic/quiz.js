@@ -451,20 +451,23 @@ function prevQuestion() {
 // RESULT CALC
 // --------------------
 function calculateResult() {
+  // --- 1. SETUP VARIABLES ---
   let sE = 0, sC = 0, sT = 0, sS = 0;
   let sRange = 0, nRange = 0;
   let sRecovery = 0, nRecovery = 0;
 
   const formData = new FormData(form);
 
+  // Count questions per type
   const nE = questions.filter(q => q.type === 'E').length;
   const nC = questions.filter(q => q.type === 'C').length;
   const nT = questions.filter(q => q.type === 'T').length;
   const nS = questions.filter(q => q.type === 'S').length;
 
+  // --- 2. CALCULATE SCORES ---
   questions.forEach(q => {
     let val = parseInt(formData.get(q.id), 10);
-    if (q.reverse) val = 6 - val;
+    if (q.reverse) val = 6 - val; // Assuming 1-5 scale
 
     if (q.type === 'E') sE += val;
     if (q.type === 'C') sC += val;
@@ -472,12 +475,13 @@ function calculateResult() {
 
     if (q.type === 'S') {
       sS += val;
-
+      // Hermers (Range) vs Demeter (Recovery) sub-scores
       if (['s1', 's4', 's5'].includes(q.id)) { sRange += val; nRange++; }
       if (['s2', 's3', 's6'].includes(q.id)) { sRecovery += val; nRecovery++; }
     }
   });
 
+  // Calculate Averages
   const avgE = nE ? sE / nE : 0;
   const avgC = nC ? sC / nC : 0;
   const avgT = nT ? sT / nT : 0;
@@ -485,38 +489,52 @@ function calculateResult() {
   const avgRange = nRange ? sRange / nRange : 0;
   const avgRecovery = nRecovery ? sRecovery / nRecovery : 0;
 
-  const MID = 3.0;
-  const PEAK = 4.1;
-  const LOW = 2.75;
-  const STRONG = 3.5;
+  // --- 3. DEFINE LOGIC THRESHOLDS ---
+  // Adjust these based on your dataset percentiles
+  const MID = 3.0;      // P50 (Cutoff for High/Low)
+  const VH  = 4.2;      // P85 (Trigger for Very High)
+  const VL  = 2.2;      // P15 (Trigger for Very Low)
 
   let type = "";
 
-  if (avgE >= PEAK && avgC >= PEAK && avgT >= 3.8) type = "ZEUS";
-  else if (avgE >= PEAK && avgT >= PEAK && avgC <= LOW) type = "POSEIDON";
-  else if (avgT >= PEAK && avgE <= LOW && avgC >= STRONG) type = "HADES";
-  else {
-    const avgCore = (avgE + avgC + avgT) / 3;
-    const stretchDominates = (avgS >= 4.0) && (avgS > avgCore * 1.15);
+  // --- 4. LAYER 1: DETERMINE BASE ARCHETYPE (The 8 Cores) ---
+  // Logic: Binary check against MID (High vs Low)
+  const isHighE = avgE >= MID;
+  const isHighC = avgC >= MID;
+  const isHighT = avgT >= MID;
 
-    if (stretchDominates) type = (avgRange >= avgRecovery) ? "HERMES" : "DEMETER";
-    else {
-      const E = avgE > MID;
-      const C = avgC > MID;
-      const T = avgT > MID;
+  if (isHighE && isHighC && isHighT)      type = "HERA";       // H-H-H
+  else if (isHighE && isHighC && !isHighT) type = "ARES";       // H-H-L
+  else if (isHighE && !isHighC && isHighT) type = "APHRODITE";  // H-L-H
+  else if (isHighE && !isHighC && !isHighT) type = "APOLLO";    // H-L-L
+  else if (!isHighE && isHighC && isHighT) type = "ATHENA";     // L-H-H
+  else if (!isHighE && isHighC && !isHighT) type = "HEPHAESTUS";// L-H-L
+  else if (!isHighE && !isHighC && isHighT) type = "ARTEMIS";   // L-L-H
+  else                                      type = "HESTIA";    // L-L-L (Default fallback)
 
-      if (E && C && T) type = "HERA";
-      else if (E && C && !T) type = "ARES";
-      else if (E && !C && T) type = "APHRODITE";
-      else if (E && !C && !T) type = "APOLLO";
-      else if (!E && C && T) type = (avgC >= STRONG || avgT >= STRONG) ? "ATHENA" : "HESTIA";
-      else if (!E && C && !T) type = "HEPHAESTUS";
-      else if (!E && !C && T) type = "ARTEMIS";
-      else type = "HESTIA";
-    }
+
+  // --- 5. LAYER 2: EXTREME OVERRIDE (The 3 Rare Modes) ---
+  // Logic: Check if user triggers "God Mode". This overwrites the Base type.
+  
+  // ZEUS: Very High Energy + Very High Control (Overrides Hera/Ares)
+  // Logic: "Dominion & Structure"
+  if (avgE >= VH && avgC >= VH) {
+      type = "ZEUS";
+  }
+  // HADES: Very High Threat + Very Low Energy (Overrides Athena/Hephaestus)
+  // Logic: "Shadow & Control" (Extreme caution + withdrawal)
+  else if (avgT >= VH && avgE <= VL) {
+      type = "HADES";
+  }
+  // POSEIDON: Very High Threat + Very Low Control (Overrides Artemis/Aphrodite)
+  // Logic: "Storm & Chaos" (Extreme emotion + no brakes)
+  else if (avgT >= VH && avgC <= VL) {
+      type = "POSEIDON";
   }
 
-  // --- Wing (adapt-based) ---
+  // --- 6. OUTPUT & UI UPDATES ---
+  
+  // Pass Range/Recovery stats to "wing" logic if you want to show them as secondary stats
   const wing = computeAdaptWing({ avgS, avgRange, avgRecovery, primaryType: type });
   const wingKey = wing?.key || null;
 
@@ -524,10 +542,12 @@ function calculateResult() {
   saveSaved({ lastResult });
 
   track('quiz_complete', { archetype: type });
-
   updateUrlForResult({ type, sE, sC, sT, sS, wingKey });
 
+  // Update UI Elements
   const data = archetypes[type];
+  if (!data) console.error("Archetype data missing for:", type);
+
   const resScreen = document.getElementById('result-screen');
   resScreen.style.display = 'block';
 
@@ -535,43 +555,43 @@ function calculateResult() {
   document.getElementById('result-role').innerText = data.role;
   document.getElementById('result-img').src = data.img;
   document.getElementById('result-desc').innerHTML = data.desc;
-  document.getElementById('result-bug').innerHTML = data.bug;
-  document.getElementById('result-fix').innerHTML = data.fix;
+  // If you use Bug/Fix logic
+  document.getElementById('result-bug').innerHTML = data.bug || ""; 
+  document.getElementById('result-fix').innerHTML = data.fix || "";
 
+  // Update Bars (Visualizing the E-C-T profile)
   const maxE = nE * 5;
   const maxC = nC * 5;
   const maxT = nT * 5;
-  const maxS = nS * 5;
+  const maxS = nS * 5; // Stretch bar (Hermes + Demeter combined)
 
   document.getElementById('bar-e').style.width = `${maxE ? (sE / maxE) * 100 : 0}%`;
   document.getElementById('bar-c').style.width = `${maxC ? (sC / maxC) * 100 : 0}%`;
   document.getElementById('bar-t').style.width = `${maxT ? (sT / maxT) * 100 : 0}%`;
+  // You might want to split Bar S into Range vs Recovery in the future
   document.getElementById('bar-s').style.width = `${maxS ? (sS / maxS) * 100 : 0}%`;
 
   renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
 
-  // Wing UI + link
+  // Handle Wing/Secondary Display
   const wingText = document.getElementById('result-wing');
   const wingImg = document.getElementById('wing-img');
 
   if (wingKey && archetypes[wingKey]) {
     const wingViewUrl = buildResultUrl({
-      type: wingKey,
-      sE, sC, sT, sS,
-      wingKey: type,
+      type: wingKey, sE, sC, sT, sS, wingKey: type,
     }).toString();
 
     if (wingText) {
       wingText.innerHTML =
-        `${tr('ui.secondaryInfluence', 'Secondary Influence:')} <strong>${wingKey}</strong> ` +
+        `${tr('ui.secondaryInfluence', 'Secondary:')} <strong>${wingKey}</strong> ` +
         `<span style="opacity:0.8;">(${wing.flavor})</span>` +
-        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">${tr('ui.openView', 'Open')} ${wingKey} ${tr('ui.view', 'view')}</a>`;
+        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">View</a>`;
     }
 
     if (wingImg) {
       wingImg.src = archetypes[wingKey].img;
       wingImg.style.display = 'block';
-      wingImg.style.cursor = 'pointer';
       wingImg.onclick = () => { window.location.href = wingViewUrl; };
     }
   } else {
@@ -579,10 +599,9 @@ function calculateResult() {
     if (wingImg) wingImg.style.display = 'none';
   }
 
-  // quiz done → clear progress (keep lastResult)
+  // Clear progress
   saveSaved({ progress: { started: false, currentQ: 0, answers: null } });
-
-  submitToGoogle(sE, sC, sT, sS, type);
+  submitToGoogle(sE, sC, sT, sS, sRange, sRecovery, type);
 }
 
 // --------------------
