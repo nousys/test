@@ -473,50 +473,69 @@ export const archetypes = {
 
 
     "HESTIA": {
-        name: "HESTIA",
-        role: "THE KEEPER",
-        img: "img/Hestia.png",
-        code: "Low E • Low C • Low T",
+    name: "HESTIA",
+    role: "THE UNSHAKEABLE FOUNDATION",
+    img: "img/Hestia.png",
+    code: "Low E • Low C • Low T",
 
-        desc: `
-            <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You are the "NPC" (Non-Playable Character) of your own life.</strong></p>
-                <p>You have confused "being chill" with "being dormant." You pride yourself on being low-maintenance, never complaining, and always going with the flow. But deep down, this isn't spiritual peace; it is <strong>Self-Erasure</strong>.</p>
-                <p>You are slowly fading out of existence because you believe that having needs makes you a burden. You sit in the passenger seat of reality, letting other people drive, pick the music, and choose the destination—and then you tell yourself you didn't care anyway. You <em>did</em> care. You just didn't speak.</p>
-            </div>
+    desc: `
+        <div class="report-section">
+            <h3 class="report-header">💀 THE ROAST</h3>
+            <p>You aren't "invisible" because you are weak; you are invisible because you are the foundation — and foundations are rarely seen until the house crumbles.</p>
+            <p>Just as Hestia quietly surrendered her golden throne to Dionysus to prevent a war on Olympus, you often step back not out of submission, but out of sovereignty. While the rest of the world is exhausting itself chasing the spotlight (<strong>High Energy</strong>) or trying to bend reality to their will (<strong>High Control</strong>), you sit in the corner — unbothered, enduring.</p>
+            <p>You have realized a quiet truth: survival isn’t about how hard you can hit; it’s about how much you can absorb. You are the water flowing around the rock. The rock thinks it is strong because it is hard, but you know the truth — the water is still there a thousand years later, long after the rock has turned to sand.</p>
+        </div>
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🕯️ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Homeostasis (The Zero Point).</strong></p>
-                <p>You operate on the <strong>Hearth OS</strong>. In a world of high-voltage anxiety (High Threat) and manic productivity (High Energy), you are the biological anchor. Your nervous system broadcasts a silent signal: <em>"Safety."</em></p>
-                <p><strong>The Superpower: Atmospheric Regulation.</strong></p>
-                <p>You don't change the world by fighting it; you change it by stabilizing it. You are the "Weighted Blanket" in human form. You can absorb the chaos of a room and neutralize it without saying a word. You are the eye of the storm.</p>
-            </div>
-        `,
+        <br>
+        <div class="report-section">
+            <h3 class="report-header">🖥️ THE OPERATING SYSTEM</h3>
+            <p><strong>System Core: Radical Acceptance (The Flow State).</strong></p>
+            <p>You operate on the <strong>Hearth OS</strong> — a stable system built on sustainability, not stimulation. Your baseline is peace, not motion.</p>
+            <p><strong>Low Energy (Conservation):</strong> You value efficiency. You don’t waste your limited heat on drama or ambition for its own sake. You are the coals, not the fireworks — quietly alive, never burning out.</p>
+            <p><strong>Low Control (Fluidity):</strong> You adapt instead of forcing. When doors close, you don’t break them down — you find another entrance. Palace or storm, you find equilibrium. You don’t crack because you don’t resist.</p>
+            <p><strong>Low Threat (Stoicism):</strong> You are immune to frenzy. Fear rolls off you like mist on stone. You move calmly through chaos not because of fearlessness but because of inner stillness.</p>
+        </div>
 
-        bug: `
-            <strong>⛔ CRITICAL FAILURE: "The Beige Trap"</strong>
-            <p>Your bug is <strong>Passive Drift</strong>.</p>
-            <p>You don't make bad decisions; you make <em>no</em> decisions. You stay in the lukewarm relationship, the boring job, or the mediocre routine because the pain of staying is less scary than the friction of leaving.</p>
-            <p><strong>The Glitch:</strong> <em>"If I assert myself, I create conflict. Conflict is dangerous."</em> So you choose numbness over friction.</p>
-        `,
+        <br>
+        <div class="report-section">
+            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+            <p><strong>You are the "Safe Harbor."</strong></p>
+            <p><strong>The Mirror:</strong> You reflect others with graceful empathy. People feel grounded around you because you absorb their turbulence without judgment or reaction.</p>
+            <p><strong>The Void:</strong> Yet that same calm can feel distant. You offer sanctuary, not fire. Your loved ones may struggle to feel your edges — wondering if you need them, or simply coexist beside them.</p>
+        </div>
 
-        fix: `
-            <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "EXISTENTIAL VOLUME"</h3>
-                <p>You need to turn your volume up from 0 to 1. Just 1.</p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The "Micro-Opinion" Protocol:</strong> Stop saying "I don't care" or "Whatever you want." Force yourself to pick the restaurant. Pick the movie. Have an opinion on the pizza topping. Train your brain that your preferences matter.</li>
-                    <li><strong>Disappoint Someone Daily:</strong> Your fear of disappointing others runs your life. Break it. Say "No" to a small favor. Watch the world <em>not</em> end.</li>
-                    <li><strong>Access Anger:</strong> You likely repress anger until it becomes apathy. Anger is just the energy of self-protection. Find a safe way to let it out (scream in a pillow, run, write). You need your fire back.</li>
-                </ul>
-                <p><strong>Final Command:</strong> Peace that costs you your identity is not peace. It is just silence.</p>
-            </div>
-        `
-    },
+        <br>
+        <div class="report-section">
+            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+            <p><strong>Designation: The Keystone.</strong></p>
+            <p><strong>The Strength:</strong> You are the one who holds it together while everyone else panics. You adapt seamlessly to new systems, new leaders, new rules — you’re the invisible stability that keeps the structure alive.</p>
+            <p><strong>The Bottleneck:</strong> Because you don’t demand power or recognition, others underestimate you. You’re not passive — you’re strategic with your energy. You’re simply waiting for a cause worth burning for.</p>
+        </div>
+    `,
+
+    bug: `
+        <strong>🧨 THE FATAL ERROR: "THE TRAP OF TOLERANCE"</strong>
+        <p>Your bug is <strong>Over-Endurance</strong>.</p>
+        <p><strong>The Shape of Water:</strong> Because you can adapt to anything, you tolerate too much. You remain in stagnant or harmful spaces not because you’re captive, but because your pain threshold is too high to feel the urgency to leave.</p>
+        <p><strong>The Path of Least Resistance:</strong> You avoid friction by design. But a life without friction never ignites. You risk settling for "peaceful numbness" instead of "living meaning."</p>
+    `,
+
+    fix: `
+        <div class="report-section">
+            <h3 class="report-header">🛠️ THE PATCH: "BUILD YOUR BANKS"</h3>
+            <p>You don’t need to change your nature — only give it form. If you are water, choose your container.</p>
+
+            <ul style="text-align: left; margin-top: 15px;">
+                <li><strong>Curate Your Environment:</strong> You adapt to everything — so choose your settings carefully. Don’t adapt to decay; adapt to growth.</li>
+                <li><strong>Establish Boundaries:</strong> A river without banks becomes a swamp. Define one or two sacred “No’s.” They’ll turn your calm into power.</li>
+                <li><strong>Invite Friction:</strong> Don’t always flow around obstacles — sometimes push through them. Pressure builds shape.</li>
+            </ul>
+
+            <p><strong>Final Command:</strong> Harmony that erases your identity isn’t peace. It’s disappearance. Keep your calm — but keep your edges too.</p>
+        </div>
+    `
+},
+
 
 
     "HERMES": {

@@ -492,8 +492,8 @@ function calculateResult() {
   // --- 3. DEFINE LOGIC THRESHOLDS ---
   // Adjust these based on your dataset percentiles
   const MID = 3.0;      // P50 (Cutoff for High/Low)
-  const VH  = 4.2;      // P85 (Trigger for Very High)
-  const VL  = 2.2;      // P15 (Trigger for Very Low)
+  const VH  = 4.4;      // P90 (Trigger for Very High)
+  const VL  = 1.6;      // P10 (Trigger for Very Low)
 
   let type = "";
 
