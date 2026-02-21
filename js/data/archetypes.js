@@ -1,5 +1,136 @@
 export const archetypes = {
     // --- MATRIX TYPES ---
+    "APHRODITE": {
+        name: "APHRODITE",
+        role: "THE MUSE",
+        img: "img/Aphrodite.png",
+        code: "High E • Low C • High T",
+
+        desc: `
+            <div class="report-section">
+            <h3 class="report-header">💀 THE ROAST</h3>
+            <p><strong>You call it “passion.” It’s poor emotional regulation with good lighting.</strong></p>
+            <p>Your "deep feelings" are just biochemical spikes. You spike hard, then you crash. You chase people, projects, and scenes that keep your nervous system entertained because quiet feels like a threat.</p>
+            <p>You need reactions to stay stable. Texts, compliments, attention, even tension—anything that proves you still exist to someone. When the signal drops, you start poking the system until it responds. Then you call that response "connection."</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
+            <p><strong>System Core: High input sensitivity, low regulation.</strong></p>
+            <p>Your configuration is high energy plus high threat reactivity with low control. Translation: You pick up signals fast, your body reacts fast, and your impulse control is weak.</p>
+            <p>You run constant social scanning for tone shifts, pauses, facial cues, and status changes. Your brain treats these as critical data. That makes you accurate in reading rooms. It also means your internal state keeps getting recalibrated by whatever the room gives you.</p>
+            <p>In system terms, you’re a power grid with unstable voltage control. Small fluctuations trigger big swings. The drama is just a symptom of a thin regulation layer.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">🌪️ THE FATAL ERROR: THE VALIDATION REGULATOR</h3>
+            <p>Your bad value is simple: <strong>External validation = Internal stability</strong>.</p>
+            <p>You treat attention as a stabilizer. When it’s present, you’re productive, charming, and generous. When it drops, your brain reads the silence as rejection and you start doing damage control.</p>
+            <p><strong>The Loop:</strong> intensity → constant contact → a normal week → you read the drop as rejection → you test → you fight or bounce → new target.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+            <p><strong>Love Language: Constant signal.</strong></p>
+            <p>You move fast. You bond fast. You call it fate because “we like each other” feels too normal for your nervous system.</p>
+            <p>You also over-adapt. You become what keeps the relationship running. You mirror, please, and monitor. It looks like devotion. It’s actually anxiety management.</p>
+            <p>Then the relationship settles. The signal becomes steady. You misread steady as low. You start checking for proof. Extra texts, tests, jealousy, little fights to see if they still care. Your partner starts living inside your reassurance routine. It wears them down.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+            <p><strong>The Glass Ceiling: Mood-based execution.</strong></p>
+            <p>You can pitch. You can inspire. You can make people feel a vision. That’s real value.</p>
+            <p>Then the work becomes repetitive. Follow-ups, QA, maintenance, timelines. You drift. You start chasing high-stimulus problems because they give you the feeling of importance.</p>
+            <p>As a leader, your team learns to manage your state. They watch your tone and timing. They delay hard conversations. They route around you when you’re activated. Everyone starts working around your moods, and you call that "leadership."</p>
+            </div>
+        `,
+
+        bug: `
+            <strong>⛔ CRITICAL FAILURE: The External Battery Problem</strong>
+            <p>You build a life that runs on other people’s attention. It works when the stream is steady.</p>
+            <p>Ten years later, people are busier. Friends have partners, kids, jobs, limits. The response rate drops. Your panic behaviors increase. You chase harder. You get more erratic. People distance themselves.</p>
+            <p>You end up surrounded by contacts and starved of real closeness. You’ll still look “social.” You’ll just be scraping for replies.</p>
+        `,
+
+        fix: `
+            <div class="report-section">
+            <h3 class="report-header">🛠️ THE PATCH: BUILDING THE REGULATOR</h3>
+            <p>Confidence is irrelevant. You need a regulation protocol. Boring. Effective. Uncomfortable.</p>
+
+            <ul style="text-align: left; margin-top: 15px;">
+                <li><strong>The 24-Hour Hold:</strong> When you feel the urge to send the emotional text, post the story, quit the thing, or declare the person “everything,” write it. Save it. Do not send it. Re-read tomorrow. If it still makes sense, send a shorter version. If you break the hold, you restart the clock.</li>
+                <li><strong>15 Minutes of No-Input:</strong> Sit. No phone. No music. No scrolling. No messaging. You’re training your system to stay stable without constant signals. Expect withdrawal symptoms. Don’t negotiate with them.</li>
+                <li><strong>One-Source Rule:</strong> Pick one person you trust. When you spiral, you go to them once. Not five friends. Not a group chat. Not the internet. Stop turning your nervous system into a public poll. If they don't answer immediately, you wait.</li>
+                <li><strong>Normalization Training:</strong> When attention drops, label it correctly: “Normal rhythm.” Then do one concrete task anyway. Send the email. Clean the room. Finish the set. You’re teaching your brain that steadiness is not rejection. Do not reward your panic with a distraction.</li>
+            </ul>
+            </div>
+        `
+        },
+
+    "APOLLO": {
+        name: "APOLLO",
+        role: "THE GOLDEN CHILD",
+        img: "img/Apollo.png",
+        code: "High E • Low C • Low T",
+
+        desc: `
+            <div class="report-section">
+                <h3 class="report-header">💀 THE ROAST</h3>
+                <p><strong>You are a Ferrari with no steering wheel.</strong></p>
+                <p>You have immense potential, and you will likely die with most of it still inside you. You are addicted to the "Beginning Phase" of everything—relationships, projects, hobbies—because that is where the dopamine is free. The moment things get hard, boring, or require actual discipline, you subconsciously check out.</p>
+                <p>You cover this flaw with "Positivity." You say: <em>"I'm just going with the flow!"</em> Translation: <em>"I am terrified of commitment because committing means I might fail."</em> You stay light so you never have to carry the weight of your own ambition.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+                <h3 class="report-header">☀️ THE OPERATING SYSTEM</h3>
+                <p><strong>System Core: Radiance & Novelty.</strong></p>
+                <p>You operate on the <strong>Radiance OS</strong>. Your brain has high "Novelty Seeking" traits. You are socially fluid, creatively generative, and naturally lucky. Opportunities come to you because you are an open door.</p>
+                <p><strong>The Superpower: Reality Distortion.</strong></p>
+                <p>You can sell ice to a polar bear. Your charisma is not just charm; it is a transfer of energy. You make people believe in the impossible because <em>you</em> believe in it. You are the muse, the spark, the hype man of the zodiac.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+                <h3 class="report-header">🌀 THE FATAL ERROR: "PETER PAN SYNDROME"</h3>
+                <p>Your bug is <strong>Shiny Object Syndrome</strong>.</p>
+                <p>You are a "Scanner" (someone who loves everything) in a world that rewards "Divers" (people who master one thing). This creates a deep, secret shame: You feel like a fraud. You know you are talented, but you have no body of work to prove it.</p>
+                <p><strong>The Loop:</strong> Excitement -> Start Project -> Hit The Boring Middle -> Lose Interest -> Find New Shiny Object -> Repeat.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+                <h3 class="report-header">💞 SOCIAL DYNAMICS</h3>
+                <p><strong>Love Language: Fun.</strong></p>
+                <p>You are an amazing first date and a terrible partner during a crisis. You want love to feel like a montage in a movie. When it feels like doing taxes or washing dishes, you panic and wonder if the "spark" is gone.</p>
+            </div>
+        `,
+
+        bug: `
+            <strong>⛔ CRITICAL FAILURE: The "Option Paralysis"</strong>
+            <p>You keep too many doors open because you are terrified of being trapped in the wrong room. But by keeping all doors open, you stand in the hallway your entire life. You are technically free, but functionally homeless.</p>
+        `,
+
+        fix: `
+            <div class="report-section">
+                <h3 class="report-header">🛠️ THE PATCH: "THE CLOSER PROTOCOL"</h3>
+                <p>Your evolution is not more ideas. It is <strong>Constraint</strong>.</p>
+                
+                <ul style="text-align: left; margin-top: 15px;">
+                    <li><strong>The "Boring" Challenge:</strong> Pick one thing (gym, writing, coding) and do it for 30 days. You are not allowed to quit when it stops being fun. You are training your brain to survive boredom.</li>
+                    <li><strong>Kill Your Darlings:</strong> You have 10 great ideas. Pick 1. Kill the other 9. Literally throw them away. Force yourself to go all-in on one path.</li>
+                    <li><strong>Ship It Ugly:</strong> You rely on "Inspiration." Stop. Rely on "Deadlines." Force yourself to finish things even if they aren't perfect. A finished C- project is worth more than an A+ idea in your head.</li>
+                </ul>
+                <p><strong>Final Command:</strong> Apollo becomes legendary when he stops being a "Promising Young Talent" and becomes a "Master."</p>
+            </div>
+        `
+    },
+
     "HERA": {
         name: "HERA",
         role: "THE SOVEREIGN ARCHITECT",
@@ -147,132 +278,6 @@ export const archetypes = {
         `
     },
 
-
-    "APHRODITE": {
-        name: "APHRODITE",
-        role: "THE MUSE",
-        img: "img/Aphrodite.png",
-        code: "High E • Low C • High T",
-
-        desc: `
-            <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You don't just "have feelings." You are held hostage by them.</strong></p>
-                <p>You treat your own life like a movie, and you get anxious if the plot isn't moving fast enough. You are addicted to "The Spark"—the beginning of relationships, projects, or eras—because that’s when reality feels magical. But the moment the magic fades and the mundane work begins, you feel a physical crash that resembles withdrawal.</p>
-                <p>You are magnetic, yes. But you are also exhausting, because you require constant external "inputs" (attention, validation, drama, novelty) just to feel okay. You use other people as emotional regulators because you have no internal thermostat.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: High Voltage / Low Insulation.</strong></p>
-                <p>You operate on the <strong>Muse OS</strong>. Psychologically, this is a rare combination of <strong>High Sensation Seeking</strong> (Energy) and <strong>High Rejection Sensitivity</strong> (Threat). You are wired to feel everything at 10x volume. You don't just walk into a room; you absorb its emotional temperature instantly.</p>
-                <p><strong>Cognitive Style: The Resonance Engine.</strong></p>
-                <p>You make people feel <em>seen</em> because you bypass logic and hit the emotional core. You inspire people not through structures, but through sheer <strong>Vibrancy</strong>. You are the color in a black-and-white world. But this openness means you have thin skin; a single critical comment can derail your entire week.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🌪️ THE FATAL ERROR: "THE VIBE SHIFT"</h3>
-                <p>Your bug is <strong>Emotional Volatility</strong>.</p>
-                <p>Because you lack a strong "Control" module to regulate your inputs, you live in a binary state: Euphoria or Devastation. You don't have "bad days"; you have Greek Tragedies.</p>
-                <p><strong>The "Crash" Loop:</strong></p>
-                <ol style="text-align: left; margin-top: 10px; padding-left: 20px;">
-                    <li>You find a new source of intensity (a person, an idea).</li>
-                    <li>You idealize it and pour all your energy in (Manic phase).</li>
-                    <li>The novelty wears off, or they disappoint you slightly.</li>
-                    <li>Your brain interprets this lack of intensity as abandonment.</li>
-                    <li>You crash, detach, and immediately scan for a new spark.</li>
-                </ol>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-                <p><strong>Love Language: Merging.</strong></p>
-                <p>You don't want a partnership; you want a fusion. You are prone to <strong>Limerence</strong>—an addictive, obsessive infatuation that feels like love but is actually just high-anxiety attachment. You tend to lose your identity in others because it’s easier than maintaining your own boundaries.</p>
-            </div>
-        `,
-
-        bug: `
-            <strong>⛔ CRITICAL FAILURE: The "External Battery" Problem</strong>
-            <p>You have outsourced your self-worth to the market. You check for texts, likes, and eyes on you to verify that you exist. You are a masterpiece, but you are trying to use yourself as a mirror, constantly asking others: "Do you see me? Am I okay?"</p>
-        `,
-
-        fix: `
-            <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "BUILDING THE CONTAINER"</h3>
-                <p>You have enough raw energy (sails). You need stability (an anchor).</p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The 24-Hour Rule:</strong> Impulse control is your weakest muscle. When you feel a sudden urge to send a dramatic text, launch a new life plan, or burn a bridge—wait 24 hours. Your emotions are data, not directives.</li>
-                    <li><strong>Boredom Tolerance:</strong> Practice doing nothing. No phone, no music, no socializing for 15 minutes. You need to relearn that peace is not boredom; peace is just the absence of chaos.</li>
-                    <li><strong>The "Two-Identity" Rule:</strong> Separate your *Self* from your *Performance*. If someone dislikes your work or isn't attracted to you, it is not a referendum on your worth as a human being.</li>
-                </ul>
-                <p><strong>Final Command:</strong> You are not the weather. You are the sky. The weather passes; the sky remains.</p>
-            </div>
-        `
-    },
-
-
-    "APOLLO": {
-        name: "APOLLO",
-        role: "THE GOLDEN CHILD",
-        img: "img/Apollo.png",
-        code: "High E • Low C • Low T",
-
-        desc: `
-            <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You are a Ferrari with no steering wheel.</strong></p>
-                <p>You have immense potential, and you will likely die with most of it still inside you. You are addicted to the "Beginning Phase" of everything—relationships, projects, hobbies—because that is where the dopamine is free. The moment things get hard, boring, or require actual discipline, you subconsciously check out.</p>
-                <p>You cover this flaw with "Positivity." You say: <em>"I'm just going with the flow!"</em> Translation: <em>"I am terrified of commitment because committing means I might fail."</em> You stay light so you never have to carry the weight of your own ambition.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">☀️ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Radiance & Novelty.</strong></p>
-                <p>You operate on the <strong>Radiance OS</strong>. Your brain has high "Novelty Seeking" traits. You are socially fluid, creatively generative, and naturally lucky. Opportunities come to you because you are an open door.</p>
-                <p><strong>The Superpower: Reality Distortion.</strong></p>
-                <p>You can sell ice to a polar bear. Your charisma is not just charm; it is a transfer of energy. You make people believe in the impossible because <em>you</em> believe in it. You are the muse, the spark, the hype man of the zodiac.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🌀 THE FATAL ERROR: "PETER PAN SYNDROME"</h3>
-                <p>Your bug is <strong>Shiny Object Syndrome</strong>.</p>
-                <p>You are a "Scanner" (someone who loves everything) in a world that rewards "Divers" (people who master one thing). This creates a deep, secret shame: You feel like a fraud. You know you are talented, but you have no body of work to prove it.</p>
-                <p><strong>The Loop:</strong> Excitement -> Start Project -> Hit The Boring Middle -> Lose Interest -> Find New Shiny Object -> Repeat.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">💞 SOCIAL DYNAMICS</h3>
-                <p><strong>Love Language: Fun.</strong></p>
-                <p>You are an amazing first date and a terrible partner during a crisis. You want love to feel like a montage in a movie. When it feels like doing taxes or washing dishes, you panic and wonder if the "spark" is gone.</p>
-            </div>
-        `,
-
-        bug: `
-            <strong>⛔ CRITICAL FAILURE: The "Option Paralysis"</strong>
-            <p>You keep too many doors open because you are terrified of being trapped in the wrong room. But by keeping all doors open, you stand in the hallway your entire life. You are technically free, but functionally homeless.</p>
-        `,
-
-        fix: `
-            <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "THE CLOSER PROTOCOL"</h3>
-                <p>Your evolution is not more ideas. It is <strong>Constraint</strong>.</p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The "Boring" Challenge:</strong> Pick one thing (gym, writing, coding) and do it for 30 days. You are not allowed to quit when it stops being fun. You are training your brain to survive boredom.</li>
-                    <li><strong>Kill Your Darlings:</strong> You have 10 great ideas. Pick 1. Kill the other 9. Literally throw them away. Force yourself to go all-in on one path.</li>
-                    <li><strong>Ship It Ugly:</strong> You rely on "Inspiration." Stop. Rely on "Deadlines." Force yourself to finish things even if they aren't perfect. A finished C- project is worth more than an A+ idea in your head.</li>
-                </ul>
-                <p><strong>Final Command:</strong> Apollo becomes legendary when he stops being a "Promising Young Talent" and becomes a "Master."</p>
-            </div>
-        `
-    },
 
 
     "ATHENA": {
