@@ -492,146 +492,144 @@ export const archetypes = {
     "HERA": {
         name: "HERA",
         role: "THE SOVEREIGN ARCHITECT",
-        code: "High E • High C • High T",
         img: "img/Hera.png",
+        code: "High E • High C • High T",
 
         desc: `
             <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p>Let’s be honest: <strong>You are exhausted, and you think it’s everyone else’s fault.</strong></p>
-                <p>You walk through life with a silent scoreboard in your head, tracking how much <em>you</em> do versus how little <em>they</em> do. You are the "Designated Adult" in every room. You secretly believe that if you stopped pushing, the entire world would grind to a halt—and the tragic part is, you’ve probably rigged your life so that’s actually true.</p>
-                <p>You aren’t just "organized." You are <strong>addicted to certainty</strong>. You try to pre-plan conversations, pre-feel emotions, and pre-solve problems that haven't happened yet. You call this "being prepared." Psychology calls it "High-Functioning Anxiety wearing a suit."</p>
+            <h3 class="report-header">💀 THE ROAST</h3>
+            <p>You run hot, then call it “burnout” like it happened to you.</p>
+            <p>You keep a private ledger of effort. You notice who moves fast, who drifts, who needs reminders, and who needs consequences. You build systems that depend on your constant pressure, then use that dependency as proof that you’re essential.</p>
+            <p>Your organization skill is control dressed up as responsibility. You pre-solve problems and pre-write conversations to quiet your threat response, then act annoyed when people still behave like humans.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">🏛️ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Entropy Reduction.</strong></p>
-                <p>Your brain has a biological intolerance for chaos. While Ares thrives in the fog and Apollo ignores it, you <em>must</em> clear it. You don't just see a messy room; you see a failure of character. You don't just see a missed deadline; you see a lack of respect.</p>
-                <p><strong>Your Superpower: Operational Simulation.</strong></p>
-                <p>Before a project starts, you have already simulated the next 20 steps. You see the bottlenecks, the risks, and the logistical gaps that everyone else is ignoring. This makes you incredibly valuable, but it also makes you incredibly annoying to people who just want to "vibes it out."</p>
+            <h3 class="report-header">🏛️ THE OPERATING SYSTEM</h3>
+            <p><strong>System Core: maximum chaos suppression.</strong></p>
+            <p>Your stack merges hyper-vigilance with rigid structure and high drive. You scan for risk by default. You process missed deadlines and environmental chaos as active threats, so you tighten control to reduce uncertainty.</p>
+            <p><strong>Cognitive Style: operational simulation.</strong></p>
+            <p>Before you act, you simulate the whole lifecycle. You automatically predict failure points and build unrequested contingencies. This predictive rendering secures unstable environments, then suffocates teams the moment things calm down because you keep forcing precision and early commitments.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">🧨 THE FATAL ERROR: "THE MARTYR TRAP"</h3>
-                <p>Your "Bug" is a toxic relational loop called <strong>Over-Functioning</strong>.</p>
-                <p>Here is the cycle you are trapped in:</p>
-                <ol style="text-align: left; margin-top: 10px; padding-left: 20px;">
-                    <li>You see a gap (a dirty dish, a flawed plan, a silent pause).</li>
-                    <li>Anxiety spikes. You think: <em>"If I don't fix it, nobody will."</em></li>
-                    <li>You rush in to fix it immediately (High Energy).</li>
-                    <li>The people around you realize they don't need to try, so they step back (Under-Functioning).</li>
-                    <li>You resent them for being "lazy" or "incompetent."</li>
-                    <li>You vow to do <em>everything</em> yourself next time.</li>
-                    <li><strong>Repeat until burnout.</strong></li>
-                </ol>
-                <p><strong>The Hard Truth:</strong> You are not a victim of people’s incompetence. You are an enabler of it. You steal their struggle, so you steal their growth.</p>
+            <h3 class="report-header">🧨 THE FATAL ERROR: THE OVER-FUNCTIONING LOOP</h3>
+            <p>You over-function to manage anxiety, then punish everyone for adapting to your over-functioning.</p>
+            <p>You immediately seize ownership to remove friction for the group. The group learns the pattern and stops initiating because you always intercept.</p>
+            <p><strong>The Loop:</strong> detect a gap → threat spike → immediate takeover → others disengage → you read disengagement as disrespect → you centralize more control → chronic overload → resentment → harsher control.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-                <p><strong>Love Language: Logistics.</strong></p>
-                <p>You don't say "I love you" with poetry. You say it by updating their resume, reminding them of their dentist appointment, and buying them the *correct* ergonomic pillow. To you, <strong>Care = Competence</strong>.</p>
-                <p><strong>The Conflict Pattern:</strong></p>
-                <p>You tend to partner with "Projects"—people with potential who need "fixing." Then you get mad when they don't follow your optimization plan. You want a partner, but you act like a parent. Nothing kills romance faster than the phrase: <em>"Did you remember to do that thing I told you about?"</em></p>
+            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+            <p><strong>Love Language: unsolicited logistics.</strong></p>
+            <p>You secure attachment through management. You show care by scheduling appointments, tightening routines, fixing money leaks, and correcting plans in real time. You feel calm when the relationship runs on your standards.</p>
+            <p>You tend to choose partners who feel easy to steer, then grow contempt when they need steering. Your “help” becomes supervision, and supervision becomes a power struggle.</p>
+            <p>When a partner asks for comfort, you respond with a plan. When they resist the plan, you escalate into control. They default to passivity or initiate a hard exit.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-                <p><strong>The "Empire Builder."</strong></p>
-                <p>You are the backbone of any organization. You are the one who actually reads the T&C. You are the one who saves the project at 11:00 PM because the "visionary" forgot about compliance laws.</p>
-                <p><strong>Your Ceiling:</strong> You struggle to delegate because you believe <em>"It will take me longer to explain it than to just do it myself."</em> This belief is why you are overworked and why your team is scared of you. You don't lead; you micromanage with good intentions.</p>
+            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+            <p><strong>The Glass Ceiling: the delegation choke point.</strong></p>
+            <p>You stabilize chaos and rescue timelines by catching compliance issues long before they detonate. People trust you with critical work because you rarely drop the ball.</p>
+            <p>Your ceiling is trust debt. You rewrite their work and hover over execution, hoarding context because explaining it feels too slow, and your team learns that initiative gets audited.</p>
+            <p>You end up leading a cautious team that waits for permission and then you blame them for waiting.</p>
             </div>
         `,
 
         bug: `
-            <strong>⛔ CRITICAL FAILURE: The "Perfect or Nothing" Binary</strong>
-            <p>You live in a binary world: Success or Failure. Perfect or Garbage. On Time or Late.</p>
-            <p>This allows you to achieve great things, but it makes you brittle. You cannot bend, so you break. When you fail, you don't just feel disappointment; you feel a total collapse of self-worth. You are terrifyingly hard on others, but you are absolutely abusive to yourself.</p>
+            <strong>⛔ CRITICAL FAILURE: The Binary Collapse</strong>
+            <p>Your internal scoring system only accepts “clean” or “failed.” Small mistakes hit you like proof that you are slipping, so you tighten standards and increase pressure to regain control.</p>
+            <p>Ten years of this builds an efficient machine with low morale. Your high performers eventually exit, leaving you surrounded exclusively by low-agency operators. Your reputation becomes “effective but unsafe,” and you keep working harder to outrun the label.</p>
         `,
 
         fix: `
             <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "STRATEGIC NEGLECT"</h3>
-                <p>To upgrade your system, you must do the most painful thing imaginable: <strong>Let small fires burn.</strong></p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The 15-Minute Rule:</strong> When you see a problem, wait 15 minutes before acting. Create a vacuum. Give others space to step up. If you fill the space instantly, they never will.</li>
-                    <li><strong>Accept "B+" Work:</strong> Your "A+" standard is expensive—it costs you your sanity. "B+" work from a team is sustainable. "A+" work from you alone is a death sentence.</li>
-                    <li><strong>Stop "Helping":</strong> Ask yourself: <em>"Did they ask for my help? Or am I just managing my own anxiety by taking over?"</em> If they didn't ask, don't help.</li>
-                </ul>
-                <p><strong>Final Command:</strong> A Queen does not scrub the floors of the castle just because the maid missed a spot. Stop operating. Start governing.</p>
+            <h3 class="report-header">🛠️ THE PATCH: STRATEGIC NEGLECT</h3>
+            <p>You must allow small failures to exist long enough for other people to develop competence and for your threat system to recalibrate.</p>
+
+            <ul style="text-align: left; margin-top: 15px;">
+                <li><strong>The 15-Minute Vacuum:</strong> When you detect an error, wait 15 minutes before touching it. You are forbidden from prepping a fix, hovering over the operator, or dropping hints. If you fill the vacuum, you train dependency.</li>
+                <li><strong>Standardize “B+” Output:</strong> Define “B+” as “meets spec, passes tests, ships on time.” Accept it without rewriting it. Force your system to track objective outcomes while actively ignoring your internal irritation.</li>
+                <li><strong>The Authorization Check:</strong> Before intervening in someone’s life or work, verify they asked. If they did not ask, you are managing your own threat response by seizing control.</li>
+            </ul>
             </div>
         `
-    },
+        },
 
 
 
-    "HESTIA": {
-        name: "HESTIA",
-        role: "THE UNSHAKEABLE FOUNDATION",
-        img: "img/Hestia.png",
-        code: "Low E • Low C • Low T",
+  "HESTIA": {
+    name: "HESTIA",
+    role: "THE UNSHAKEABLE FOUNDATION",
+    img: "img/Hestia.png",
+    code: "Low E • Low C • Low T",
 
-        desc: `
-            <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p>You aren't "invisible" because you are weak; you are invisible because you are the foundation — and foundations are rarely seen until the house crumbles.</p>
-                <p>Just as Hestia quietly surrendered her golden throne to Dionysus to prevent a war on Olympus, you often step back not out of submission, but out of sovereignty. While the rest of the world is exhausting itself chasing the spotlight (<strong>High Energy</strong>) or trying to bend reality to their will (<strong>High Control</strong>), you sit in the corner — unbothered, enduring.</p>
-                <p>You have realized a quiet truth: survival isn’t about how hard you can hit; it’s about how much you can absorb. You are the water flowing around the rock. The rock thinks it is strong because it is hard, but you know the truth — the water is still there a thousand years later, long after the rock has turned to sand.</p>
-            </div>
+    desc: `
+        <div class="report-section">
+        <h3 class="report-header">💀 THE ROAST</h3>
+        <p>You rebrand passivity as inner peace.</p>
+        <p>By letting other people set the direction and the tempo, you end up living inside someone else’s schedule.</p>
+        <p>Friction gets absorbed quietly, and silence gets treated as virtue. People stop checking in because you trained them to expect nothing from you.</p>
+        </div>
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">🖥️ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Radical Acceptance (The Flow State).</strong></p>
-                <p>You operate on the <strong>Hearth OS</strong> — a stable system built on sustainability, not stimulation. Your baseline is peace, not motion.</p>
-                <p><strong>Low Energy (Conservation):</strong> You value efficiency. You don’t waste your limited heat on drama or ambition for its own sake. You are the coals, not the fireworks — quietly alive, never burning out.</p>
-                <p><strong>Low Control (Fluidity):</strong> You adapt instead of forcing. When doors close, you don’t break them down — you find another entrance. Palace or storm, you find equilibrium. You don’t crack because you don’t resist.</p>
-                <p><strong>Low Threat (Stoicism):</strong> You are immune to frenzy. Fear rolls off you like mist on stone. You move calmly through chaos not because of fearlessness but because of inner stillness.</p>
-            </div>
+        <br>
+        <div class="report-section">
+        <h3 class="report-header">🖥️ THE OPERATING SYSTEM</h3>
+        <p><strong>System Core: inertia with minimal enforcement.</strong></p>
+        <p>Your baseline is low propulsion paired with weak structure, and your urgency circuit tends to wake up late. The result is predictable drift: you tolerate small problems while delaying decisions, then mobilize only after the costs become real.</p>
+        <p>You move toward whatever environment has the strongest push. That makes you easy to live with and easy to use.</p>
+        <p><strong>Cognitive Style: the sponge.</strong></p>
+        <p>You adapt fast because you rarely defend preferences. You take in expectations and stress without pushing back, then label stagnation as “stability” because change feels expensive.</p>
+        </div>
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-                <p><strong>You are the "Safe Harbor."</strong></p>
-                <p><strong>The Mirror:</strong> You reflect others with graceful empathy. People feel grounded around you because you absorb their turbulence without judgment or reaction.</p>
-                <p><strong>The Void:</strong> Yet that same calm can feel distant. You offer sanctuary, not fire. Your loved ones may struggle to feel your edges — wondering if you need them, or simply coexist beside them.</p>
-            </div>
+        <br>
+        <div class="report-section">
+        <h3 class="report-header">🧨 THE FATAL ERROR: over-tolerance loop</h3>
+        <p>Your core bug is delayed discomfort detection paired with low follow-through.</p>
+        <p>You stay in jobs that drain you and relationships that stall because leaving feels like work. You don’t miss the red flags. You wait until they become structural damage.</p>
+        <p><strong>The Loop:</strong> enter an environment → minimize preferences to avoid friction → absorb discomfort silently → normalize it as “how things are” → keep showing up while the environment decays around you.</p>
+        </div>
 
-            <br>
-            <div class="report-section">
-                <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-                <p><strong>Designation: The Keystone.</strong></p>
-                <p><strong>The Strength:</strong> You are the one who holds it together while everyone else panics. You adapt seamlessly to new systems, new leaders, new rules — you’re the invisible stability that keeps the structure alive.</p>
-                <p><strong>The Bottleneck:</strong> Because you don’t demand power or recognition, others underestimate you. You’re not passive — you’re strategic with your energy. You’re simply waiting for a cause worth burning for.</p>
-            </div>
-        `,
+        <br>
+        <div class="report-section">
+        <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+        <p><strong>Love Language: compliant proximity.</strong></p>
+        <p>You are at higher risk of ending up with controlling partners because you leave a boundary vacuum. People test limits when none are visible, and you rarely push back early.</p>
+        <p>You agree quickly and avoid direct disagreement, then go silent when conflict requires a clear response. Over time, your partner stops asking what you want because your answer keeps sounding like “whatever.” You become reliable and taken for granted.</p>
+        <p>When neglect finally lands, you go quiet and expect the other person to infer the problem. They won’t, and the resentment keeps stacking.</p>
+        </div>
 
-        bug: `
-            <strong>🧨 THE FATAL ERROR: "THE TRAP OF TOLERANCE"</strong>
-            <p>Your bug is <strong>Over-Endurance</strong>.</p>
-            <p><strong>The Shape of Water:</strong> Because you can adapt to anything, you tolerate too much. You remain in stagnant or harmful spaces not because you’re captive, but because your pain threshold is too high to feel the urgency to leave.</p>
-            <p><strong>The Path of Least Resistance:</strong> You avoid friction by design. But a life without friction never ignites. You risk settling for "peaceful numbness" instead of "living meaning."</p>
-        `,
+        <br>
+        <div class="report-section">
+        <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+        <p><strong>The Glass Ceiling: invisible stability.</strong></p>
+        <p>You keep operations smooth through quiet compliance and constant absorption of extra load. Managers like that because it reduces noise and protects their time.</p>
+        <p>Your ceiling is low visibility and low self-advocacy. Extra tasks slide onto your plate because you default to yes. Over time, you become the background stabilizer: under-credited and easy to pass over.</p>
+        <p>You end up maintaining the infrastructure while other people collect the authority tied to it.</p>
+        </div>
+    `,
 
-        fix: `
-            <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "BUILD YOUR BANKS"</h3>
-                <p>You don’t need to change your nature — only give it form. If you are water, choose your container.</p>
+    bug: `
+        <strong>⛔ CRITICAL FAILURE: The Invisible Life</strong>
+        <p>Ten years from now, you will still be in the same orbit, serving the same priorities, with quiet resentment baked in. Nobody will have a clear picture of what you want because you spent a decade refusing to make it legible.</p>
+        <p>Your relationships will look calm and feel hollow. Your career will be “stable,” which means you stayed useful while remaining replaceable.</p>
+    `,
 
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>Curate Your Environment:</strong> You adapt to everything — so choose your settings carefully. Don’t adapt to decay; adapt to growth.</li>
-                    <li><strong>Establish Boundaries:</strong> A river without banks becomes a swamp. Define one or two sacred “No’s.” They’ll turn your calm into power.</li>
-                    <li><strong>Invite Friction:</strong> Don’t always flow around obstacles — sometimes push through them. Pressure builds shape.</li>
-                </ul>
+    fix: `
+        <div class="report-section">
+        <h3 class="report-header">🛠️ THE PATCH: ARTIFICIAL FRICTION</h3>
+        <p>Your default mode does not generate outward force. You need installed constraints that trigger action before you drift back into silence.</p>
 
-                <p><strong>Final Command:</strong> Harmony that erases your identity isn’t peace. It’s disappearance. Keep your calm — but keep your edges too.</p>
-            </div>
-        `
+        <ul style="text-align: left; margin-top: 15px;">
+            <li><strong>The Preference Mandate:</strong> Once per day, state one preference and hold it after the first pushback. Pick the restaurant and keep the choice. Train your system to tolerate mild conflict without shutting down.</li>
+            <li><strong>The 48-Hour Tolerance Cap:</strong> When you notice disrespect or recurring friction, take one outward action within 48 hours. Say a direct sentence or refuse the next request. Thinking about it does not count.</li>
+            <li><strong>Install Hard Boundaries:</strong> Write down two non-negotiables in measurable terms and enforce them for 30 days. Example: “No work messages after 9pm.” Example: “I need 24 hours before I agree to plans.” Enforcement is the point.</li>
+        </ul>
+        </div>
+    `
     },
 
 
@@ -643,102 +641,141 @@ export const archetypes = {
         code: "High E • Low C • High T",
 
         desc: `
-            <div class="legendary-banner">⚠️ LEGENDARY ARCHETYPE: TIER 1</div>
+            <div class="legendary-banner">⚠️ LEGENDARY ARCHETYPE: THE HYDRAULIC ANOMALY</div>
 
             <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>You are a walking emotional grenade with the pin pulled out.</strong></p>
-                <p>You don't just "have feelings"; you have <strong>weather patterns</strong>. One minute you are the sunniest, most charismatic leader in the room; the next, you are a hurricane destroying the village because someone looked at you the wrong way. You are exhausting to be around because people always have to check "Which version of you are we getting today?"</p>
-                <p>You call this "Passion." Everyone else calls it "Lack of Impulse Control."</p>
+            <h3 class="report-header">💀 THE ROAST</h3>
+            <p>You rebrand low impulse control as “passion.”</p>
+            <p>Your reactions set the weather for everyone around you. People monitor you constantly because the cost of guessing wrong is hours of fallout.</p>
+            <p>You sell this as “authentic.” Under load, you treat restraint as a threat and act fast to dump pressure into the room.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">🌊 THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Hydraulic Power.</strong></p>
-                <p>You operate on <strong>Raw Voltage</strong>. You combine High Energy (Action) with High Threat (Sensitivity). This is rare. Most sensitive people withdraw (Hades/Artemis). You do not withdraw; you <strong>Explode</strong>.</p>
-                <p><strong>The Superpower: The Catalyst.</strong></p>
-                <p>You can move immovable objects. When you care about a cause, your emotional force is so strong it bends reality. You are the revolutionary, the artist who makes people weep, the leader who inspires fanatical loyalty.</p>
+            <h3 class="report-header">🌊 THE OPERATING SYSTEM</h3>
+            <p><strong>System Core: unregulated kinetic pressure.</strong></p>
+            <p>Your stack combines massive outward drive with hyper-reactive threat detection and a weak braking layer. Small friction cues hit fast, and your body moves before your planning catches up.</p>
+            <p><strong>Cognitive Style: the floodgate.</strong></p>
+            <p>Stress does not sit quietly in your system. It converts into speech and rapid action with almost no latency. The burst can break stagnation and force decisions, then it leaves damage that takes longer to clean than the original problem.</p>
+            <p>In practice, you hit send before rereading and commit to exits at peak heat, then wake up later confused by the consequences you initiated.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">⚡ THE POSEIDON PARADOX</h3>
-                <p><strong>You destroy what you love most.</strong></p>
-                <p>Your intensity draws people in (you are magnetic), but your volatility pushes them away. You crave deep connection, but you often burn the bridge while you are standing on it.</p>
+            <h3 class="report-header">🧨 THE FATAL ERROR: scorched earth protocol</h3>
+            <p>Your core bug is using immediate discharge as your primary regulation tool.</p>
+            <p>When your alarm spikes, your brake system fails under load and you purge pressure through accusation or abrupt exits. The spike is the driver, and the “event” becomes a convenient label you attach afterward.</p>
+            <p><strong>The Loop:</strong> friction cue → threat spike → brake failure → explosive retaliation → damage that outlives the moment → brief relief followed by isolation and cleanup debt.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+            <p><strong>Love Language: crisis intimacy.</strong></p>
+            <p>You confuse intensity with closeness because calm reads as distance in your nervous system. You feel most connected during a spike and the aftermath, when everything is loud enough to register.</p>
+            <p>Partners get pulled into a cycle of rapid attachment and sudden withdrawal. They become your external shock absorbers, then get punished when they miss cues you never stated clearly.</p>
+            <p>Over time they either shrink into careful silence or take a clean exit, and you call them “fragile” because the real explanation is uglier.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+            <p><strong>The Glass Ceiling: the operational hazard.</strong></p>
+            <p>You generate momentum fast and break gridlock when a system is stuck. People use you as a battering ram because you move without hesitation.</p>
+            <p>Your ceiling is trust. Teams can’t plan around your volatility, so they restrict your scope to burst work and keep you away from long-term ownership. When you feel dismissed, you are high risk for destabilizing the room through conflict or abrupt exits, and leadership learns to route around you.</p>
             </div>
         `,
 
         bug: `
-            <strong>⛔ CRITICAL FAILURE: The "Tsunami Protocol"</strong>
-            <p>When you feel hurt (High Threat), your system bypasses logic and goes straight to <strong>Total Destruction</strong>. You say things you can't unsay. You quit jobs on the spot. You scorch the earth to protect your ego.</p>
+            <strong>⛔ CRITICAL FAILURE: The Isolated Hazard</strong>
+            <p>Ten years from now, you will have a trail of scorched relationships and a résumé full of sharp starts and abrupt stops. People will describe you as powerful and unsafe, then keep distance as a basic safety measure.</p>
+            <p>You will blame sensitivity, politics, timing, bad luck. The consistent variable will be your refusal to hold pressure long enough to choose a cleaner output.</p>
         `,
 
         fix: `
             <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "THE DAM ARCHITECTURE"</h3>
-                <p>Power without containment is just a flood. You need to build a Dam.</p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>The 24-Hour Rule:</strong> You are legally forbidden from sending "that text" or making "that decision" when your heart rate is above 100bpm. Wait 24 hours. The storm always passes.</li>
-                    <li><strong>Channeling:</strong> Energy cannot be destroyed, only redirected. When you feel the rage/passion rising, dump it into a physical activity or a creative project immediately. Do not dump it on a human.</li>
-                    <li><strong>Apologize Cleanly:</strong> You *will* mess up. Master the art of the clean apology (no "buts"). It is the only way to repair the coasts you flood.</li>
-                </ul>
+            <h3 class="report-header">🛠️ THE PATCH: HYDRAULIC CONTAINMENT</h3>
+            <p>Power without containment turns into spillage. You need enforced delay plus a dumping channel that stays off the social layer.</p>
+            
+            <ul style="text-align: left; margin-top: 15px;">
+                <li><strong>The 24-Hour Quarantine:</strong> If you feel the urge to send a charged message or make an irreversible exit, you wait 24 hours. During that window, you do not recruit an audience and you do not probe the target with “small” follow-ups. Document the thought, then immediately archive it.</li>
+                <li><strong>Kinetic Grounding:</strong> Before any confrontation, dump the surge into a secondary system for a minimum dose: 20 minutes of hard physical exertion or a full high-friction task that forces focus. Then wait 10 minutes in silence before re-entering the social layer.</li>
+                <li><strong>The Sterile Reset:</strong> When you breach containment, you run a clean repair protocol that fits in one paragraph containing absolute ownership and the immediate next action. You are forbidden from negotiating reality or dragging the target into your internal surge to justify the breach.</li>
+            </ul>
             </div>
         `
-    },
+        },
 
     "ZEUS": {
         name: "ZEUS",
-        role: "THE GOD EMPEROR",
+        role: "THE TOTALITARIAN NODE",
         img: "img/Zeus.png",
-        code: "High E • High C • High T",
+        code: "Very High E • Very High C • Very High T",
 
         desc: `
             <div class="legendary-banner">⚠️ LEGENDARY ARCHETYPE: TIER 0</div>
 
             <div class="report-section">
-                <h3 class="report-header">💀 THE ROAST</h3>
-                <p><strong>Congratulations, you have won the game. And you are alone at the top.</strong></p>
-                <p>You are the "Final Boss" of the human operating system. You have the energy to do everything (High E), the discipline to organize it (High C), and the paranoia to check for every risk (High T). You are a machine.</p>
-                <p>But let's be real: <strong>You don't have friends; you have subjects.</strong> You don't have conversations; you have briefings. You are so busy holding up the sky that you have forgotten what it feels like to just be a human standing on the earth.</p>
+            <h3 class="report-header">💀 THE ROAST</h3>
+            <p>You confuse domination with competence.</p>
+            <p>Speed and structure come easy to you, so you treat people as throughput constraints. Conversations become status updates. Disagreement becomes “misalignment.” You built a life where you can veto reality on demand, then act shocked when the load lands on your own spine.</p>
+            <p>At the top, you get control, plus the predictable side effects: silence and filtered information, followed by a calendar full of decisions nobody else is allowed to make.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">⚡ THE OPERATING SYSTEM</h3>
-                <p><strong>System Core: Total Dominion.</strong></p>
-                <p>You are the <strong>Apex Predator</strong> of productivity. Most people have to choose between "Vision" (Energy) and "Execution" (Control). You have both. You are a natural-born CEO, General, or Founder.</p>
-                <p><strong>The Superpower: The Thunderbolt.</strong></p>
-                <p>You possess <strong>Absolute Will</strong>. When you decide something happens, it happens. Obstacles do not stop you; they fuel you. You have a reality-distortion field that forces the world to align with your plan.</p>
+            <h3 class="report-header">⚡ THE OPERATING SYSTEM</h3>
+            <p><strong>System Core: centralized authority.</strong></p>
+            <p>Your stack maxes out drive and structure, with threat sensitivity running hot in the background. You treat uncertainty as a liability, so you tighten specs early and correct deviations fast.</p>
+            <p><strong>Cognitive Style: override routing.</strong></p>
+            <p>When a variable deviates, you push pressure until it snaps back into spec. It hits targets fast and teaches the network to stop thinking out loud. Bad news gets delayed and operational risk is actively buried. The network learns to exclusively feed you sterilized data to avoid triggering your override.</p>
             </div>
 
             <br>
             <div class="report-section">
-                <h3 class="report-header">👑 THE ZEUS PARADOX</h3>
-                <p><strong>The Paranoia of the Peak.</strong></p>
-                <p>Because you are High Threat (T), you never actually relax. You think everyone is incompetent, trying to dethrone you, or wasting your time. You have everything, but you enjoy nothing.</p>
+            <h3 class="report-header">🧨 THE FATAL ERROR: THE APEX BOTTLENECK</h3>
+            <p>Your core bug is building a system that depends on your continuous authorization.</p>
+            <p>Your alarm system assumes delegation creates exposure, so you hoard approvals and keep critical context inside your head. Decision queues form behind you and the organization slows down while you work harder to “fix” the slowdown.</p>
+            <p><strong>The Loop:</strong> identify an objective → centralize control → drive output through force and review → hit the objective → scan for authority threats → tighten access and permissions → bottleneck multiplies.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+            <p><strong>Love Language: compliance.</strong></p>
+            <p>You select for partners who are easy to manage. You reward agreement and punish friction, then call the result “stability.” Vulnerability feels like operational exposure, so you keep emotional access shallow and transactional.</p>
+            <p>Transparency stays one-way. You demand loyalty and offer selective information. When a partner asks for equal footing, your alarm reads it as a power challenge and you respond with control, often through financial gating or constant correction framed as “help.”</p>
+            <p>The end state is predictable. They shrink or they leave, and you tell yourself they couldn’t handle your standards.</p>
+            </div>
+
+            <br>
+            <div class="report-section">
+            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+            <p><strong>The Glass Ceiling: scale collapse.</strong></p>
+            <p>You scale until the org outgrows your personal bandwidth, then everything starts waiting for you. Decisions stack. Teams sandbag estimates because your reaction cost is too high. A shadow org forms to ship work without triggering your review layer.</p>
+            <p>You call it “lack of ownership.” It’s a predictable adaptation to being punished for independent judgment.</p>
             </div>
         `,
 
         bug: `
-            <strong>⛔ CRITICAL FAILURE: The "Icarus Burnout"</strong>
-            <p>Your system runs at 110% capacity, 24/7. You don't just burn out; you <strong>Supernova</strong>. You will drive yourself (and your team) until the wheels fall off, and then you will try to drag the chassis with your teeth.</p>
+            <strong>⛔ CRITICAL FAILURE: Catastrophic Hardware Failure</strong>
+            <p>Ten years from now, you will have an organization that runs on your nervous system. People will look capable in meetings and freeze in execution because they were trained to seek permission first.</p>
+            <p>You will keep pushing until your body forces a shutdown. When you disappear, the structure will wobble, then break, because you built dependency as a governance model.</p>
         `,
 
         fix: `
             <div class="report-section">
-                <h3 class="report-header">🛠️ THE PATCH: "THE MORTAL ANCHOR"</h3>
-                <p>You know how to be a God. You need to relearn how to be a Man.</p>
-                
-                <ul style="text-align: left; margin-top: 15px;">
-                    <li><strong>Find an Equal:</strong> You need one person who does not work for you, does not need you, and is not impressed by you. You need a peer who can tell you to shut up.</li>
-                    <li><strong>Forced Power-Down:</strong> Your brain will not stop on its own. You must schedule "Blackout Periods" where you are functionally useless. No phone, no decisions.</li>
-                    <li><strong>Legacy > Control:</strong> A true King creates a kingdom that survives his death. If the system collapses without you, you didn't build a system; you just built a cage for yourself. Delegate power, not just tasks.</li>
-                </ul>
+            <h3 class="report-header">🛠️ THE PATCH: DECENTRALIZATION</h3>
+            <p>You must decentralize authority in ways that remove your ability to claw it back during stress.</p>
+            
+            <ul style="text-align: left; margin-top: 15px;">
+                <li><strong>The Peer Mandate:</strong> Install one peer with real veto power over budget or hiring and document it. This person must be able to override you in writing without consequences, including public retaliation or quiet career sabotage.</li>
+                <li><strong>Hard Power-Down Windows:</strong> Schedule recurring blackout windows where you are unreachable and barred from monitoring channels. This window strictly prohibits casual monitoring or proxy commands through a lieutenant, restricting emergency exceptions to a pre-defined threshold.</li>
+                <li><strong>Distribute The Keys:</strong> Transfer two concrete approvals to secondary owners and remove yourself from one decision path entirely for 60 days. Track throughput and error rate. If you reinsert yourself early, log it as a breach of protocol.</li>
+            </ul>
             </div>
         `
-    },
+        },
 
 
 };
