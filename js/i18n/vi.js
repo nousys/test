@@ -1,3 +1,5 @@
+import questions from './questions_vi.js';
+
 export default {
   ui: {
     start: "Bắt đầu",
@@ -7,5 +9,6 @@ export default {
     selectWarning: "Vui lòng chọn một lựa chọn.",
     secondary: "Ảnh hưởng phụ",
     openView: "Xem {k}",
-  }
+  },
+  questions,
 };

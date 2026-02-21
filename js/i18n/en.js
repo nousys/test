@@ -1,4 +1,6 @@
 // js/i18n/en.js
+import questions from './questions_en.js';
+
 export default {
   ui: {
     start: "Initialize System",
@@ -7,6 +9,7 @@ export default {
     pickLean: "Pick your lean: 1 = Left · 2 = Lean Left · 3 = Neutral · 4 = Lean Right · 5 = Right",
     selectWarning: "Please select an option.",
     secondary: "Secondary Influence",
-    openView: (k) => `Open ${k} view`,
-  }
+    openView: "Open {k} view",
+  },
+  questions,
 };

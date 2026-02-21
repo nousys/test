@@ -1,3 +1,4 @@
+// js/logic/quiz.js
 import { questions } from '../config/questions.js';
 import { archetypes } from '../data/archetypes.js';
 import { submitToGoogle, submitEmailToGoogle } from '../services/google.js';
@@ -14,18 +15,92 @@ export function getLastResult() {
   return lastResult;
 }
 
+// --------------------
+// i18n helpers (safe fallback)
+// --------------------
+// Supports:
+// - dot paths: "ui.start", "questions.t1.title", "archetypes.APHRODITE.role"
+// - interpolation: "Open {k} view" via vars {k: "..."} (works for BOTH en/vi if you standardize to strings)
+function tr(path, fallback, vars) {
+  try {
+    const dict = t?.() || {};
+    const parts = String(path).split('.');
+    let cur = dict;
+    for (const p of parts) cur = cur?.[p];
+
+    if (cur == null || cur === '') return fallback;
+
+    // If someone accidentally left a function in the dict, try to call it safely.
+    // (Still recommend making both en/vi strings for consistency.)
+    if (typeof cur === 'function') {
+      const v = (vars && typeof vars === 'object') ? (vars.k ?? vars) : vars;
+      return String(cur(v));
+    }
+
+    let s = String(cur);
+
+    if (vars && typeof vars === 'object') {
+      for (const [k, v] of Object.entries(vars)) {
+        s = s.replaceAll(`{${k}}`, String(v));
+      }
+    }
+    return s;
+  } catch {
+    return fallback;
+  }
+}
+
+// Prefer i18n archetype fields if present; fallback to archetypes.js data.
+function trA(type, field, fallback) {
+  return tr(`archetypes.${String(type).toUpperCase()}.${field}`, fallback);
+}
+
+// Prefer i18n question fields if present; fallback to questions.js data.
+function trQ(qid, field, fallback) {
+  return tr(`questions.${String(qid)}.${field}`, fallback);
+}
+
+function applyStaticUIText() {
+  // Set <html lang="">
+  try { document.documentElement.lang = getLang(); } catch {}
+
+  // These elements may exist before quiz start
+  const prevBtn = document.getElementById('btn-prev');
+  if (prevBtn) prevBtn.textContent = tr('ui.prev', prevBtn.textContent || 'Previous Command');
+
+  const nextBtn = document.getElementById('btn-next');
+  if (nextBtn) nextBtn.textContent = tr('ui.next', nextBtn.textContent || 'Next Command');
+
+  const restartBtn = document.getElementById('btn-restart');
+  if (restartBtn) restartBtn.textContent = tr('ui.restart', restartBtn.textContent || 'Restart');
+
+  const startBtn = document.getElementById('btn-start');
+  if (startBtn) startBtn.textContent = tr('ui.start', startBtn.textContent || 'Initialize System');
+
+  const warn = document.getElementById('quiz-warning');
+  if (warn) warn.textContent = tr('ui.selectWarning', warn.textContent || 'Please select an option.');
+}
+
 function sNoteFromAvgS(avgS) {
   if (avgS == null) return null;
 
   if (avgS >= 3.7) {
-    return `Because your <strong>Adaptability</strong> is high, you may relate to multiple archetypes.`;
+    return tr(
+      'premium.sNoteHigh',
+      `Because your <strong>Adaptability</strong> is high, you may relate to multiple archetypes.`
+    );
   }
   if (avgS <= 2.6) {
-    return `Because your <strong>Adaptability</strong> is lower, your pattern tends to be more stable and repeatable.`;
+    return tr(
+      'premium.sNoteLow',
+      `Because your <strong>Adaptability</strong> is lower, your pattern tends to be more stable and repeatable.`
+    );
   }
-  return `Your <strong>Adaptability</strong> is moderate — your pattern shifts depending on context.`;
+  return tr(
+    'premium.sNoteMid',
+    `Your <strong>Adaptability</strong> is moderate — your pattern shifts depending on context.`
+  );
 }
-
 
 // --- 3. THE LOGIC ---
 let currentQ = 0;
@@ -87,63 +162,25 @@ function refreshPremiumUI() {
     }
 
     if (!isValidEmail(email)) {
-      if (statusEl) statusEl.textContent = 'Please enter a valid email.';
+      if (statusEl) statusEl.textContent = tr('premium.emailInvalid', 'Please enter a valid email.');
       track('premium_email_invalid', { archetype });
       return;
     }
 
-    if (statusEl) statusEl.textContent = 'Submitting...';
+    if (statusEl) statusEl.textContent = tr('premium.submitting', 'Submitting...');
 
     track('premium_email_submit_click', { archetype });
 
     const ok = await submitEmailToGoogle(email, archetype, hasS ? res.sS : undefined);
 
     if (ok) {
-      if (statusEl) statusEl.textContent = 'Thanks! We\'ll notify you.';
+      if (statusEl) statusEl.textContent = tr('premium.thanks', `Thanks! We'll notify you.`);
       track('premium_email_submit_success', { archetype });
     } else {
-      if (statusEl) statusEl.textContent = 'Error sending. Please try again.';
+      if (statusEl) statusEl.textContent = tr('premium.sendError', 'Error sending. Please try again.');
       track('premium_email_submit_fail', { archetype });
     }
   };
-}
-
-
-
-// --------------------
-// i18n helpers (safe fallback)
-// --------------------
-function tr(path, fallback) {
-  try {
-    const dict = t?.() || {};
-    const parts = String(path).split('.');
-    let cur = dict;
-    for (const p of parts) cur = cur?.[p];
-    return (cur == null || cur === '') ? fallback : cur;
-  } catch {
-    return fallback;
-  }
-}
-
-function applyStaticUIText() {
-  // Set <html lang="">
-  try { document.documentElement.lang = getLang(); } catch {}
-
-  // These elements may exist before quiz start
-  const prevBtn = document.getElementById('btn-prev');
-  if (prevBtn) prevBtn.textContent = tr('ui.prev', prevBtn.textContent || 'Previous Command');
-
-  const nextBtn = document.getElementById('btn-next');
-  if (nextBtn) nextBtn.textContent = tr('ui.next', nextBtn.textContent || 'Next Command');
-
-  const restartBtn = document.getElementById('btn-restart');
-  if (restartBtn) restartBtn.textContent = tr('ui.restart', restartBtn.textContent || 'Restart');
-
-  const startBtn = document.getElementById('btn-start');
-  if (startBtn) startBtn.textContent = tr('ui.start', startBtn.textContent || 'Initialize System');
-
-  const warn = document.getElementById('quiz-warning');
-  if (warn) warn.textContent = tr('ui.selectWarning', warn.textContent || 'Please select an option.');
 }
 
 // --------------------
@@ -317,8 +354,12 @@ function initQuiz() {
     const hasSplitFields = q.title && q.scene && q.leftOption && q.rightOption;
 
     if (!hasSplitFields) {
+      const text = trQ(q.id, 'text', q.text);
+      const leftLab = trQ(q.id, 'leftLabel', q.leftLabel) || tr('ui.disagree', 'Disagree');
+      const rightLab = trQ(q.id, 'rightLabel', q.rightLabel) || tr('ui.agree', 'Agree');
+
       div.innerHTML = `
-        <div class="question-text">${q.text}</div>
+        <div class="question-text">${text}</div>
         <div class="options">
           ${[1, 2, 3, 4, 5].map(val => `
             <label class="option-label">
@@ -328,31 +369,42 @@ function initQuiz() {
           `).join('')}
         </div>
         <div style="display:flex; justify-content:space-between; font-size: 0.8rem; opacity: 0.5; padding: 0 5px;">
-          <span>${q.leftLabel || tr('ui.disagree', 'Disagree')}</span>
-          <span>${q.rightLabel || tr('ui.agree', 'Agree')}</span>
+          <span>${leftLab}</span>
+          <span>${rightLab}</span>
         </div>
       `;
     } else {
-      const systemTag = q.systemTag || TYPE_TO_SYSTEM[q.type] || 'SYSTEM';
+      const systemTag = trQ(
+        q.id,
+        'systemTag',
+        q.systemTag || TYPE_TO_SYSTEM[q.type] || 'SYSTEM'
+      );
+
+      const title = trQ(q.id, 'title', q.title);
+      const scene = trQ(q.id, 'scene', q.scene);
+      const leftOption = trQ(q.id, 'leftOption', q.leftOption);
+      const rightOption = trQ(q.id, 'rightOption', q.rightOption);
+      const leftLabel = trQ(q.id, 'leftLabel', q.leftLabel);
+      const rightLabel = trQ(q.id, 'rightLabel', q.rightLabel);
 
       div.innerHTML = `
         <div class="q-top">
           <div class="q-tag">${systemTag}</div>
-          <div class="q-title">${q.title}</div>
+          <div class="q-title">${title}</div>
           <div class="q-scene">
-            <strong>${tr('ui.scene', 'Scene:')}</strong> ${q.scene}
+            <strong>${tr('ui.scene', 'Scene:')}</strong> ${scene}
           </div>
         </div>
 
         <div class="q-cards">
           <button type="button" class="q-card q-card-left" data-value="1">
             <div class="q-card-label">${tr('ui.option1', 'Option 1 (Left)')}</div>
-            <div class="q-card-body">${q.leftOption}</div>
+            <div class="q-card-body">${leftOption}</div>
           </button>
 
           <button type="button" class="q-card q-card-right" data-value="5">
             <div class="q-card-label">${tr('ui.option5', 'Option 5 (Right)')}</div>
-            <div class="q-card-body">${q.rightOption}</div>
+            <div class="q-card-body">${rightOption}</div>
           </button>
         </div>
 
@@ -366,8 +418,8 @@ function initQuiz() {
         </div>
 
         <div class="q-scale">
-          <span>${q.leftLabel || tr('ui.left', 'Left')}</span>
-          <span>${q.rightLabel || tr('ui.right', 'Right')}</span>
+          <span>${leftLabel || tr('ui.left', 'Left')}</span>
+          <span>${rightLabel || tr('ui.right', 'Right')}</span>
         </div>
       `;
 
@@ -414,8 +466,9 @@ function computeAdaptWing({ avgS, avgRange, avgRecovery, primaryType }) {
   if (primaryType === 'HERMES' || primaryType === 'DEMETER') return null;
 
   const key = (avgRange >= avgRecovery) ? 'HERMES' : 'DEMETER';
-  const flavor = (key === 'HERMES') ? tr('wing.hermesFlavor', 'Range / Adaptation')
-                                   : tr('wing.demeterFlavor', 'Recovery / Regeneration');
+  const flavor = (key === 'HERMES')
+    ? tr('wing.hermesFlavor', 'Range / Adaptation')
+    : tr('wing.demeterFlavor', 'Recovery / Regeneration');
   return { key, flavor };
 }
 
@@ -449,7 +502,7 @@ function renderRadarChart({ sE, sC, sT, sS, max }) {
         tr('ui.adapt', 'Adapt'),
       ],
       datasets: [{
-        label: 'Scores',
+        label: tr('ui.scores', 'Scores'),
         data: [sE, sC, sT, sS],
         borderWidth: 2,
         borderColor: 'rgba(212, 175, 55, 0.9)',
@@ -597,7 +650,7 @@ function calculateResult() {
   const isHighC = avgC >= MID;
   const isHighT = avgT >= MID;
 
-  if (isHighE && isHighC && isHighT)      type = "HERA";       // H-H-H
+  if (isHighE && isHighC && isHighT)      type = "HERA";        // H-H-H
   else if (isHighE && isHighC && !isHighT) type = "ARES";       // H-H-L
   else if (isHighE && !isHighC && isHighT) type = "APHRODITE";  // H-L-H
   else if (isHighE && !isHighC && !isHighT) type = "APOLLO";    // H-L-L
@@ -606,29 +659,16 @@ function calculateResult() {
   else if (!isHighE && !isHighC && isHighT) type = "ARTEMIS";   // L-L-H
   else                                      type = "HESTIA";    // L-L-L (Default fallback)
 
-
   // --- 5. LAYER 2: EXTREME OVERRIDE (The 3 Rare Modes) ---
-  // Logic: Check if user triggers "God Mode". This overwrites the Base type.
-  
-  // ZEUS: Very High Energy + Very High Control (Overrides Hera/Ares)
-  // Logic: "Dominion & Structure"
   if (avgE >= VH && avgC >= VH) {
-      type = "ZEUS";
-  }
-  // HADES: Very High Threat + Very Low Energy (Overrides Athena/Hephaestus)
-  // Logic: "Shadow & Control" (Extreme caution + withdrawal)
-  else if (avgT >= VH && avgE <= VL) {
-      type = "HADES";
-  }
-  // POSEIDON: Very High Threat + Very Low Control (Overrides Artemis/Aphrodite)
-  // Logic: "Storm & Chaos" (Extreme emotion + no brakes)
-  else if (avgT >= VH && avgC <= VL) {
-      type = "POSEIDON";
+    type = "ZEUS";
+  } else if (avgT >= VH && avgE <= VL) {
+    type = "HADES";
+  } else if (avgT >= VH && avgC <= VL) {
+    type = "POSEIDON";
   }
 
   // --- 6. OUTPUT & UI UPDATES ---
-  
-  // Pass Range/Recovery stats to "wing" logic if you want to show them as secondary stats
   const wing = computeAdaptWing({ avgS, avgRange, avgRecovery, primaryType: type });
   const wingKey = wing?.key || null;
 
@@ -645,24 +685,24 @@ function calculateResult() {
   const resScreen = document.getElementById('result-screen');
   resScreen.style.display = 'block';
 
-  document.getElementById('result-name').innerText = data.name;
-  document.getElementById('result-role').innerText = data.role;
-  document.getElementById('result-img').src = data.img;
-  document.getElementById('result-desc').innerHTML = data.desc;
-  // If you use Bug/Fix logic
-  document.getElementById('result-bug').innerHTML = data.bug || ""; 
-  document.getElementById('result-fix').innerHTML = data.fix || "";
+  // Archetype fields: prefer i18n if you add js/i18n/archetypes_*.js later
+  document.getElementById('result-name').innerText = trA(type, 'name', data?.name ?? type);
+  document.getElementById('result-role').innerText = trA(type, 'role', data?.role ?? '');
+  document.getElementById('result-img').src = data?.img ?? '';
 
-  // Update Bars (Visualizing the E-C-T profile)
+  document.getElementById('result-desc').innerHTML = trA(type, 'desc', data?.desc ?? '');
+  document.getElementById('result-bug').innerHTML = trA(type, 'bug', data?.bug ?? '');
+  document.getElementById('result-fix').innerHTML = trA(type, 'fix', data?.fix ?? '');
+
+  // Update Bars
   const maxE = nE * 5;
   const maxC = nC * 5;
   const maxT = nT * 5;
-  const maxS = nS * 5; // Stretch bar (Hermes + Demeter combined)
+  const maxS = nS * 5;
 
   document.getElementById('bar-e').style.width = `${maxE ? (sE / maxE) * 100 : 0}%`;
   document.getElementById('bar-c').style.width = `${maxC ? (sC / maxC) * 100 : 0}%`;
   document.getElementById('bar-t').style.width = `${maxT ? (sT / maxT) * 100 : 0}%`;
-  // You might want to split Bar S into Range vs Recovery in the future
   document.getElementById('bar-s').style.width = `${maxS ? (sS / maxS) * 100 : 0}%`;
 
   renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
@@ -681,7 +721,8 @@ function calculateResult() {
       wingText.innerHTML =
         `${tr('ui.secondaryInfluence', 'Secondary:')} <strong>${wingKey}</strong> ` +
         `<span style="opacity:0.8;">(${wing.flavor})</span>` +
-        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">View</a>`;
+        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">` +
+        `${tr('ui.openView', 'Open {k} view', { k: wingKey })}</a>`;
     }
 
     if (wingImg) {
@@ -727,12 +768,13 @@ export function renderResultFromUrl() {
   const resScreen = document.getElementById('result-screen');
   if (resScreen) resScreen.style.display = 'block';
 
-  document.getElementById('result-name').innerText = data.name;
-  document.getElementById('result-role').innerText = data.role;
+  document.getElementById('result-name').innerText = trA(type, 'name', data.name);
+  document.getElementById('result-role').innerText = trA(type, 'role', data.role);
   document.getElementById('result-img').src = data.img;
-  document.getElementById('result-desc').innerHTML = data.desc;
-  document.getElementById('result-bug').innerHTML = data.bug;
-  document.getElementById('result-fix').innerHTML = data.fix;
+
+  document.getElementById('result-desc').innerHTML = trA(type, 'desc', data.desc);
+  document.getElementById('result-bug').innerHTML = trA(type, 'bug', data.bug || '');
+  document.getElementById('result-fix').innerHTML = trA(type, 'fix', data.fix || '');
 
   const nE = questions.filter(q => q.type === 'E').length;
   const nC = questions.filter(q => q.type === 'C').length;
@@ -771,7 +813,8 @@ export function renderResultFromUrl() {
     if (wingText) {
       wingText.innerHTML =
         `${tr('ui.secondaryInfluence', 'Secondary Influence:')} <strong>${w}</strong>` +
-        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">${tr('ui.openView', 'Open')} ${w} ${tr('ui.view', 'view')}</a>`;
+        `<br><a href="${wingViewUrl}" style="color: var(--primary); text-decoration: underline;">` +
+        `${tr('ui.openView', 'Open {k} view', { k: w })}</a>`;
     }
 
     if (wingImg) {
@@ -799,7 +842,6 @@ window.addEventListener('pagehide', () => {
   saveProgress();
   track('quiz_abandon', { last_question_index: currentQ + 1 });
 });
-
 
 // Run once (safe, DOM exists because module is at end of body)
 applyStaticUIText();
