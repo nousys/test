@@ -1,5 +1,6 @@
 // js/i18n/en.js
 import questions from './questions_en.js';
+import archetypes from './archetypes_en.js';
 
 export default {
   ui: {
@@ -12,4 +13,5 @@ export default {
     openView: "Open {k} view",
   },
   questions,
+  archetypes,
 };

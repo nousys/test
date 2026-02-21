@@ -1,4 +1,5 @@
 import questions from './questions_vi.js';
+import archetypes from './archetypes_vi.js';
 
 export default {
   ui: {
@@ -11,4 +12,5 @@ export default {
     openView: "Xem {k}",
   },
   questions,
+  archetypes,
 };
