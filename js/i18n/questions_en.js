@@ -180,7 +180,6 @@ export default {
     "leftLabel": "Lock the Paradigm",
     "rightLabel": "Fluid Adaptation"
   },
-  {
   "s6": {
     "systemTag": "SYSTEM: STRETCH",
     "title": "Trial of the Bronze Giant",
