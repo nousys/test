@@ -99,7 +99,7 @@ function refreshPremiumUI() {
     const ok = await submitEmailToGoogle(email, archetype, hasS ? res.sS : undefined);
 
     if (ok) {
-      if (statusEl) statusEl.textContent = 'Thanks! We'll notify you.';
+      if (statusEl) statusEl.textContent = 'Thanks! We\'ll notify you.';
       track('premium_email_submit_success', { archetype });
     } else {
       if (statusEl) statusEl.textContent = 'Error sending. Please try again.';
