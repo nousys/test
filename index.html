@@ -207,6 +207,38 @@
 
         <div class="content-block">
             <div class="section-title">📝 FEEDBACK</div>
+            <!-- Upsell / Fake door (shown after result render) -->
+            <div id="upsell-block" class="content-block" style="display:none;">
+                <div class="section-title">✨ PREMIUM GUIDE</div>
+                <p id="upsell-text" style="margin-top:0;"></p>
+
+                <button id="upsell-open" type="button" class="btn">Unlock Full Guide</button>
+
+                <p id="upsell-hint" style="font-size:0.85rem; opacity:0.75; margin:10px 0 0;">
+                    (Early access — leave your email. No spam.)
+                </p>
+                </div>
+
+                <!-- Upsell modal -->
+                <div id="upsell-modal" hidden>
+                <div class="upsell-panel" role="dialog" aria-modal="true" aria-labelledby="upsell-title">
+                    <div class="upsell-top">
+                    <div id="upsell-title" class="upsell-title">Get notified when Premium launches</div>
+                    <button id="upsell-close" type="button" class="upsell-close" aria-label="Close">✕</button>
+                    </div>
+
+                    <p class="upsell-sub">
+                    Leave your email. We’ll notify you when the full guide is ready.
+                    </p>
+
+                    <input id="upsell-email" type="email" inputmode="email" autocomplete="email"
+                    placeholder="you@email.com" class="upsell-input">
+
+                    <button id="upsell-submit" type="button" class="btn" style="margin-top:12px;">Notify Me</button>
+                    <p id="upsell-status" class="upsell-status" style="display:none;"></p>
+                </div>
+            </div>
+
             <p style="margin-top: 0;">How accurate was your result?</p>
 
             <div style="display:flex; align-items:center; gap:12px;">
