@@ -21,7 +21,7 @@ const ENTRY_TEXT = "entry.476361627";
 const ENTRY_SESSION = "entry.1125820041";
 
 // Lead email (fake door / premium)
-const ENTRY_LEAD_EMAIL = "entry.592806153";
+const ENTRY_EMAIL = "entry.592806153";
 
 /**
  * Updated to include sRange and sRecovery
