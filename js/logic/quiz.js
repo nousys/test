@@ -1,8 +1,30 @@
 import { questions } from '../config/questions.js';
 import { archetypes } from '../data/archetypes.js';
-import { submitToGoogle } from '../services/google.js';
+import { submitToGoogle, submitEmailToGoogle } from '../services/google.js';
 import { track } from '../services/analytics.js';
 import { t, getLang, setLang as setLangInternal } from '../services/lang.js';
+
+function isValidEmail(email) {
+  // simple, safe validation
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || '').trim());
+}
+
+let lastResult = null;
+export function getLastResult() {
+  return lastResult;
+}
+
+function sNoteFromAvgS(avgS) {
+  if (avgS == null) return null;
+
+  if (avgS >= 3.7) {
+    return `Because your <strong>Adaptability</strong> is high, you may relate to multiple archetypes.`;
+  }
+  if (avgS <= 2.6) {
+    return `Because your <strong>Adaptability</strong> is lower, your pattern tends to be more stable and repeatable.`;
+  }
+  return `Your <strong>Adaptability</strong> is moderate — your pattern shifts depending on context.`;
+}
 
 
 // --- 3. THE LOGIC ---
@@ -12,118 +34,74 @@ let radarChartInstance = null;
 
 const form = document.getElementById('quiz-form');
 
-let lastResult = null;
-export function getLastResult() {
-  return lastResult;
-}
+function refreshPremiumUI() {
+  const res = getLastResult();
+  const nS = questions.filter(q => q.type === 'S').length;
 
+  const sNoteEl = document.getElementById('premium-s-note');
+  const formEl = document.getElementById('premium-form');
+  const openBtn = document.getElementById('premium-open');
+  const submitBtn = document.getElementById('premium-submit');
+  const emailEl = document.getElementById('premium-email');
+  const statusEl = document.getElementById('premium-status');
 
-// --------------------
-// Upsell / Fake-door email capture
-// --------------------
-const UPSELL_ENTRY_EMAIL = "entry.592806153";
+  if (!openBtn || !formEl || !submitBtn || !emailEl) return;
 
-// [Unverified] This assumes you want to submit to the SAME Google Form as submitToGoogle() uses.
-// If your submitToGoogle() uses a different form, set this to the same formID.
-const UPSELL_FORM_ID = "1FAIpQLScEWdwVaCJC-K7C_Ek7eQFWg8IaGiNvx-6txv8cTP6-x8drIQ";
-const UPSELL_SUBMIT_URL = `https://docs.google.com/forms/d/e/${UPSELL_FORM_ID}/formResponse`;
+  // Always show fake door; only show S-note if we have S
+  const hasS = !!(res && typeof res.sS === 'number' && nS > 0);
+  const avgS = hasS ? (res.sS / nS) : null;
 
-let upsellBound = false;
-
-function isValidEmail(email) {
-  // basic sanity check; not perfect, but prevents garbage.
-  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(email || '').trim());
-}
-
-async function submitUpsellEmail(email) {
-  const data = new FormData();
-  data.append(UPSELL_ENTRY_EMAIL, email);
-
-  // no-cors means we can't read response; success = no exception thrown
-  await fetch(UPSELL_SUBMIT_URL, { method: 'POST', mode: 'no-cors', body: data });
-}
-
-function buildUpsellMessage(avgS) {
-  // avgS is 1..5
-  if (avgS >= 3.7) {
-    return `Your <strong>Adaptability</strong> is high — which means you can “shape-shift” across situations.
-    Many high-S users feel less locked into one archetype. The Premium Guide explains your blended pattern and gives a deeper read.`;
+  if (sNoteEl) {
+    const note = sNoteFromAvgS(avgS);
+    if (note) {
+      sNoteEl.innerHTML = note;
+      sNoteEl.hidden = false;
+    } else {
+      sNoteEl.textContent = '';
+      sNoteEl.hidden = true;
+    }
   }
-  if (avgS <= 2.6) {
-    return `Your <strong>Adaptability</strong> is lower — which often makes your pattern more stable and repeatable.
-    The Premium Guide gives a sharper “failure mode” + a step-by-step patch plan.`;
-  }
-  return `Want the deeper breakdown? The Premium Guide adds more detail, examples, and a clearer “why this happens” explanation.`;
-}
 
-function setupUpsellUI({ avgS }) {
-  const block = document.getElementById('upsell-block');
-  const text = document.getElementById('upsell-text');
-  const openBtn = document.getElementById('upsell-open');
-
-  const modal = document.getElementById('upsell-modal');
-  const closeBtn = document.getElementById('upsell-close');
-  const submitBtn = document.getElementById('upsell-submit');
-  const emailEl = document.getElementById('upsell-email');
-  const status = document.getElementById('upsell-status');
-
-  if (!block || !text || !openBtn || !modal || !closeBtn || !submitBtn || !emailEl || !status) return;
-
-  // show & set message
-  block.style.display = 'block';
-  text.innerHTML = buildUpsellMessage(avgS);
-
-  if (upsellBound) return;
-  upsellBound = true;
-
-  function openModal() {
-    modal.hidden = false;
-    status.style.display = 'none';
-    status.textContent = '';
-    emailEl.value = '';
+  // Fake door: expand email form on click
+  openBtn.onclick = () => {
+    formEl.hidden = false;
     emailEl.focus();
-    track?.('upsell_open');
-  }
+    if (statusEl) {
+      statusEl.textContent = '';
+      statusEl.style.display = 'none';
+    }
+    track('premium_open_click', { archetype: res?.type || 'UNKNOWN' });
+  };
 
-  function closeModal() {
-    modal.hidden = true;
-  }
-
-  openBtn.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-
-  // click outside closes
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // ESC closes
-  document.addEventListener('keydown', (e) => {
-    if (!modal.hidden && e.key === 'Escape') closeModal();
-  });
-
-  submitBtn.addEventListener('click', async () => {
+  submitBtn.onclick = async () => {
     const email = String(emailEl.value || '').trim();
+    const archetype = res?.type || 'UNKNOWN';
+
+    if (statusEl) {
+      statusEl.style.display = 'block';
+      statusEl.textContent = '';
+    }
 
     if (!isValidEmail(email)) {
-      status.style.display = 'block';
-      status.textContent = 'Please enter a valid email.';
+      if (statusEl) statusEl.textContent = 'Please enter a valid email.';
+      track('premium_email_invalid', { archetype });
       return;
     }
 
-    status.style.display = 'block';
-    status.textContent = 'Sending...';
+    if (statusEl) statusEl.textContent = 'Submitting...';
 
-    try {
-      await submitUpsellEmail(email);
-      status.textContent = 'Thanks — you’re on the list.';
-      track?.('upsell_email_submit', { ok: true });
-    } catch (err) {
-      console.log('Upsell submit error', err);
-      status.textContent = 'Error sending. Please try again.';
-      track?.('upsell_email_submit', { ok: false });
+    track('premium_email_submit_click', { archetype });
+
+    const ok = await submitEmailToGoogle(email, archetype, hasS ? res.sS : undefined);
+
+    if (ok) {
+      if (statusEl) statusEl.textContent = 'Thanks! We’ll notify you.';
+      track('premium_email_submit_success', { archetype });
+    } else {
+      if (statusEl) statusEl.textContent = 'Error sending. Please try again.';
+      track('premium_email_submit_fail', { archetype });
     }
-  });
+  };
 }
 
 
@@ -141,7 +119,6 @@ function tr(path, fallback) {
     return fallback;
   }
 }
-
 
 function applyStaticUIText() {
   // Set <html lang="">
@@ -164,7 +141,6 @@ function applyStaticUIText() {
   if (warn) warn.textContent = tr('ui.selectWarning', warn.textContent || 'Please select an option.');
 }
 
-
 // --------------------
 // Reset + Lang globals (for HTML onclick)
 // --------------------
@@ -185,7 +161,6 @@ window.setLang = (lang) => {
   try { setLangInternal(lang); } catch {}
   window.location.reload();
 };
-
 
 // --------------------
 // Local save (progress + last result)
@@ -262,7 +237,6 @@ function restoreProgressIfAny() {
   return true;
 }
 
-
 // --------------------
 // URL helpers
 // --------------------
@@ -289,7 +263,6 @@ function updateUrlForResult(payload) {
   return url;
 }
 
-
 // --------------------
 // UI helpers
 // --------------------
@@ -315,7 +288,6 @@ function showWarning(show) {
   warn.textContent = tr('ui.selectWarning', 'Please select an option.');
   warn.style.display = show ? 'block' : 'none';
 }
-
 
 // --------------------
 // Split-card init
@@ -427,7 +399,6 @@ function initQuiz() {
   track('question_view', { question_index: 1 });
 }
 
-
 // --------------------
 // Wing logic (Adapt)
 // --------------------
@@ -442,7 +413,6 @@ function computeAdaptWing({ avgS, avgRange, avgRecovery, primaryType }) {
                                    : tr('wing.demeterFlavor', 'Recovery / Regeneration');
   return { key, flavor };
 }
-
 
 // --------------------
 // Radar chart
@@ -501,7 +471,6 @@ function renderRadarChart({ sE, sC, sT, sS, max }) {
     }
   });
 }
-
 
 // --------------------
 // Quiz controls
@@ -567,7 +536,6 @@ function prevQuestion() {
   track('question_view', { question_index: currentQ + 1, nav: 'back' });
 }
 
-
 // --------------------
 // RESULT CALC
 // --------------------
@@ -596,7 +564,7 @@ function calculateResult() {
 
     if (q.type === 'S') {
       sS += val;
-      // Hermes (Range) vs Demeter (Recovery) sub-scores
+      // Hermers (Range) vs Demeter (Recovery) sub-scores
       if (['s1', 's4', 's5'].includes(q.id)) { sRange += val; nRange++; }
       if (['s2', 's3', 's6'].includes(q.id)) { sRecovery += val; nRecovery++; }
     }
@@ -611,6 +579,7 @@ function calculateResult() {
   const avgRecovery = nRecovery ? sRecovery / nRecovery : 0;
 
   // --- 3. DEFINE LOGIC THRESHOLDS ---
+  // Adjust these based on your dataset percentiles
   const MID = 3.0;      // P50 (Cutoff for High/Low)
   const VH  = 4.4;      // P90 (Trigger for Very High)
   const VL  = 1.6;      // P10 (Trigger for Very Low)
@@ -618,11 +587,12 @@ function calculateResult() {
   let type = "";
 
   // --- 4. LAYER 1: DETERMINE BASE ARCHETYPE (The 8 Cores) ---
+  // Logic: Binary check against MID (High vs Low)
   const isHighE = avgE >= MID;
   const isHighC = avgC >= MID;
   const isHighT = avgT >= MID;
 
-  if (isHighE && isHighC && isHighT)       type = "HERA";       // H-H-H
+  if (isHighE && isHighC && isHighT)      type = "HERA";       // H-H-H
   else if (isHighE && isHighC && !isHighT) type = "ARES";       // H-H-L
   else if (isHighE && !isHighC && isHighT) type = "APHRODITE";  // H-L-H
   else if (isHighE && !isHighC && !isHighT) type = "APOLLO";    // H-L-L
@@ -631,21 +601,29 @@ function calculateResult() {
   else if (!isHighE && !isHighC && isHighT) type = "ARTEMIS";   // L-L-H
   else                                      type = "HESTIA";    // L-L-L (Default fallback)
 
+
   // --- 5. LAYER 2: EXTREME OVERRIDE (The 3 Rare Modes) ---
+  // Logic: Check if user triggers "God Mode". This overwrites the Base type.
+  
   // ZEUS: Very High Energy + Very High Control (Overrides Hera/Ares)
+  // Logic: "Dominion & Structure"
   if (avgE >= VH && avgC >= VH) {
       type = "ZEUS";
   }
   // HADES: Very High Threat + Very Low Energy (Overrides Athena/Hephaestus)
+  // Logic: "Shadow & Control" (Extreme caution + withdrawal)
   else if (avgT >= VH && avgE <= VL) {
       type = "HADES";
   }
   // POSEIDON: Very High Threat + Very Low Control (Overrides Artemis/Aphrodite)
+  // Logic: "Storm & Chaos" (Extreme emotion + no brakes)
   else if (avgT >= VH && avgC <= VL) {
       type = "POSEIDON";
   }
 
   // --- 6. OUTPUT & UI UPDATES ---
+  
+  // Pass Range/Recovery stats to "wing" logic if you want to show them as secondary stats
   const wing = computeAdaptWing({ avgS, avgRange, avgRecovery, primaryType: type });
   const wingKey = wing?.key || null;
 
@@ -666,20 +644,24 @@ function calculateResult() {
   document.getElementById('result-role').innerText = data.role;
   document.getElementById('result-img').src = data.img;
   document.getElementById('result-desc').innerHTML = data.desc;
+  // If you use Bug/Fix logic
   document.getElementById('result-bug').innerHTML = data.bug || ""; 
   document.getElementById('result-fix').innerHTML = data.fix || "";
 
+  // Update Bars (Visualizing the E-C-T profile)
   const maxE = nE * 5;
   const maxC = nC * 5;
   const maxT = nT * 5;
-  const maxS = nS * 5;
+  const maxS = nS * 5; // Stretch bar (Hermes + Demeter combined)
 
   document.getElementById('bar-e').style.width = `${maxE ? (sE / maxE) * 100 : 0}%`;
   document.getElementById('bar-c').style.width = `${maxC ? (sC / maxC) * 100 : 0}%`;
   document.getElementById('bar-t').style.width = `${maxT ? (sT / maxT) * 100 : 0}%`;
+  // You might want to split Bar S into Range vs Recovery in the future
   document.getElementById('bar-s').style.width = `${maxS ? (sS / maxS) * 100 : 0}%`;
 
   renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
+  refreshPremiumUI();
 
   // Handle Wing/Secondary Display
   const wingText = document.getElementById('result-wing');
@@ -710,11 +692,7 @@ function calculateResult() {
   // Clear progress
   saveSaved({ progress: { started: false, currentQ: 0, answers: null } });
   submitToGoogle(sE, sC, sT, sS, sRange, sRecovery, type);
-
-  // NEW: initialize upsell after we know avgS
-  setupUpsellUI({ avgS });
 }
-
 
 // --------------------
 // Render result from URL (share links)
@@ -772,7 +750,7 @@ export function renderResultFromUrl() {
   document.getElementById('bar-s').style.width = `${maxS ? (sS / maxS) * 100 : 0}%`;
 
   renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
-  setupUpsellUI({ avgS });
+  refreshPremiumUI();
 
   // Wing UI (from URL w=)
   const wingText = document.getElementById('result-wing');
@@ -808,7 +786,6 @@ export function renderResultFromUrl() {
   track('result_view', { archetype: type, via: 'url' });
 }
 
-
 // --------------------
 window.addEventListener('pagehide', () => {
   if (!quizStarted) return;
@@ -818,7 +795,9 @@ window.addEventListener('pagehide', () => {
   track('quiz_abandon', { last_question_index: currentQ + 1 });
 });
 
+
 // Run once (safe, DOM exists because module is at end of body)
 applyStaticUIText();
+refreshPremiumUI();
 
 export { startQuiz, nextQuestion, prevQuestion };

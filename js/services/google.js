@@ -20,6 +20,9 @@ const ENTRY_TEXT = "entry.476361627";
 // Session ID
 const ENTRY_SESSION = "entry.1125820041";
 
+// Lead email (fake door / premium)
+const ENTRY_LEAD_EMAIL = "entry.592806153";
+
 /**
  * Updated to include sRange and sRecovery
  */
@@ -42,18 +45,18 @@ export function submitToGoogle(e, c, t, s, sRange, sRecovery, type) {
     .catch(err => console.log('Headless submit error', err));
 }
 
-export async function submitFeedbackToGoogle(rating, feedbackText, archetype) {
+export async function submitEmailToGoogle(email, archetype, sTotal) {
   const data = new FormData();
-  data.append(ENTRY_RATING, rating);
-  data.append(ENTRY_TEXT, feedbackText || '');
-  data.append(ENTRY_ARCHETYPE, archetype);
+  data.append(ENTRY_EMAIL, email);
+  data.append(ENTRY_ARCHETYPE, archetype || 'UNKNOWN');
   data.append(ENTRY_SESSION, getSessionId());
+  if (typeof sTotal === 'number') data.append(ENTRY_S, sTotal);
 
   try {
     await fetch(submitURL, { method: 'POST', mode: 'no-cors', body: data });
     return true;
   } catch (err) {
-    console.log('Headless feedback submit error', err);
+    console.log('Headless email submit error', err);
     return false;
   }
 }
