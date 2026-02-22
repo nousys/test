@@ -139,27 +139,26 @@ export default {
             <p>You move through people like a battering ram, optimizing for fast entry and loud impact while skipping cleanup. Hesitation reads as incompetence to you, and questions trigger your control reflex. People comply because resisting costs more energy than obeying. Your version of leadership is managing the fatigue you inflict on everyone around you.</p>
             </div>
 
-            <br>
             <div class="report-section">
-              <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
+            <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
 
-              <p><strong>System Core: High drive, tight control, disabled brakes.</strong></p>
+            <p><strong>System Core: High drive, tight control, disabled brakes.</strong></p>
 
-              <ul class="report-bullets">
-                <li><strong>Drive:</strong> You default to action. Output stays high even when the plan is sloppy.</li>
-                <li><strong>Control:</strong> You reduce uncertainty by taking over. It creates speed. It also kills ownership.</li>
-                <li><strong>Threat sensitivity:</strong> You miss early social warning signs. You read friction as noise.</li>
-                <li><strong>Brakes:</strong> You don’t downshift on your own. You stop when something forces it.</li>
-              </ul>
+            <ul class="report-bullets">
+              <li><strong>Drive:</strong> You default to action. The engine keeps output high even when the plan is half-baked.</li>
+              <li><strong>Control:</strong> Uncertainty grabs the wheel. You override people fast. Speed spikes. Ownership collapses.</li>
+              <li><strong>Threat sensitivity:</strong> The threat sensor misses early social warnings. It labels friction as noise and filters it out.</li>
+              <li><strong>Brakes:</strong> The braking routine rarely engages. Stopping happens when consequences force it.</li>
+            </ul>
 
-              <p><strong>Cognitive Style: Closed-loop execution.</strong></p>
-              <p>
-                You pick a target and compress the timeline until the environment yields.
-                Stress registers as fuel, so you push harder instead of recalibrating.
-                Without active braking, you don’t adjust for human limits.
-                You escalate until someone breaks, quits, or goes silent.
-              </p>
-            </div>
+            <p><strong>Cognitive Style: Closed-loop execution.</strong></p>
+            <p>
+              You pick a target and compress the timeline until the environment yields.
+              Stress feeds the push; it doesn’t slow it down.
+              With brakes offline, human limits don’t register early enough.
+              Escalation stays online until someone breaks, quits, or goes quiet.
+            </p>
+          </div>
 
             <br>
             <div class="report-section">
