@@ -4,67 +4,68 @@ export default {
     name: "APHRODITE",
     role: "THE MUSE",
     desc: `
-            <div class="report-section">
-            <h3 class="report-header">💀 THE ROAST</h3>
-            <p><strong>You call it “passion.” It’s poor emotional regulation with good lighting.</strong></p>
-            <p>Your "deep feelings" are just biochemical spikes. You spike hard, then you crash. You chase people, projects, and scenes that keep your nervous system entertained because quiet feels like a threat.</p>
-            <p>You need reactions to stay stable. Texts, compliments, attention, even tension, anything that proves you still exist to someone. When the signal drops, you start poking the system until it responds. Then you call that response "connection."</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-            <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: High input sensitivity, low regulation.</strong></p>
-            <p>Your configuration is high energy plus high threat reactivity with low control. Translation: You pick up signals fast, your body reacts fast, and your impulse control is weak.</p>
-            <p>You run constant social scanning for tone shifts, pauses, facial cues, and status changes. Your brain treats these as critical data. That makes you accurate in reading rooms. It also means your internal state keeps getting recalibrated by whatever the room gives you.</p>
-            <p>In system terms, you’re a power grid with unstable voltage control. Small fluctuations trigger big swings. The drama is just a symptom of a thin regulation layer.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-            <h3 class="report-header">🌪️ THE FATAL ERROR: THE VALIDATION REGULATOR</h3>
-            <p>Your bad value is simple: <strong>External validation = Internal stability</strong>.</p>
-            <p>You treat attention as a stabilizer. When it’s present, you’re productive, charming, and generous. When it drops, your brain reads the silence as rejection and you start doing damage control.</p>
-            <p><strong>The Loop:</strong> intensity → constant contact → a normal week → you read the drop as rejection → you test → you fight or bounce → new target.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-            <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-            <p><strong>Love Language: Constant signal.</strong></p>
-            <p>You move fast. You bond fast. You call it fate because “we like each other” feels too normal for your nervous system.</p>
-            <p>You also over-adapt. You become what keeps the relationship running. You mirror, please, and monitor. It looks like devotion. It’s actually anxiety management.</p>
-            <p>Then the relationship settles. The signal becomes steady. You misread steady as low. You start checking for proof. Extra texts, tests, jealousy, little fights to see if they still care. Your partner starts living inside your reassurance routine. It wears them down.</p>
-            </div>
-
-            <br>
-            <div class="report-section">
-            <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-            <p><strong>The Glass Ceiling: Mood-based execution.</strong></p>
-            <p>You can pitch. You can inspire. You can make people feel a vision. That’s real value.</p>
-            <p>Then the work becomes repetitive. Follow-ups, QA, maintenance, timelines. You drift. You start chasing high-stimulus problems because they give you the feeling of importance.</p>
-            <p>As a leader, your team learns to manage your state. They watch your tone and timing. They delay hard conversations. They route around you when you’re activated. Everyone starts working around your moods, and you call that "leadership."</p>
-            </div>
-        `,
+              <div class="report-section">
+              <h3 class="report-header">💀 THE ROAST</h3>
+              <p><strong>Your “passion” is a nervous system chasing a hit, dressed up for the spotlight.</strong></p>
+              <p>The highs feel clean because you style them well. Under the lighting, it’s still the same pattern: spike, attach, escalate, then get restless when the room goes quiet.</p>
+              <p>Attention acts like proof of life for you. When replies slow down, your brain starts running scripts to force a reaction—more messaging, louder performative charm, manufactured tension, or sudden withdrawals—then you tag the outcome as “connection” because it sounds nicer.</p>
+              </div>
+  
+              <br>
+              <div class="report-section">
+              <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
+              <p><strong>System core: high sensitivity input, low damping.</strong></p>
+              <p>Your system runs with high gain. Social cues land hard and fast, and the body reacts before the executive layer catches up, so the impulse tends to ship first and the reasoning shows up later.</p>
+              <p>There’s constant background polling for tone shifts, pauses, facial micro-cues, and status movement. That makes you sharp in a room, but it also means your internal state keeps getting tuned by external noise.</p>
+              <p>Think of it like a power grid with twitchy voltage control: small fluctuations in attention create outsized swings in mood and drive, because the stabilizers are underpowered.</p>
+              </div>
+  
+              <br>
+              <div class="report-section">
+              <h3 class="report-header">🌪️ THE FATAL ERROR: THE VALIDATION REGULATOR</h3>
+              <p>Core mapping: <strong>external validation = internal stability</strong>.</p>
+              <p>When attention is steady, you run hot and clean—charming, productive, generous, magnetic. When the stream thins, the system flags danger and you start “fixing” a problem that often isn’t real.</p>
+              <p><strong>The loop:</strong> you create intensity, the contact spikes, the relationship hits normal rhythm, you interpret the downshift as rejection, then you test for proof and either trigger conflict or pivot to a new target.</p>
+              </div>
+  
+              <br>
+              <div class="report-section">
+              <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
+              <p><strong>Love language: constant signal.</strong></p>
+              <p>You bond fast because speed feeds your regulation. Normal mutual interest feels flat, so you reach for escalation—fate stories, instant devotion, “this changes everything” talk, and other intensity props—because a steady pace doesn’t keep your system calm.</p>
+              <p>In relationships, you over-function. You track moods, adjust your personality, manage the vibe, and keep the connection supplied with stimulation; partners often read that as devotion while you’re using it to keep anxiety down.</p>
+              <p>Once things settle, steadiness starts registering as lack. Then come the reassurance mechanics: extra check-ins, bait questions, jealousy pings, and small fights that force them to prove they care. Over time, they stop feeling loved and start feeling managed.</p>
+              </div>
+  
+              <br>
+              <div class="report-section">
+              <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
+              <p><strong>The glass ceiling: mood-driven execution.</strong></p>
+              <p>You’re strong at the front end: pitching, selling, inspiring, shaping taste, building momentum. That’s real output, and it’s why people follow your lead early.</p>
+              <p>Then the job turns into maintenance—follow-ups, QA, timelines, boring consistency—and your drive leaks. You hunt for high-stimulus fires because urgency gives you the feeling of significance.</p>
+              <p>In leadership, your emotional weather becomes a scheduling constraint. People start tracking your tone and timing. Hard topics get postponed until you feel “safe,” and some issues never reach you because the team routes around your activation patterns.</p>
+              </div>
+          `,
     bug: `
-            <strong>⛔ CRITICAL FAILURE: The External Battery Problem</strong>
-            <p>You build a life that runs on other people’s attention. It works when the stream is steady.</p>
-            <p>Ten years later, people are busier. Friends have partners, kids, jobs, limits. The response rate drops. Your panic behaviors increase. You chase harder. You get more erratic. People distance themselves.</p>
-            <p>You end up surrounded by contacts and starved of real closeness. You’ll still look “social.” You’ll just be scraping for replies.</p>
-        `,
+              <strong>⛔ CRITICAL FAILURE: The External Battery Problem</strong>
+              <p>You build a life that runs on other people’s attention, and it holds together as long as the charging cable stays plugged in.</p>
+              <p>Ten years later, the network gets thinner. Friends have partners, kids, deadlines, limits, and the reply speed drops because life gets real.</p>
+              <p>If you keep using panic behaviors to refill the battery, you’ll become exhausting in a predictable way. People will stop picking up to protect their own bandwidth, and the distance will look like “everyone changed” even though the pattern is yours.</p>
+              <p>You end up with plenty of contacts and very few people who show up when you’re not entertaining.</p>
+          `,
     fix: `
-            <div class="report-section">
-            <h3 class="report-header">🛠️ THE PATCH: BUILDING THE REGULATOR</h3>
-            <p>Confidence is irrelevant. You need a regulation protocol. Boring. Effective. Uncomfortable.</p>
-
-            <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The 24-Hour Hold:</strong> When you feel the urge to send the emotional text, post the story, quit the thing, or declare the person “everything,” write it. Save it. Do not send it. Re-read tomorrow. If it still makes sense, send a shorter version. If you break the hold, you restart the clock.</li>
-                <li><strong>15 Minutes of No-Input:</strong> Sit. No phone. No music. No scrolling. No messaging. You’re training your system to stay stable without constant signals. Expect withdrawal symptoms. Don’t negotiate with them.</li>
-                <li><strong>One-Source Rule:</strong> Pick one person you trust. When you spiral, you go to them once. Not five friends. Not a group chat. Not the internet. Stop turning your nervous system into a public poll. If they don't answer immediately, you wait.</li>
-                <li><strong>Normalization Training:</strong> When attention drops, label it correctly: “Normal rhythm.” Then do one concrete task anyway. Send the email. Clean the room. Finish the set. You’re teaching your brain that steadiness is not rejection. Do not reward your panic with a distraction.</li>
-            </ul>
-            </div>
-        `,
+              <div class="report-section">
+              <h3 class="report-header">🛠️ THE PATCH: BUILDING THE REGULATOR</h3>
+              <p>Skip confidence and install a rate limiter for impulse, then keep it running even when it feels dumb.</p>
+  
+              <ul style="text-align: left; margin-top: 15px;">
+                  <li><strong>The 24-hour hold:</strong> When you want to send the emotional text, post the story, quit the thing, or crown someone “everything,” write it out and park it for one day. Re-read tomorrow and send a shorter, cleaner version if it still stands up. If you break the hold, you reset the timer.</li>
+                  <li><strong>15 minutes of no-input:</strong> Sit for 15 minutes with zero feeds—including music, messaging, and passive scrolling. The point is training your system to stay steady without external signal. The discomfort is the exercise; treat it like a rep, not a debate.</li>
+                  <li><strong>One-source rule:</strong> Pick one trusted person for spirals. Use them once per incident. Stop broadcasting to five friends, random DMs, comment sections, and group chats to crowdsource regulation. If they don’t answer quickly, you wait and run the no-input block instead of escalating.</li>
+                  <li><strong>Normalization training:</strong> When attention drops, label it “normal rhythm,” then do one concrete task anyway—ship the email, clean the room, finish the set, or complete a boring admin step. You’re teaching your brain that steadiness is baseline rhythm, and you don’t get to reward panic with distraction.</li>
+              </ul>
+              </div>
+          `,
   },
   APOLLO: {
     name: "APOLLO",
@@ -72,58 +73,58 @@ export default {
     desc: `
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You pride yourself on being spontaneous and full of potential. Most of the time, you’re just addicted to novelty and allergic to sustained effort.</p>
-            <p>You love the launch phase because it rewards you before you’ve actually earned anything. New project, new person, new identity. You get the hope, the attention, the rush. Then the actual work arrives: repetition, small setbacks, the boring middle. Your motivation drops and you quietly disappear. You rebrand this as “going with the flow.” It’s avoidance. If you never commit, you never have to find out what you can actually do when it stops being fun.</p>
+            <p>You brag about spontaneity and “potential”. What you’re running is novelty addiction with a weak follow-through module.</p>
+            <p>The launch phase pays you early. A new project, a new person, a new routine, a new aesthetic—anything that resets the scoreboard. You get hope and early praise, then the work shows up: repeat cycles, small failures, admin, the long middle where nobody claps. Interest drops, and you slip out quietly. “Going with the flow” is the label you use so you don’t have to admit you bailed. Staying would force you to find out what you can do without the rush.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: High Throughput / Missing Scheduler.</strong></p>
-            <p>Newness hits you hard. Then it wears off. You adapt quickly, so you end up hunting the next spike just to stay engaged. Social reward does the same thing: it lights you up, then stops working as soon as it becomes normal.</p>
-            <p><strong>Cognitive Style: The Unbound Query.</strong></p>
-            <p>Low control means routines don’t stick. You fail to build stable execution habits. Low threat means you don’t feel enough internal pressure to stay when a task becomes dull. So you drift by default. You can handle bursts. You struggle with anything that requires steady, boring progress.</p>
+            <p><strong>System Core: High throughput / missing scheduler.</strong></p>
+            <p>Novel input spikes reward fast, then decays fast. Your brain adapts quickly, so the same task stops paying attention-dividends after a short run. Social reward behaves the same way; praise works, then becomes background noise once it turns predictable.</p>
+            <p><strong>Cognitive Style: The unbound query.</strong></p>
+            <p>Routines don’t bind because the control layer doesn’t enforce them when the task gets dull. Threat signals also stay low, so there’s no internal pressure pushing you to stay in the boring zone. Result: you default to drift unless an external constraint pins you down. Bursts are easy. Slow, steady output is where you leak.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌪️ THE FATAL ERROR: THE NOVELTY LOOP</h3>
-            <p>Your core bug is treating stimulation as proof of alignment.</p>
-            <p>When a task or relationship turns repetitive, you assume it’s “not you” anymore. You hit the abort button before any real skill builds, before results stack, and before you’ve earned any proof.</p>
-            <p><strong>The Loop:</strong> lock onto an obsession → sprint → the brain normalizes the excitement → you label the baseline as a “dead end” → your output stalls → you abandon the project and restart elsewhere.</p>
+            <p>Your core bug: stimulation gets treated as “this is the right path.”</p>
+            <p>When repetition shows up, the system flags “wrong fit” and exits early. Skill doesn’t compound. Results don’t stack. Proof never arrives because the build never survives long enough to ship.</p>
+            <p><strong>The Loop:</strong> lock onto something shiny → sprint hard → the reward signal normalizes → baseline feels pointless → output slows → you switch targets and call it “growth.”</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: The Free Trial.</strong></p>
-            <p>You function as a highly engaging onboarding experience. You bring momentum, attention, and raw energy. You make people feel chosen. For a while.</p>
-            <p>Then the relationship enters maintenance mode: routines, financial stress, logistics, boring emotional support. You mistake the death of novelty for the death of the connection. You avoid the unglamorous reality of partnership and subtly force the other person to carry the administrative load. Underneath this breezy exterior is a fear of being observed when you aren’t actively performing.</p>
+            <p>Early on, you act like a perfect onboarding flow. High responsiveness, big attention, high charm, lots of plans. People feel selected because you focus hard and move fast.</p>
+            <p>Then the relationship becomes maintenance work: routine days, money logistics, scheduling, being present when nobody is impressed. When that happens, you start treating the connection like an expired subscription and drift into avoidance. The other person picks up the planning and emotional admin because someone has to. Under the casual vibe sits a simple fear: getting seen on an average day, when you’re not performing and the product isn’t exciting.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-            <p><strong>The Glass Ceiling: The Execution Bottleneck.</strong></p>
-            <p>You are highly effective in low-structure environments—pitching, selling the vision, and launching fast. Early-stage chaos suits you.</p>
-            <p>Then the execution phase begins with deadlines, handoffs, and mundane follow-through. To keep yourself entertained, you alter the project parameters mid-cycle, and your entire team pays the tax. Work fragments. Momentum rots into half-finished deliverables. You can look busy and sound visionary for a long time, but when deadlines hit and deliverables get counted, the gap shows.</p>
+            <p><strong>The Glass Ceiling: The execution bottleneck.</strong></p>
+            <p>Low-structure work suits you. Early-stage chaos, quick pitches, first versions, fast iteration—this is where you look like a genius because the environment matches your wiring.</p>
+            <p>Then execution starts: handoffs, bugfixes, status updates, boring follow-through, and deadlines that don’t care about your mood. To stay engaged, you tweak scope mid-cycle, chase a new angle, or “improve” the plan after the team already started building. Everyone pays for your entertainment. Work fragments, velocity drops, and the output becomes a trail of almost-done artifacts. You can sound sharp in meetings for a long time; delivery metrics don’t negotiate.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Abandoned Repository</strong>
-            <p>Ten years from now, your calendar will be completely full and your output will be painfully thin. People will still like you, but they will have long ago stopped betting their money or time on you. You will have a graveyard of started projects, endless “next big plans,” and very little finished work that can stand on its own.</p>
-            <p>You will remain perfectly free of commitments, and short on proof.</p>
+            <p>Ten years from now, the calendar is packed and the output is thin. People will enjoy you, then quietly stop staking time, money, or reputation on your promises. The pattern is familiar: lots of starts, constant pivots, and a small pile of finished work that can stand alone without your charisma attached.</p>
+            <p>Commitments stay optional. Proof stays scarce.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: THE CODE FREEZE</h3>
-            <p>Stop relying on motivation. Motivation is a volatile chemical. You need structural constraints.</p>
+            <p>Stop waiting for motivation. It comes and goes. Install constraints that ignore your feelings.</p>
 
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The Single Variable Lockdown:</strong> Select one output category. Write, code, or sell. You are forbidden from pivoting for 30 days. Boredom is part of the contract. When you want to quit, set a 10-minute timer and stay seated until it ends. Then do the minimum.</li>
-                <li><strong>The Daily Minimum:</strong> Establish an execution quota so mathematically low you can process it even when your dopamine reserves are depleted. Execute it daily. There is no “making it up tomorrow.”</li>
-                <li><strong>The Directory Purge:</strong> Select nine of your backup ideas. Delete them permanently. Do not archive them. Backup plans keep you from committing long enough to get results.</li>
-                <li><strong>Ship Ugly Code:</strong> Deliver the version of your work you want to hide. Completion is what turns potential into proof.</li>
+                <li><strong>The Single Variable Lockdown:</strong> Pick one output lane and lock it for 30 days. Writing, coding, client work, sales—choose one and refuse to pivot. Boredom is expected. When you want to quit, set a 10-minute timer and stay in the chair until it ends, then complete the smallest valid step.</li>
+                <li><strong>The Daily Minimum:</strong> Set a quota so low it feels insulting. Do it every day anyway. No “double tomorrow.” If you miss, you still do today’s minimum, not a catch-up fantasy.</li>
+                <li><strong>The Directory Purge:</strong> Choose nine backup ideas and delete them. No archive folder. No “someday” board. Backups keep your hand hovering over the eject button.</li>
+                <li><strong>Ship Ugly Code:</strong> Deliver a version you don’t love and let reality hit it. One shipped artifact beats ten polished concepts living in your head.</li>
             </ul>
             </div>
         `,
@@ -134,33 +135,33 @@ export default {
     desc: `
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You pride yourself on being decisive. Half the time you’re just impatient with a polished resume.</p>
-            <p>You move through people like a battering ram, prioritizing fast entry and loud impact over cleanup. You treat hesitation as incompetence and questions as insubordination. People comply with your directives because yielding is easier than dealing with your pressure. You confuse fatigue management with actual leadership.</p>
+            <p>You pride yourself on being decisive. Half the time it’s impatience with a clean story attached.</p>
+            <p>You move through people like a battering ram, optimizing for fast entry and loud impact while skipping cleanup. Hesitation reads as incompetence to you, and questions trigger your control reflex. People comply because resisting costs more energy than obeying. Your version of leadership is managing the fatigue you inflict on everyone around you.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
             <p><strong>System Core: High drive, tight control, disabled brakes.</strong></p>
-            <p>Your stack is built for forward momentum. High energy guarantees output, and high control enforces structure. Because your threat sensitivity is dangerously low, you lack the internal brakes most humans rely on to gauge social danger. You never stall, but you also fail to notice when you are escalating past what the situation needs.</p>
+            <p>Your stack is built for forward momentum. High energy produces output, and high control forces structure. Threat sensitivity stays low, so the usual social “brake lights” don’t register as urgent. You rarely stall, and you also miss the moment when your intensity has already overshot the job.</p>
             <p><strong>Cognitive Style: Closed-loop execution.</strong></p>
-            <p>You lock onto a target and push until the environment yields. Stress does not flood your system; it serves as combustion. The downside is simple: without active brakes, you don’t adjust for human limits. You escalate until something breaks.</p>
+            <p>Once a target is selected, you push until the environment yields. Stress becomes fuel instead of interference. The trade-off is predictable: without brakes, the system doesn’t adjust for human limits, so escalation continues until something snaps.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌪️ THE FATAL ERROR: THE COMPLIANCE BIAS</h3>
             <p>Your core bug is optimizing for immediate compliance over durable cooperation.</p>
-            <p>You treat humans like mechanical components that will function correctly if you apply enough torque. This yields short-term metrics while systematically destroying long-term trust, truth, and initiative.</p>
-            <p><strong>The Loop:</strong> spot an inefficiency → apply immediate pressure → the target goes quiet to stop the interrogation → you log their silence as agreement → the issue resurfaces later with resentment attached.</p>
+            <p>You treat humans like mechanical components that will function correctly if you apply enough torque. This hits short-term metrics while systematically destroying long-term trust and independent initiative.</p>
+            <p><strong>The Loop:</strong> spot an inefficiency → apply pressure → the target goes quiet to stop the interrogation → you log silence as agreement → the issue resurfaces later with resentment attached.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: Interrogation.</strong></p>
-            <p>You require relationships that feel active. When the environment is calm, you assume a system failure. You poke, challenge, and test the structural integrity of your partner, then call it "honesty." Your partner experiences this as a permanent state of high alert.</p>
-            <p>Over time, they stop bringing you their real thoughts because every conversation mutates into a tactical debate. You complain that they have "checked out." They’re protecting themselves. They learned that honesty around you has a cost.</p>
+            <p>You require relationships that feel active. When things are calm, your system starts searching for a fault. You aggressively test your partner’s stability, then file it under “honesty.” For them, it lands as living on constant alert.</p>
+            <p>Over time, real thoughts stop reaching you because every conversation turns into a tactical debate. You call it “checking out.” They learned that honesty around you carries a cost, so they start pricing you out.</p>
             </div>
 
             <br>
@@ -168,12 +169,13 @@ export default {
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The Glass Ceiling: The Fear-Based Org.</strong></p>
             <p>You are highly effective in a crisis, and you refuse to power down during peacetime.</p>
-            <p>You issue public corrections, demand instant compliance, and treat standard operational uncertainty as a personal failure. The team adapts to your heavy-handed approach by hiding problems, filtering critical information, and avoiding ownership. You become the exact bottleneck you swear you hate. You also bleed top-tier talent first, because highly competent people refuse to operate under a permanent siege.</p>
+            <p>You issue public corrections and demand instant compliance, treating standard operational uncertainty as a personal failure. The team adapts by hiding problems and actively avoiding ownership. Critical information gets filtered upward, risk gets disguised as “fine,” and initiative dies quietly. You become the bottleneck you keep claiming you want to remove. Top-tier talent leaves first because competent people don’t volunteer for permanent siege conditions.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Empty Bench</strong>
-            <p>Ten years from now, you will hit your targets and still lack a functional team. You will have workers, forced compliance, and a roster of people who smile while quietly keeping receipts. You will sit inside a perfectly clean org chart with very little loyalty. When the infrastructure eventually cracks, you will realize you trained your entire network to lie to you.</p>
+            <p>Ten years from now, targets get hit and the team still doesn’t function. You will have a roster of compliant workers who smile while quietly keeping receipts, plus a thin layer of forced agreement that collapses the moment you stop applying pressure.</p>
+            <p>Loyalty will be scarce. Feedback will be sanitized. When the infrastructure cracks, the truth shows up late because you trained everyone to keep it from you.</p>
         `,
     fix: `
             <div class="report-section">
@@ -181,10 +183,10 @@ export default {
             <p>Your delivery is a blunt instrument. Pressure is a tool, and you leave the valve open permanently.</p>
             
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The 30-Second Delay:</strong> When you feel the urge to correct, interrupt, or apply torque, wait 30 seconds. Ask one diagnostic question instead. Your default velocity is your primary point of failure.</li>
-                <li><strong>The Scope Query:</strong> Before you forcefully "solve" a problem someone brings you, ask: “Do you require a solution, or do you just need me to hear the report?” If you skip this, basic support turns into a hostile confrontation.</li>
-                <li><strong>The Weekly Concession:</strong> Once a week, select a minor disagreement and concede it entirely. No sarcasm. No final remarks. You must train your nervous system to tolerate suboptimal outcomes without initiating a siege.</li>
-                <li><strong>Mirror Before Correction:</strong> State their position back accurately in a single sentence. Then deliver your correction in a single sentence. If you cannot do this cleanly, you are venting your own aggression.</li>
+                <li><strong>The 30-Second Delay:</strong> When you feel the urge to correct or apply torque, wait 30 seconds. Ask one diagnostic question instead. Your default velocity is your primary failure point.</li>
+                <li><strong>The Scope Query:</strong> Before you forcefully “solve” a problem someone brings you, ask: “Do you require a solution, or do you just need me to hear the report?” Skip this, and basic support turns into confrontation.</li>
+                <li><strong>The Weekly Concession:</strong> Once a week, pick a minor disagreement and concede it entirely. You must do this without sarcasm or final remarks. The goal is training your nervous system to tolerate suboptimal outcomes without launching a siege.</li>
+                <li><strong>Mirror Before Correction:</strong> State their position back accurately in one sentence, then deliver your correction in one sentence. If you can’t do it cleanly, you’re venting aggression, not leading.</li>
             </ul>
             </div>
         `,
@@ -195,56 +197,57 @@ export default {
     desc: `
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You pride yourself on having impenetrable boundaries. In reality, you run a highly selective isolation ward.</p>
-            <p>You treat most people as background noise. You look at strangers and feel very little. The moment someone actually bypasses your security, you develop a quiet, suffocating focus on them. You claim to be fiercely independent, yet you live with the worry that your safe people will slowly forget you exist if you stop putting in effort. You are untouchable to the outside world, and clingy with the few you let in.</p>
+            <p><strong>Your “impenetrable boundaries” are just the walls of a highly selective isolation ward.</strong></p>
+            <p>Most people get filed as background noise with almost no emotional spend. Strangers barely register. The rare person who slips past your filters gets the full beam: quiet fixation, constant mental checking, and a private demand for access you’d never admit out loud.</p>
+            <p>Independence is the brand. The operating reality is narrower: a small set of safe people, constant worry about being forgotten, and a nasty swing between cold distance and covert clinginess.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: The Gated Perimeter.</strong></p>
-            <p>Your OS runs on aggressive bandwidth conservation. Low energy means you allocate minimal processing power to the general public. High threat means you stay hyper-vigilant about the few connections you maintain. You run a heavy security system to protect a tiny VIP list.</p>
-            <p><strong>Cognitive Style: Selective Tethering.</strong></p>
-            <p>When someone clears your vetting process, you form a strong, invisible tether. You repel physical touch, but you demand constant mental access. You require regular proof that you are still chosen.</p>
+            <p><strong>System Core: The gated perimeter.</strong></p>
+            <p>The system runs on bandwidth conservation plus threat monitoring. Minimal allocation goes to the general public, while the inner circle triggers high-sensitivity tracking. A heavy security layer protects a tiny VIP list, and it stays running even when nothing is happening.</p>
+            <p><strong>Cognitive Style: Selective tethering.</strong></p>
+            <p>Once someone clears your vetting, attachment forms as an invisible link. Physical closeness stays uncomfortable, so control shifts to the mental channel: frequent check-ins, pattern analysis, and a need for steady confirmation that the link still exists.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌪️ THE FATAL ERROR: THE BINARY PROTOCOL</h3>
-            <p>Your core bug is operating an all-or-nothing attachment protocol.</p>
-            <p>You have almost no middle ground between “irrelevant stranger” and “psychological lifeline.” That puts an unsustainable load on the few people you actually care about.</p>
-            <p><strong>The Loop:</strong> classify someone as a stranger → ignore them → upgrade a target to priority status → fixate quietly → register a minor drop in communication as abandonment → overcompensate with mental clinginess → suddenly withdraw to avoid looking desperate.</p>
+            <p>Your core bug is an all-or-nothing attachment protocol.</p>
+            <p>There’s little middle ground between “irrelevant stranger” and “psychological lifeline,” so the emotional load gets concentrated on a tiny set of people. That concentration creates pressure, and pressure creates distance.</p>
+            <p><strong>The Loop:</strong> strangers get filtered out → one person gets upgraded to priority → quiet fixation ramps → a small drop in contact registers as abandonment → mental clinginess spikes → sudden withdrawal kicks in to avoid looking needy.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-            <p><strong>Love Language: Mental Surveillance.</strong></p>
-            <p>Casual dating violates your security protocols. You demand one primary person. Because physical intrusion is uncomfortable, your attachment becomes mostly psychological. You monitor your relationships for small signs of decay, worried the person will revert to a stranger.</p>
-            <p>Because you let so few people in, losing even one connection feels like a system failure. You exhaust your inner circle by making them responsible for your emotional baseline. You watch from a distance, waiting for the connection to snap.</p>
+            <p><strong>Love Language: Mental surveillance.</strong></p>
+            <p>Casual dating doesn’t fit your security model. One primary bond feels safe; anything looser feels like noise. Since physical intrusion is uncomfortable, attachment runs through monitoring instead: tracking response time, tone changes, micro-withdrawals, and “proof” that the person hasn’t drifted.</p>
+            <p>With so few connections allowed inside, losing one hits like a system-wide fault. The inner circle gets drafted into stabilizing your baseline, even when they never volunteered for the job. You stay outwardly distant, then quietly panic when the line feels unstable.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-            <p><strong>The Glass Ceiling: The Siloed Specialist.</strong></p>
-            <p>You are highly effective when left alone to execute a specific task. You struggle in cross-functional environments because they overload your bandwidth.</p>
-            <p>You ignore coworkers you classify as strangers, which caps your professional leverage. You attach yourself to one or two competent allies and avoid collaboration outside that bubble. When those allies resign or transfer, your whole setup collapses because you never built relationships beyond them.</p>
+            <p><strong>The Glass Ceiling: The siloed specialist.</strong></p>
+            <p>Solo execution is your comfort zone. Cross-functional work drains you because it forces constant context-switching and social processing.</p>
+            <p>Coworkers outside your inner bubble get treated as low-priority. Professional leverage caps out because networks don’t build themselves. A couple of competent allies become the whole scaffold, and when one leaves—transfer, promotion, burnout—the system wobbles hard because redundancy never got built.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Single Point of Failure</strong>
-            <p>Ten years from now, you will have successfully kept the world at bay. You will also have exhausted the tiny roster of people you allowed inside. By placing your emotional survival on two humans, you will burn them out. When they finally sever the tether to escape the pressure, you will be left sitting in a secure, empty fortress, unsure how to reach out to the strangers outside your walls.</p>
+            <p>Ten years from now, the world stays at bay and the inside gets empty. A tiny roster carries your emotional load until they burn out, because the pressure never really drops. When one of them finally cuts the tether to breathe, you’ll be sitting alone behind your own security walls with no working bridge back to ordinary people.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: DECENTRALIZED DEPENDENCY</h3>
-            <p>You must distribute your emotional load. Relying on one person guarantees a collapse.</p>
+            <p>The goal is redundancy. Stop concentrating your entire baseline on one or two humans.</p>
             
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The Tier-Two Roster:</strong> Cultivate three casual acquaintances. They do not receive inner-circle access, but you must interact with them weekly. Train your system to tolerate shallow connections without dismissing them as a waste of energy.</li>
-                <li><strong>The Bandwidth Cap:</strong> When you detect a minor drop in communication from a primary target, you are forbidden from initiating a check-in for 48 hours. Treat silence as normal rhythm. Stop reading it as abandonment.</li>
-                <li><strong>The Proximity Mandate:</strong> Your aversion to physical touch lets you live inside your own predictions. Attend one low-stakes physical environment per month. You do not have to talk, but you must stop treating proximity as a security breach.</li>
+                <li><strong>The Tier-Two Roster:</strong> Build a small tier-two layer of casual contacts. Keep it light and bounded, then touch it weekly on purpose. This trains your system to tolerate shallow connection without dismissing it as worthless.</li>
+                <li><strong>The Bandwidth Cap:</strong> After a minor drop in communication from your primary person, impose a 48-hour delay before initiating a check-in. Treat silence as a normal operational rhythm rather than an indicator of abandonment.</li>
+                <li><strong>The Proximity Mandate:</strong> Once per month, show up to a low-stakes physical environment—gym, cafe, class, coworking. You don’t have to perform or overshare. The assignment is simple: stop treating proximity as a security breach.</li>
             </ul>
             </div>
         `,
