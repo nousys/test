@@ -198,8 +198,8 @@ export default {
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
             <p><strong>Your “impenetrable boundaries” are just the walls of a highly selective isolation ward.</strong></p>
-            <p>Most people get filed as background noise with almost no emotional spend. Strangers barely register. The rare person who slips past your filters gets the full beam: quiet fixation, constant mental checking, and a private demand for access you’d never admit out loud.</p>
-            <p>Independence is the brand. The operating reality is narrower: a small set of safe people, constant worry about being forgotten, and a nasty swing between cold distance and covert clinginess.</p>
+            <p>Most people get filed as background noise with almost no emotional spend. Strangers barely register. The rare person who slips past your filters gets the full beam: quiet fixation masking a private demand for access you’d never admit out loud.</p>
+            <p>Independence is the brand. The operating reality is narrower: a small set of safe people, burdened by your constant worry about being forgotten and your nasty swings between cold distance and covert clinginess.</p>
             </div>
 
             <br>
@@ -208,7 +208,7 @@ export default {
             <p><strong>System Core: The gated perimeter.</strong></p>
             <p>The system runs on bandwidth conservation plus threat monitoring. Minimal allocation goes to the general public, while the inner circle triggers high-sensitivity tracking. A heavy security layer protects a tiny VIP list, and it stays running even when nothing is happening.</p>
             <p><strong>Cognitive Style: Selective tethering.</strong></p>
-            <p>Once someone clears your vetting, attachment forms as an invisible link. Physical closeness stays uncomfortable, so control shifts to the mental channel: frequent check-ins, pattern analysis, and a need for steady confirmation that the link still exists.</p>
+            <p>Once someone clears your vetting, attachment forms as an invisible link. Physical closeness stays uncomfortable, so control shifts to the mental channel: frequent check-ins and aggressive pattern analysis to confirm the link still exists.</p>
             </div>
 
             <br>
@@ -232,7 +232,7 @@ export default {
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The Glass Ceiling: The siloed specialist.</strong></p>
             <p>Solo execution is your comfort zone. Cross-functional work drains you because it forces constant context-switching and social processing.</p>
-            <p>Coworkers outside your inner bubble get treated as low-priority. Professional leverage caps out because networks don’t build themselves. A couple of competent allies become the whole scaffold, and when one leaves—transfer, promotion, burnout—the system wobbles hard because redundancy never got built.</p>
+            <p>Coworkers outside your inner bubble get treated as low-priority. Professional leverage caps out because networks don’t build themselves. A couple of competent allies become the whole scaffold, and when one leaves through transfer or burnout, the system wobbles hard because redundancy never got built.</p>
             </div>
         `,
     bug: `
@@ -258,62 +258,62 @@ export default {
     desc: `
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You rebrand anxiety as strategic depth.</p>
-            <p>You process ten thousand edge cases to avoid committing to a move. You call it research. It’s delay with better vocabulary. You keep collecting information because action creates exposure, and exposure creates the one thing you cannot control: feedback.</p>
-            <p>You call it “being careful.” You optimize your existence to avoid visible mistakes, meaning you ship very little. You run flawless simulations of reality and still refuse to step into the room.</p>
+            <p>You turned anxiety into a credential.</p>
+            <p>The brain runs edge-case sweeps to justify staying uncommitted. Browser tabs multiply and frameworks endlessly stack as your notes grow. This mimics rigor but functions entirely as a delay tactic, because action creates a public record and a public record invites feedback.</p>
+            <p>“Careful” is the cover story. The real pattern is avoidance of visible error. Plans look clean on paper, and the calendar stays empty because nothing gets pushed into reality.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: Overclocked planning, weak execution output.</strong></p>
-            <p>You allocate heavy computing power to threat detection and structure. High control wants clean plans. High threat wants fewer surprises. Low energy means the plan stays in your head and the calendar stays empty.</p>
-            <p>You demand near-certainty before you start. Standard friction—unclear requirements, imperfect timing, a vague response—gets logged as major risk. So you stall and “tighten the plan” instead of moving.</p>
+            <p><strong>System Core: Overclocked planning, throttled execution.</strong></p>
+            <p>Threat detection and structure get most of the compute. The control layer demands clean inputs while the threat sensors actively block surprises. Energy runs low once the work turns messy, so the plan remains internal and the output remains theoretical.</p>
+            <p>Near-certainty becomes the launch condition. Standard friction—unclear requirements, imperfect timing, vague replies, minor ambiguity—gets logged as elevated risk. The result is predictable: more planning cycles, fewer starts.</p>
             <p><strong>Cognitive Style: Offline build.</strong></p>
-            <p>You design pristine architectures in a controlled environment. You see second-order consequences that everyone else misses. That makes your advice valuable. It also makes your personal execution speed slow, because reality refuses to match your model.</p>
+            <p>Architectures are pristine in a controlled environment. Second-order effects are easy for you to see, which is why people come to you for diagnostics. Real environments refuse to match your model, so execution slows while you keep patching the spec.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌪️ THE FATAL ERROR: THE INFINITE COMPILE</h3>
             <p>Your core bug is treating unknown variables as fatal exceptions.</p>
-            <p>You try to eliminate risk by expanding your scope indefinitely. You refuse to deploy until the output feels “safe,” ignoring the obvious fact that deployment is where the real bugs show up.</p>
-            <p><strong>The Loop:</strong> set objective → run threat simulation → spot a failure point → pause to gather more data → repeat until the timeline expires.</p>
-            <p><strong>Example:</strong> You spend two weeks researching how to start a project, then never publish the first draft. You rewrite the plan, re-check tools, then start over on the market research, and call that progress.</p>
+            <p>Scope expands as a defense. The spec expands and the research deepens while the “prep” keeps accumulating, and deployment keeps sliding. Most bugs only surface at runtime, and you keep refusing runtime.</p>
+            <p><strong>The Loop:</strong> set objective → run threat simulation → spot a weak point → gather more data → adjust the model → repeat until the timeline expires.</p>
+            <p><strong>Example:</strong> Two weeks go into choosing the “right” toolchain, then the first draft never ships. The plan is endlessly rewritten and the market re-scanned until the work feels “safe,” and nothing enters the world with your name on it.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
-            <p><strong>Love Language: The Risk Assessment.</strong></p>
-            <p>You treat people like volatile systems. You run silent vetting: consistency, track record, reactions under stress, how they handle conflict. Because emotions cannot be quantified, your system flags them as operational hazards.</p>
-            <p>You want a partnership that stays logical and predictable. When the dynamic requires vulnerability, your system locks up because intimacy demands uncertainty.</p>
-            <p><strong>Example:</strong> You can talk for hours about goals and logistics, but when someone asks, “What do you actually feel about me?” you default to analysis, jokes, or a vague answer that keeps you protected.</p>
+            <p><strong>Love Language: The risk assessment.</strong></p>
+            <p>People get treated like volatile systems. Vetting runs quietly in the background: consistency, history, reactions under stress, conflict behavior, follow-through. Emotions resist quantification, so the system flags them as operational hazards.</p>
+            <p>Predictable partnership feels safe. Vulnerability requires uncertainty, and uncertainty trips the lockout. When someone asks for a clean emotional answer, analysis steps in as a shield.</p>
+            <p><strong>Example:</strong> Logistics and goals are easy to discuss for hours. “What do you feel about me?” triggers a pivot into jokes or a highly analytical deflection that preserves control.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-            <p><strong>The Glass Ceiling: The Permanent Consultant.</strong></p>
-            <p>You design systems that other people build. You can see exactly where things will fail. That’s a real skill.</p>
-            <p>The ceiling shows up when you refuse to ship. A launched product can be critiqued. A finished deck can be wrong. So you keep improving the model and calling it quality control, while actual execution becomes someone else’s problem.</p>
-            <p>You become valuable but entirely optional. People extract your input, but nobody follows you into the arena because you won’t take the first risk.</p>
-            <p><strong>Example:</strong> You can tear apart a strategy doc in 10 minutes, but you avoid owning a deliverable with your name on it unless you’re sure it can’t easily be attacked.</p>
+            <p><strong>The Glass Ceiling: The permanent consultant.</strong></p>
+            <p>Systems design is your home turf. Failure points show up early in your head, which makes your feedback sharp and your strategy work valuable.</p>
+            <p>The ceiling appears at shipment. A launched product can be critiqued, and a final deliverable can simply be wrong. To avoid that exposure, the model keeps getting improved while execution gets delegated or postponed.</p>
+            <p>That pattern makes you valuable and optional at the same time. Teams extract your insight, then choose someone else to take the first risk because you won’t.</p>
+            <p><strong>Example:</strong> A strategy doc can be dismantled in ten minutes. Owning a deliverable with your name on it gets delayed until it feels attack-proof, which is basically never.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Theoretical Life</strong>
-            <p>Ten years from now, you will understand a life you didn’t actually live. You’ll have a hard drive full of perfect plans and almost no finished output. You’ll watch less careful people execute ideas you predicted years ago, then convince yourself they were “reckless,” even though they simply moved.</p>
+            <p>Ten years from now, you’ll understand a life you didn’t execute. Storage fills up with plans, models, drafts, and internal maps while finished output stays scarce. Less careful people will ship versions of ideas you predicted years ago, and your coping story will be “they moved too fast.” They moved at all.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: RUNTIME EXECUTION</h3>
-            <p>You require hard time limits on research and forced exposure to live feedback.</p>
+            <p>Research requires a hard cutoff to force the entry of real-world feedback.</p>
             
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The 70 Percent Threshold:</strong> Execute when you have enough information to avoid obvious mistakes. The remaining variables only show up during runtime. Waiting for total certainty is a stall tactic.</li>
-                <li><strong>Forced Shipment:</strong> Ship one imperfect output every week. Send the draft. Publish the rough version. Deliver the prototype. Your job is to prove to your nervous system that non-fatal errors are survivable.</li>
-                <li><strong>Two-Step Planning Cap:</strong> Plan to the second-order consequence, then stop. After that, you are no longer planning. You are running a rumination spiral.</li>
+                <li><strong>The 70 Percent Threshold:</strong> Start when you have enough information to avoid obvious failure. The remaining variables surface during runtime. Waiting for absolute certainty is simply a stalling mechanism.</li>
+                <li><strong>Forced Shipment:</strong> One imperfect output ships every week, on a fixed day. Pick a format—a draft, a prototype, or a post—and push it out. Missing the ship date triggers a penalty: no new research until something gets delivered.</li>
+                <li><strong>Two-Step Planning Cap:</strong> Plan two moves ahead, then stop. Anything past that point is rumination dressed as engineering. If the urge to “tighten the plan” shows up, convert it into one concrete action within 15 minutes.</li>
             </ul>
             </div>
         `,
@@ -327,56 +327,58 @@ export default {
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
             <p>You rebrand social paralysis as intellectual depth.</p>
-            <p>Subtext is your primary residence because the surface feels like a threat you cannot read in real-time. You sit in meetings cataloging failure points while convincing yourself your silence is “restraint.” This is self-protection. You develop a private sense of superiority about your cynicism, as if being miserable makes you more accurate than the people actually participating. Joy looks suspicious to you. You do not trust it long enough to enjoy it.</p>
+            <p>Subtext is where you live because the surface layer feels like a threat you can’t parse in real time. Meetings turn into silent failure audits while you label the silence “restraint.” It’s self-protection. Cynicism becomes a private status symbol, as if misery guarantees accuracy over the people actually participating. Joy reads as suspicious input, so it never stays in the system long enough to be enjoyed.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🕳️ THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: Deep-Storage Encrypted Vault.</strong></p>
-            <p>Your OS is optimized for high-fidelity risk extraction. While most people possess a positivity bias, your system filters for structural weakness, hidden agendas, and power decay. You process information alone to keep your internal models clean and to avoid the drain of other people’s moods.</p>
+            <p><strong>System Core: Deep-storage encrypted vault.</strong></p>
+            <p>Your OS is optimized for high-fidelity risk extraction. While most people carry a positivity bias, this system filters aggressively for structural weakness and hidden agendas, then stores the model internally to avoid contamination from other people’s moods.</p>
             <p><strong>The Superpower: Cold continuity.</strong></p>
-            <p>You stay functional during a crisis because you have been rehearsing worst-case scenarios for years. While the room panics, you are already executing contingencies you quietly prepared ahead of time.</p>
+            <p>Crisis performance stays high because worst-case scenarios have been rehearsed for years. When the room panics, contingencies are already staged and execution kicks in without drama.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌪️ THE FATAL ERROR: THE PRE-EMPTIVE SHUTDOWN</h3>
             <p>Your core bug is mourning objectives before you even attempt to secure them.</p>
-            <p>You detect the potential for loss and initiate a hard reset to avoid the experience. You reject opportunities, relationships, and progress so you never have to process a failure in public.</p>
-            <p><strong>The Loop:</strong> detect a potential connection → run worst-case math → register a minor signal of distance → ghost first → return to the safety of your bunker → log the isolation as proof you were “right.”</p>
-            <p><strong>Example:</strong> You stop replying to a promising lead because you’ve already imagined the conversation where they eventually lose interest. You call this “saving time.”</p>
+            <p>Loss gets detected early, and the system initiates shutdown to avoid experiencing it. You preemptively reject opportunities and sever relationships so you never have to process a public failure.</p>
+            <p><strong>The Loop:</strong> detect a potential connection → run worst-case math → register a minor signal of distance → ghost first → retreat to the bunker → log isolation as proof you were “right.”</p>
+            <p><strong>Example:</strong> A promising lead stops getting replies because you already ran the scene where they lose interest. You label it “saving time,” but the actual function is pure avoidance.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: The Moat.</strong></p>
-            <p>You want depth, but you make access expensive. You go quiet to feel safe, then watch who has the stamina to stay. Most people read it as coldness and leave.</p>
-            <p>Because you let so few people in, you end up asking one person to carry the entire weight of your inner world. You also expect to be understood without providing enough access to understand you. Then you use the distance you created as proof that nobody is worth trusting.</p>
+            <p>Depth is the requirement, and access is priced high. Silence becomes your safety move, then you watch who tolerates it. Most people read coldness and leave.</p>
+            <p>With so few allowed inside, one person ends up carrying the weight of your inner world. Access stays restricted, yet comprehension is still expected. The distance you engineer then gets used as evidence that nobody is worth trusting.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
-            <p><strong>The Glass Ceiling: THE HIDDEN ARCHITECT.</strong></p>
-            <p>You function as the system's forensic auditor. You see cracks in the foundation long before it reaches the roof.</p>
-            <p>Your ceiling is your refusal to be visible. You hoard strategic insight, only surfacing it later to document a failure you already predicted. You struggle as a leader because you treat emotional upkeep as wasted bandwidth. You end up essential for survival but sidelined from control, because you don’t trust anyone else either.</p>
+            <p><strong>The Glass Ceiling: The hidden architect.</strong></p>
+            <p>In organizations, the role defaults to forensic auditor: cracks show up early, and failure gets predicted long before it becomes visible.</p>
+            <p>Visibility gets refused, so strategic insight is hoarded and only surfaced later to document a failure already anticipated. Emotional upkeep is treated as wasted bandwidth, which makes leadership brittle and coordination thin.</p>
+            <p>The outcome is consistent: survival value stays high while control remains low, ensuring trust never gets built because nobody else gets trusted either.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Self-Burying Protocol</strong>
-            <p>Ten years from now, your bunker will be secure and empty. You will have protected yourself from disappointment by making sure very little can reach you. You will sit with a flawless list of everything that would have gone wrong if you had tried, and realize you traded your life for a sense of control.</p>
+            <p>Ten years from now, the bunker will be secure and empty. Self-protection will leave you isolated behind layers of risk control, with very little able to reach you.</p>
+            <p>A flawless list of everything that would have gone wrong will still be sitting there, and the trade will finally register: a life exchanged for a sense of control.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: SURFACE PROTOCOLS</h3>
-            <p>You must learn to operate in daylight without requiring everything to be “deep.”</p>
+            <p>Operating only in “deep mode” is the trap. Daylight needs to become usable input.</p>
             
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The Scheduled Triviality:</strong> Allocate 30 minutes daily to a zero-consequence activity. Watch a mindless movie. Eat something for the flavor alone. Play a game with no stakes. Prove to your system that not every input is a survival threat.</li>
-                <li><strong>The Virtue Ledger:</strong> For every structural flaw you identify in a person, manually log one genuine virtue. Balance the report before you file it.</li>
-                <li><strong>Operational Transparency:</strong> Share the map. When you see a risk, use it to protect the team instead of using it as a reason to hide. If you do not share what you see, you are part of the problem you’re diagnosing.</li>
+                <li><strong>The Scheduled Triviality:</strong> Block 30 minutes daily for a zero-consequence activity. Use baseline distraction on purpose—light media or a walk with no productivity goal—so the system learns that not every input is a survival event.</li>
+                <li><strong>The Virtue Ledger:</strong> For every structural flaw you log in someone, manually log one genuine virtue. Balance the report before you file it.</li>
+                <li><strong>Operational Transparency:</strong> Share the map. When a risk shows up, surface it early to protect the team instead of using it as a reason to disappear. Silence turns you into part of the failure you’re diagnosing.</li>
             </ul>
             </div>
         `,
