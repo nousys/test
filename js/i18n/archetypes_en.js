@@ -141,11 +141,24 @@ export default {
 
             <br>
             <div class="report-section">
-            <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
-            <p><strong>System Core: High drive, tight control, disabled brakes.</strong></p>
-            <p>Your stack is built for forward momentum. High energy produces output, and high control forces structure. Threat sensitivity stays low, so the usual social “brake lights” don’t register as urgent. You rarely stall, and you also miss the moment when your intensity has already overshot the job.</p>
-            <p><strong>Cognitive Style: Closed-loop execution.</strong></p>
-            <p>Once a target is selected, you push until the environment yields. Stress becomes fuel instead of interference. The trade-off is predictable: without brakes, the system doesn’t adjust for human limits, so escalation continues until something snaps.</p>
+              <h3 class="report-header">💗 THE OPERATING SYSTEM</h3>
+
+              <p><strong>System Core: High drive, tight control, disabled brakes.</strong></p>
+
+              <ul class="report-bullets">
+                <li><strong>Drive:</strong> You default to action. Output stays high even when the plan is sloppy.</li>
+                <li><strong>Control:</strong> You reduce uncertainty by taking over. It creates speed. It also kills ownership.</li>
+                <li><strong>Threat sensitivity:</strong> You miss early social warning signs. You read friction as noise.</li>
+                <li><strong>Brakes:</strong> You don’t downshift on your own. You stop when something forces it.</li>
+              </ul>
+
+              <p><strong>Cognitive Style: Closed-loop execution.</strong></p>
+              <p>
+                You pick a target and compress the timeline until the environment yields.
+                Stress registers as fuel, so you push harder instead of recalibrating.
+                Without active braking, you don’t adjust for human limits.
+                You escalate until someone breaks, quits, or goes silent.
+              </p>
             </div>
 
             <br>
