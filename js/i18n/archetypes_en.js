@@ -390,61 +390,61 @@ export default {
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
             <p>You call it “craft.” It’s a hiding strategy with good branding.</p>
-            <p>You pick problems that can’t talk back. Hardware obeys physics, so you park your life there and label it “focus.” Basic social interaction drains you fast, so you treat it like a tax you didn’t agree to pay.</p>
-            <p>Your workbench becomes your bunker because it gives you control, predictable rules, and an exit button.</p>
+            <p>Problems that can’t talk back are the easy choice. Hardware obeys physics, so life gets parked there and labeled “focus.” Basic social interaction drains you fast, so it gets treated like a tax you never agreed to pay.</p>
+            <p>The workbench becomes your bunker because it guarantees predictable rules and an immediate exit button.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🔨 THE OPERATING SYSTEM</h3>
             <p><strong>System core: deep focus with low interaction bandwidth.</strong></p>
-            <p>Your attention system is built for long, uninterrupted runs. High control keeps standards tight and execution consistent over time. Low threat reduces emotional noise and status sensitivity, so external pressure rarely moves your needle.</p>
+            <p>Your attention system is built for long, uninterrupted runs. High control enforces strict execution standards, while low threat sensitivity naturally dampens emotional noise and status anxiety, so external pressure rarely moves your needle.</p>
             <p>Low energy changes the economics. Context switching burns you down, and interruption forces a costly reload of mental state.</p>
             <p><strong>Cognitive style: single-thread execution.</strong></p>
-            <p>You queue tasks instead of juggling them. Interruptions trigger irritation because your system just lost state and has to rebuild it under someone else’s timeline.</p>
+            <p>Tasks are queued sequentially rather than juggled. Interruptions trigger irritation because state just got dropped and has to be rebuilt under someone else’s timeline.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🧊 THE FATAL ERROR: THE OBSERVER TRAP</h3>
-            <p>You treat detachment as an efficiency strategy and then act surprised when your life feels empty.</p>
-            <p>You treat life like a test environment, measuring and optimizing from a safe distance while avoiding the messy feedback that comes from being emotionally present.</p>
+            <p>Detachment gets treated as an efficiency strategy, then the empty life shows up later as a surprise.</p>
+            <p>Life is handled like a test environment: measure, optimize, stay at a safe distance, avoid the messy feedback that comes from being emotionally present.</p>
             <p><strong>The loop:</strong> pick a hard technical target → cut contact to protect state → ship something clean → return late to the humans → get a colder reception → retreat back to the build to avoid that hit.</p>
-            <p><strong>Example:</strong> you spend six weekends polishing backend architecture while ignoring repeated bids for attention, then expect the final deployment to register as care. It registers as absence.</p>
+            <p><strong>Example:</strong> Six weekends go into polishing backend architecture while repeated bids for attention get ignored, then the final deployment is expected to translate as affection when it’s experienced as pure absence.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love language: maintenance tickets.</strong></p>
-            <p>You show care through repairs, upgrades, and logistics because tasks feel safe and measurable. You assume stability in the environment creates stability in the bond.</p>
-            <p>You demand exact logical inputs from a partner who simply requires your physical presence, so you convert emotional moments into analysis sessions and call it “being helpful.”</p>
-            <p>Your habit of “processing” mid-conflict forces your partner to experience a sudden, total abandonment, followed by a long silence that you treat as neutral downtime.</p>
+            <p>Care is demonstrated through logistical repairs and system upgrades because tasks feel safe and measurable. Stability in the environment gets equated with stability in the bond.</p>
+            <p>A partner asks for presence, and the system responds with exact logical inputs. Emotional moments get converted into analysis sessions and filed under “helpful.”</p>
+            <p>Mid-conflict “processing” lands as a hard abandonment: sudden disengagement followed by a long silence, capped off with a return that assumes nothing happened.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The glass ceiling: the high-output silo.</strong></p>
-            <p>You dominate as an individual contributor because you can hold complexity, maintain standards, and keep shipping under minimal supervision.</p>
-            <p>Management requires throughput across people, not just code. You avoid alignment, delay updates, and treat communication as overhead, so the team routes around you and stops trusting you as a decision surface.</p>
-            <p>Your absolute lack of a user interface permanently caps your skill.</p>
+            <p>Individual contributor work is where you dominate, because you can maintain strict standards and ship complex output under minimal supervision.</p>
+            <p>Management requires throughput across people, not just code. Alignment is actively dodged while routine updates and communication are treated as unnecessary overhead, so the team routes around you and stops trusting you as a decision surface.</p>
+            <p>That missing user interface caps your ceiling.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Flawless Vacuum</strong>
-            <p>Ten years from now, your life will run perfectly clean. You will experience zero interruptions, zero arguments, and absolutely no invitations.</p>
-            <p>Your work will be solid and your environment will be optimized, but you will become “brilliant” and “hard to reach” in the same sentence. You will notice the silence, then rationalize it as preference because that story hurts less.</p>
+            <p>Ten years from now, life runs perfectly clean. The blissful absence of interruptions will eventually bleed into a permanent absence of invitations.</p>
+            <p>Work stays solid and the environment stays optimized, but “brilliant” and “hard to reach” become a bundled description. The silence gets noticed, then rationalized as preference because that story hurts less.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: THE INTERFACE PROTOCOL</h3>
-            <p>You require a scheduled, strictly explicit protocol because your default mode does not maintain bonds.</p>
+            <p>A schedule is required, with explicit rules, because the default mode does not maintain bonds.</p>
 
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The ping protocol:</strong> Five minutes daily, device-free, with one real question and one follow-up. Failing to allocate five minutes is active avoidance, not operational overload.</li>
-                <li><strong>Verbalize the standby:</strong> When you need processing time, state it and give a return time, then return on schedule. Silence gets interpreted as contempt even when you mean nothing by it.</li>
-                <li><strong>The deployment mandate:</strong> Ship before it feels perfect and put it in front of users within a bounded window. Process this feedback purely as data collection.</li>
+                <li><strong>The ping protocol:</strong> Five minutes daily, device-free, with one real question plus a follow-up. Missing five minutes isn’t “busy.” It’s avoidance.</li>
+                <li><strong>Verbalize the standby:</strong> When processing time is needed, state it and give a return time, then return on schedule. Silence gets interpreted as contempt even when nothing is meant by it.</li>
+                <li><strong>The deployment mandate:</strong> Ship before it feels perfect and put it in front of users within a bounded window. Process the feedback as data collection and patch accordingly.</li>
             </ul>
             </div>
         `,
@@ -455,62 +455,86 @@ export default {
     desc: `
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You run hot, then call it “burnout” like it happened to you.</p>
-            <p>You keep a private ledger of effort. You notice who moves fast, who drifts, who needs reminders, and who needs consequences. You build systems that depend on your constant pressure, then use that dependency as proof that you’re essential.</p>
-            <p>Your organization skill is control dressed up as responsibility. You pre-solve problems and pre-write conversations to quiet your threat response, then act annoyed when people still behave like humans.</p>
+            <p>The system frames running hot as “burnout,” like the heat arrived from the outside.</p>
+            <p>A private ledger tracks effort and compliance. It notes who moves fast, who drifts, who needs reminders, and who only responds to consequences. Your architecture demands constant pressure, then points at the dependency as evidence that you’re “essential.”</p>
+            <p>Your “organizational skill” is simply pure control deployed as a form of responsibility. The threat engine pre-solves problems and pre-writes conversations to calm itself, then real humans show up and ruin the script.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">🏛️ THE OPERATING SYSTEM</h3>
             <p><strong>System Core: maximum chaos suppression.</strong></p>
-            <p>Your stack merges hyper-vigilance with rigid structure and high drive. You scan for risk by default. You process missed deadlines and environmental chaos as active threats, so you tighten control to reduce uncertainty.</p>
+            <p>The stack fuses hyper-vigilance with an aggressively rigid structure. Risk scanning runs by default. The threat scanner reads missed deadlines and ambient chaos as attacks, so the control layer tightens and locks down uncertainty.</p>
+
             <p><strong>Cognitive Style: operational simulation.</strong></p>
-            <p>Before you act, you simulate the whole lifecycle. You automatically predict failure points and build unrequested contingencies. This predictive rendering secures unstable environments, then suffocates teams the moment things calm down because you keep forcing precision and early commitments.</p>
+            <p>Action rarely starts without a full lifecycle run in your head. The engine predicts failure points early and auto-generates contingencies nobody asked for. That stabilizes unstable environments, then suffocates teams once things calm down because the system keeps forcing precision past its useful window.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">🧨 THE FATAL ERROR: THE OVER-FUNCTIONING LOOP</h3>
-            <p>You over-function to manage anxiety, then punish everyone for adapting to your over-functioning.</p>
-            <p>You immediately seize ownership to remove friction for the group. The group learns the pattern and stops initiating because you always intercept.</p>
-            <p><strong>The Loop:</strong> detect a gap → threat spike → immediate takeover → others disengage → you read disengagement as disrespect → you centralize more control → chronic overload → resentment → harsher control.</p>
+            <p>Over-functioning regulates anxiety, then punishes everyone for adapting to it.</p>
+            <p>Immediate ownership neutralizes friction for the group. The group learns the pattern and stops initiating because interception is guaranteed.</p>
+            <p><strong>The Loop:</strong> detect a gap → threat spike → immediate takeover → others disengage → disengagement reads as disrespect → control centralizes → overload becomes chronic → resentment builds → control hardens.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: unsolicited logistics.</strong></p>
-            <p>You secure attachment through management. You show care by scheduling appointments, tightening routines, fixing money leaks, and correcting plans in real time. You feel calm when the relationship runs on your standards.</p>
-            <p>You tend to choose partners who feel easy to steer, then grow contempt when they need steering. Your “help” becomes supervision, and supervision becomes a power struggle.</p>
-            <p>When a partner asks for comfort, you respond with a plan. When they resist the plan, you escalate into control. They default to passivity or initiate a hard exit.</p>
+            <p>Attachment requires active management. Care shows up as appointment scheduling and routine tightening, while money and plans get patched in real time. Calm arrives when the relationship runs on your standards.</p>
+            <p>The selection process favors partners who feel easy to steer, then contempt grows when steering is still required. “Help” turns into supervision, and supervision turns into a power struggle.</p>
+            <p>A request for comfort triggers a logistical plan, and resistance to that plan triggers escalation into control until the partner learns passivity or exits to breathe.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The Glass Ceiling: the delegation choke point.</strong></p>
-            <p>You stabilize chaos and rescue timelines by catching compliance issues long before they detonate. People trust you with critical work because you rarely drop the ball.</p>
-            <p>Your ceiling is trust debt. You rewrite their work and hover over execution, hoarding context because explaining it feels too slow, and your team learns that initiative gets audited.</p>
-            <p>You end up leading a cautious team that waits for permission and then you blame them for waiting.</p>
+            <p>Catching compliance issues early stabilizes chaos and rescues timelines. That earns trust because critical work rarely slips.</p>
+            <p>Trust debt still accumulates. The urge to rewrite work and hover over execution takes over, because explaining context feels too slow and initiative becomes another audit surface.</p>
+            <p>The result is a cautious team that waits for permission, plus a leader who resents them for waiting.</p>
             </div>
+
         `,
+
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Binary Collapse</strong>
-            <p>Your internal scoring system only accepts “clean” or “failed.” Small mistakes hit you like proof that you are slipping, so you tighten standards and increase pressure to regain control.</p>
-            <p>Ten years of this builds an efficient machine with low morale. Your high performers eventually exit, leaving you surrounded exclusively by low-agency operators. Your reputation becomes “effective but unsafe,” and you keep working harder to outrun the label.</p>
+
+            <p>The internal scoring system only accepts “clean” or “failed.” Small mistakes register as proof of slipping, so standards tighten and pressure increases to regain control.</p>
+
+            <p>Ten years of this builds an efficient machine with low morale. High performers eventually exit, leaving a roster of low-agency operators. The reputation becomes “effective but unsafe,” and the response is the usual one: work harder to outrun the label.</p>
+
         `,
+
     fix: `
             <div class="report-section">
+
             <h3 class="report-header">🛠️ THE PATCH: STRATEGIC NEGLECT</h3>
-            <p>You must allow small failures to exist long enough for other people to develop competence and for your threat system to recalibrate.</p>
+
+            <p>Small failures must be allowed to exist long enough for competence to develop and for the threat system to recalibrate.</p>
+
 
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The 15-Minute Vacuum:</strong> When you detect an error, wait 15 minutes before touching it. You are forbidden from prepping a fix, hovering over the operator, or dropping hints. If you fill the vacuum, you train dependency.</li>
-                <li><strong>Standardize “B+” Output:</strong> Define “B+” as “meets spec, passes tests, ships on time.” Accept it without rewriting it. Force your system to track objective outcomes while actively ignoring your internal irritation.</li>
-                <li><strong>The Authorization Check:</strong> Before intervening in someone’s life or work, verify they asked. If they did not ask, you are managing your own threat response by seizing control.</li>
+
+                <li><strong>The 15-Minute Vacuum:</strong> When an error is detected, wait 15 minutes before touching it. Strict rule: no prepping a fix and no hovering over the operator. Filling the vacuum trains dependency.</li>
+
+                <li><strong>Standardize “B+” Output:</strong> Define “B+” as strictly “meets spec and ships on time.” Accept it without rewriting it. Track objective outcomes while ignoring the internal irritation.</li>
+
+                <li><strong>The Authorization Check:</strong> Before intervening in someone’s life or work, verify they asked. If they did not ask, this is threat regulation through control.</li>
+
             </ul>
+
             </div>
+
         `,
   },
   HESTIA: {
@@ -519,26 +543,26 @@ export default {
     desc: `
         <div class="report-section">
         <h3 class="report-header">💀 THE ROAST</h3>
-        <p>You rebrand passivity as inner peace.</p>
-        <p>By letting other people set the direction and the tempo, you end up living inside someone else’s schedule.</p>
-        <p>Friction gets absorbed quietly, and silence gets treated as virtue. People stop checking in because you trained them to expect nothing from you.</p>
+        <p>The brain markets passivity as inner peace.</p>
+        <p>Letting other people set direction and tempo turns your calendar into someone else’s schedule.</p>
+        <p>The system quietly absorbs friction and weaponizes silence as a fake virtue. Over time, people stop checking in because the pattern trained them to expect nothing back.</p>
         </div>
 
         <br>
         <div class="report-section">
         <h3 class="report-header">🖥️ THE OPERATING SYSTEM</h3>
         <p><strong>System Core: inertia with minimal enforcement.</strong></p>
-        <p>Your baseline is low propulsion paired with weak structure, and your urgency circuit tends to wake up late. The result is predictable drift: you tolerate small problems while delaying decisions, then mobilize only after the costs become real.</p>
-        <p>You move toward whatever environment has the strongest push. That makes you easy to live with and easy to use.</p>
+        <p>Propulsion remains low and structure weak, leaving the urgency circuit dormant until pain becomes unavoidable. The system tolerates small problems and delays decisions until pain forces a response, then mobilizes late and expensively.</p>
+        <p>The system drifts toward the environment with the strongest gravitational push. This makes the system pleasant to live with and exceptionally easy to exploit.</p>
         <p><strong>Cognitive Style: the sponge.</strong></p>
-        <p>You adapt fast because you rarely defend preferences. You take in expectations and stress without pushing back, then label stagnation as “stability” because change feels expensive.</p>
+        <p>Minimal preference defense leads to rapid, unvetted adaptation. Stress loads in without resistance, allowing stagnation to masquerade as “stability” just to avoid the price tag of change.</p>
         </div>
 
         <br>
         <div class="report-section">
         <h3 class="report-header">🧨 THE FATAL ERROR: over-tolerance loop</h3>
         <p>Your core bug is delayed discomfort detection paired with low follow-through.</p>
-        <p>You stay in jobs that drain you and relationships that stall because leaving feels like work. You don’t miss the red flags. You wait until they become structural damage.</p>
+        <p>Inertia keeps you in draining jobs and stalled relationships because leaving requires effort. The red flags register. Action still waits until the damage turns structural.</p>
         <p><strong>The Loop:</strong> enter an environment → minimize preferences to avoid friction → absorb discomfort silently → normalize it as “how things are” → keep showing up while the environment decays around you.</p>
         </div>
 
@@ -546,18 +570,19 @@ export default {
         <div class="report-section">
         <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
         <p><strong>Love Language: compliant proximity.</strong></p>
-        <p>You are at higher risk of ending up with controlling partners because you leave a boundary vacuum. People test limits when none are visible, and you rarely push back early.</p>
-        <p>You agree quickly and avoid direct disagreement, then go silent when conflict requires a clear response. Over time, your partner stops asking what you want because your answer keeps sounding like “whatever.” You become reliable and taken for granted.</p>
-        <p>When neglect finally lands, you go quiet and expect the other person to infer the problem. They won’t, and the resentment keeps stacking.</p>
+        <p>Boundary vacuum attracts control. People test limits when none are visible, and pushback rarely arrives early enough to matter.</p>
+        <p>Agreement comes fast and disagreement gets avoided, then silence takes over when conflict demands a clear response. Over time, partners stop asking what you want because the answer keeps sounding like “whatever.” Reliability turns into being taken for granted.</p>
+        <p>Neglect triggers quiet withdrawal and mind-reading expectations. The other person won’t infer the problem, and resentment keeps stacking.</p>
         </div>
 
         <br>
         <div class="report-section">
         <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
         <p><strong>The Glass Ceiling: invisible stability.</strong></p>
-        <p>You keep operations smooth through quiet compliance and constant absorption of extra load. Managers like that because it reduces noise and protects their time.</p>
-        <p>Your ceiling is low visibility and low self-advocacy. Extra tasks slide onto your plate because you default to yes. Over time, you become the background stabilizer: under-credited and easy to pass over.</p>
-        <p>You end up maintaining the infrastructure while other people collect the authority tied to it.</p>
+        <p>Operations stay smooth through quiet compliance and constant absorption of extra load. Managers like that because it reduces noise and protects their time.</p>
+        <p>Low visibility and low self-advocacy cap your leverage. Extra tasks slide onto your plate because “yes” is the default. Over time, you become the background stabilizer: under-credited and easy to pass over.</p>
+        <p>You maintain the infrastructure while others collect the authority attached to it.</p>
+        </div>
     `,
     bug: `
         <strong>⛔ CRITICAL FAILURE: The Invisible Life</strong>
@@ -567,12 +592,12 @@ export default {
     fix: `
         <div class="report-section">
         <h3 class="report-header">🛠️ THE PATCH: ARTIFICIAL FRICTION</h3>
-        <p>Your default mode does not generate outward force. You need installed constraints that trigger action before you drift back into silence.</p>
+        <p>Your default mode does not generate outward force. Constraints must be installed that trigger action before silence retakes the controls.</p>
 
         <ul style="text-align: left; margin-top: 15px;">
-            <li><strong>The Preference Mandate:</strong> Once per day, state one preference and hold it after the first pushback. Pick the restaurant and keep the choice. Train your system to tolerate mild conflict without shutting down.</li>
-            <li><strong>The 48-Hour Tolerance Cap:</strong> When you notice disrespect or recurring friction, take one outward action within 48 hours. Say a direct sentence or refuse the next request. Thinking about it does not count.</li>
-            <li><strong>Install Hard Boundaries:</strong> Write down two non-negotiables in measurable terms and enforce them for 30 days. Example: “No work messages after 9pm.” Example: “I need 24 hours before I agree to plans.” Enforcement is the point.</li>
+            <li><strong>The Preference Mandate:</strong> Once per day, state one preference and hold it after the first pushback. Choose the restaurant and say it out loud; refuse to renegotiate even after the first sigh. Train the system to tolerate mild conflict without shutting down.</li>
+            <li><strong>The 48-Hour Tolerance Cap:</strong> When disrespect or recurring friction is noticed, take one outward action within 48 hours. Say one direct sentence or refuse the next request. Thinking about it does not count.</li>
+            <li><strong>Install Hard Boundaries:</strong> Write down two non-negotiables in measurable terms and enforce them for 30 days. Example: “No work messages after 9pm.” Add a second rule that forces delay, such as requiring 24 hours before agreeing to plans. Enforcement is the point.</li>
         </ul>
         </div>
     `,
@@ -585,26 +610,26 @@ export default {
 
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You rebrand low impulse control as “passion.”</p>
-            <p>Your reactions set the weather for everyone around you. People monitor you constantly because the cost of guessing wrong is hours of fallout.</p>
-            <p>You sell this as “authentic.” Under load, you treat restraint as a threat and act fast to dump pressure into the room.</p>
+            <p><strong>Your “passion” is a lack of impulse control with a better marketing department.</strong></p>
+            <p>Your reactions set the weather for everyone nearby. The room tracks your tone because guessing wrong costs hours of fallout.</p>
+            <p>“Authentic” is the story. Under load, restraint registers as danger, so pressure gets dumped into the room fast and loud.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🌊 THE OPERATING SYSTEM</h3>
             <p><strong>System Core: unregulated kinetic pressure.</strong></p>
-            <p>Your stack combines massive outward drive with hyper-reactive threat detection and a weak braking layer. Small friction cues hit fast, and your body moves before your planning catches up.</p>
+            <p>The stack runs on massive outward drive fused with hyper-reactive threat detection, lacking any functional braking layer. Small friction cues hit fast, and the body moves before planning catches up.</p>
             <p><strong>Cognitive Style: the floodgate.</strong></p>
-            <p>Stress does not sit quietly in your system. It converts into speech and rapid action with almost no latency. The burst can break stagnation and force decisions, then it leaves damage that takes longer to clean than the original problem.</p>
-            <p>In practice, you hit send before rereading and commit to exits at peak heat, then wake up later confused by the consequences you initiated.</p>
+            <p>Stress immediately converts into speech and rapid action with near-zero latency. The burst can break stagnation and force decisions, then leaves damage that takes longer to clean than the original problem.</p>
+            <p>In practice, it shows up as hitting send before rereading or committing to scorched-earth exits at peak heat, only to wake up later confused by the self-initiated fallout.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">🧨 THE FATAL ERROR: scorched earth protocol</h3>
             <p>Your core bug is using immediate discharge as your primary regulation tool.</p>
-            <p>When your alarm spikes, your brake system fails under load and you purge pressure through accusation or abrupt exits. The spike is the driver, and the “event” becomes a convenient label you attach afterward.</p>
+            <p>Alarm spikes trigger brake collapse under load, and pressure gets purged through accusation or abrupt exits. The spike drives the behavior, and the “event” becomes the label attached afterward.</p>
             <p><strong>The Loop:</strong> friction cue → threat spike → brake failure → explosive retaliation → damage that outlives the moment → brief relief followed by isolation and cleanup debt.</p>
             </div>
 
@@ -612,33 +637,33 @@ export default {
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: crisis intimacy.</strong></p>
-            <p>You confuse intensity with closeness because calm reads as distance in your nervous system. You feel most connected during a spike and the aftermath, when everything is loud enough to register.</p>
-            <p>Partners get pulled into a cycle of rapid attachment and sudden withdrawal. They become your external shock absorbers, then get punished when they miss cues you never stated clearly.</p>
-            <p>Over time they either shrink into careful silence or take a clean exit, and you call them “fragile” because the real explanation is uglier.</p>
+            <p>Your nervous system only registers “real” connection when the volume is high. Quiet attachment feels unreal, so intensity becomes the proof-of-life signal.</p>
+            <p>Partners get pulled into a cycle of rapid attachment and sudden withdrawal. They become external shock absorbers, then get punished when they miss cues you never stated clearly.</p>
+            <p>Over time, they shrink into careful silence or take a clean exit. “Fragile” is the insult you use to avoid the obvious pattern.</p>
             </div>
 
             <br>
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The Glass Ceiling: the operational hazard.</strong></p>
-            <p>You generate momentum fast and break gridlock when a system is stuck. People use you as a battering ram because you move without hesitation.</p>
-            <p>Your ceiling is trust. Teams can’t plan around your volatility, so they restrict your scope to burst work and keep you away from long-term ownership. When you feel dismissed, you are high risk for destabilizing the room through conflict or abrupt exits, and leadership learns to route around you.</p>
+            <p>Momentum shows up fast and gridlock breaks when a system is stuck. People use you as a battering ram because you move without hesitation.</p>
+            <p>The ceiling is trust. Teams can’t plan around volatility, so scope gets restricted to burst work and long-term ownership stays out of reach. Dismissal triggers a high risk of room-wide destabilization, eventually forcing leadership to route around you entirely.</p>
             </div>
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: The Isolated Hazard</strong>
-            <p>Ten years from now, you will have a trail of scorched relationships and a résumé full of sharp starts and abrupt stops. People will describe you as powerful and unsafe, then keep distance as a basic safety measure.</p>
-            <p>You will blame sensitivity, politics, timing, bad luck. The consistent variable will be your refusal to hold pressure long enough to choose a cleaner output.</p>
+            <p>Ten years from now, there’s a trail of scorched relationships and a résumé full of sharp starts and abrupt stops. People will describe you as powerful and unsafe, then keep distance as a basic safety measure.</p>
+            <p>Sensitivity, politics, timing, bad luck—pick the excuse. The consistent variable will be refusing to hold pressure long enough to choose a cleaner output.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: HYDRAULIC CONTAINMENT</h3>
-            <p>Power without containment turns into spillage. You need enforced delay plus a dumping channel that stays off the social layer.</p>
+            <p>Power without containment turns into spillage. Enforced delay is required, plus a dumping channel that stays off the social layer.</p>
             
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The 24-Hour Quarantine:</strong> If you feel the urge to send a charged message or make an irreversible exit, you wait 24 hours. During that window, you do not recruit an audience and you do not probe the target with “small” follow-ups. Document the thought, then immediately archive it.</li>
-                <li><strong>Kinetic Grounding:</strong> Before any confrontation, dump the surge into a secondary system for a minimum dose: 20 minutes of hard physical exertion or a full high-friction task that forces focus. Then wait 10 minutes in silence before re-entering the social layer.</li>
-                <li><strong>The Sterile Reset:</strong> When you breach containment, you run a clean repair protocol that fits in one paragraph containing absolute ownership and the immediate next action. You are forbidden from negotiating reality or dragging the target into your internal surge to justify the breach.</li>
+                <li><strong>The 24-Hour Quarantine:</strong> When the urge hits to send a charged message or make an irreversible exit, impose a 24-hour delay. No audience recruitment, and no “small” follow-ups that probe the target. Document the thought, then archive it immediately.</li>
+                <li><strong>Kinetic Grounding:</strong> Before confrontation, dump the surge into a secondary system for a minimum dose: 20 minutes of hard physical exertion or a high-friction task that forces focus. Then wait ten minutes in silence before re-entering the social layer.</li>
+                <li><strong>The Sterile Reset:</strong> After a breach, run a clean repair protocol in one paragraph: full ownership plus the immediate next action. Reality negotiation is forbidden, and dragging the target into your internal surge to justify the breach is also forbidden.</li>
             </ul>
             </div>
         `,
@@ -649,60 +674,70 @@ export default {
     desc: `
             <div class="legendary-banner">⚠️ LEGENDARY ARCHETYPE: TIER 0</div>
 
+
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
-            <p>You confuse domination with competence.</p>
-            <p>Speed and structure come easy to you, so you treat people as throughput constraints. Conversations become status updates. Disagreement becomes “misalignment.” You built a life where you can veto reality on demand, then act shocked when the load lands on your own spine.</p>
-            <p>At the top, you get control, plus the predictable side effects: silence and filtered information, followed by a calendar full of decisions nobody else is allowed to make.</p>
+            <p>Domination is the metric you use for competence.</p>
+            <p>Speed and structure come easy, so people get treated like throughput constraints. Conversations die and reporting takes over. Any pushback gets logged as misalignment, then control tightens until the room stops offering real input.</p>
+            <p>At the top, control buys silence and filtered information, then hands you a calendar packed with decisions nobody else is allowed to touch.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">⚡ THE OPERATING SYSTEM</h3>
             <p><strong>System Core: centralized authority.</strong></p>
-            <p>Your stack maxes out drive and structure, with threat sensitivity running hot in the background. You treat uncertainty as a liability, so you tighten specs early and correct deviations fast.</p>
+            <p>Your stack maxes out drive and structure, with threat sensitivity running hot in the background. Uncertainty reads as liability, so specs get tightened early and deviations get corrected fast.</p>
             <p><strong>Cognitive Style: override routing.</strong></p>
-            <p>When a variable deviates, you push pressure until it snaps back into spec. It hits targets fast and teaches the network to stop thinking out loud. Bad news gets delayed and operational risk is actively buried. The network learns to exclusively feed you sterilized data to avoid triggering your override.</p>
+            <p>When a variable deviates, pressure gets applied until it snaps back into spec. Targets get hit fast, and the network learns to stop thinking out loud. Bad news gets delayed, risk gets buried, and the only safe data is the sterilized version that won’t trigger your override.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">🧨 THE FATAL ERROR: THE APEX BOTTLENECK</h3>
-            <p>Your core bug is building a system that depends on your continuous authorization.</p>
-            <p>Your alarm system assumes delegation creates exposure, so you hoard approvals and keep critical context inside your head. Decision queues form behind you and the organization slows down while you work harder to “fix” the slowdown.</p>
-            <p><strong>The Loop:</strong> identify an objective → centralize control → drive output through force and review → hit the objective → scan for authority threats → tighten access and permissions → bottleneck multiplies.</p>
+            <p>Your core bug is building a system that depends on continuous authorization.</p>
+            <p>Delegation registers as exposure, so approvals get hoarded and critical context stays trapped inside your head. Decision queues form behind you and the organization slows down while you work harder to “fix” the slowdown.</p>
+            <p><strong>The Loop:</strong> an objective appears → control centralizes → review pressure spikes → people stop taking initiative → your scanner flags that silence as safety → permissions tighten again → throughput collapses into your inbox.</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">💞 SOCIAL & ROMANTIC DYNAMICS</h3>
             <p><strong>Love Language: compliance.</strong></p>
-            <p>You select for partners who are easy to manage. You reward agreement and punish friction, then call the result “stability.” Vulnerability feels like operational exposure, so you keep emotional access shallow and transactional.</p>
-            <p>Transparency stays one-way. You demand loyalty and offer selective information. When a partner asks for equal footing, your alarm reads it as a power challenge and you respond with control, often through financial gating or constant correction framed as “help.”</p>
-            <p>The end state is predictable. They shrink or they leave, and you tell yourself they couldn’t handle your standards.</p>
+            <p>Partner selection favors ease of management. Reward agreement and punish friction until the resulting quiet looks like “stability.” Emotional access stays shallow because vulnerability feels like exposure.</p>
+            <p>Transparency stays one-way. Loyalty gets demanded and information stays selective. When a partner asks for equal footing, the alarm reads a power challenge and control shows up fast, often through financial gating or constant correction framed as “help.”</p>
+            <p>The end state is consistent. They shrink or leave, and the story becomes “they couldn’t handle standards.”</p>
             </div>
 
+
             <br>
+
             <div class="report-section">
             <h3 class="report-header">💼 CAREER & LEADERSHIP</h3>
             <p><strong>The Glass Ceiling: scale collapse.</strong></p>
-            <p>You scale until the org outgrows your personal bandwidth, then everything starts waiting for you. Decisions stack. Teams sandbag estimates because your reaction cost is too high. A shadow org forms to ship work without triggering your review layer.</p>
-            <p>You call it “lack of ownership.” It’s a predictable adaptation to being punished for independent judgment.</p>
+            <p>The org scales until it outgrows your personal bandwidth, then everything starts waiting. Decisions stack. Teams sandbag estimates because the reaction cost is too high. A shadow org forms to ship work without triggering your review layer.</p>
+            <p>This “lack of ownership” is simply a predictable adaptation to a system that punishes independent judgment.</p>
             </div>
+
         `,
     bug: `
             <strong>⛔ CRITICAL FAILURE: Catastrophic Hardware Failure</strong>
-            <p>Ten years from now, you will have an organization that runs on your nervous system. People will look capable in meetings and freeze in execution because they were trained to seek permission first.</p>
-            <p>You will keep pushing until your body forces a shutdown. When you disappear, the structure will wobble, then break, because you built dependency as a governance model.</p>
+            <p>Ten years from now, the organization will run on your nervous system. People will look capable in meetings and freeze in execution because they were trained to seek permission first.</p>
+            <p>You will keep pushing until your body forces a shutdown. When you disappear, the structure will wobble, then break, because dependency was built as the governance model.</p>
         `,
     fix: `
             <div class="report-section">
             <h3 class="report-header">🛠️ THE PATCH: DECENTRALIZATION</h3>
-            <p>You must decentralize authority in ways that remove your ability to claw it back during stress.</p>
-            
+            <p>Authority has to be decentralized in ways that remove your ability to claw it back during stress.</p>
+
             <ul style="text-align: left; margin-top: 15px;">
-                <li><strong>The Peer Mandate:</strong> Install one peer with real veto power over budget or hiring and document it. This person must be able to override you in writing without consequences, including public retaliation or quiet career sabotage.</li>
-                <li><strong>Hard Power-Down Windows:</strong> Schedule recurring blackout windows where you are unreachable and barred from monitoring channels. This window strictly prohibits casual monitoring or proxy commands through a lieutenant, restricting emergency exceptions to a pre-defined threshold.</li>
+                <li><strong>The Peer Mandate:</strong> Install one peer with real veto power over budget or hiring and document it. This person must be able to override you in writing, immune to both public retaliation and quiet career sabotage.</li>
+                <li><strong>Hard Power-Down Windows:</strong> Schedule recurring blackout windows where you are unreachable and barred from monitoring channels. No proxy commands through a lieutenant. Emergency exceptions require a pre-defined threshold and a written log entry.</li>
                 <li><strong>Distribute The Keys:</strong> Transfer two concrete approvals to secondary owners and remove yourself from one decision path entirely for 60 days. Track throughput and error rate. If you reinsert yourself early, log it as a breach of protocol.</li>
             </ul>
             </div>
