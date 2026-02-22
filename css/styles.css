@@ -483,6 +483,18 @@ p { line-height: 1.6; color: #cbd5e1; }
     font-weight: 600;
 }
 
+#result-roast p, #result-roast li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+}
+
+#result-roast strong {
+    color: #fff;
+    font-weight: 600;
+}
+
 /* LEGENDARY BADGE */
 .legendary-banner {
     background: rgba(212, 175, 55, 0.15);

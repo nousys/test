@@ -689,6 +689,7 @@ function calculateResult() {
   document.getElementById('result-img').src = data?.img ?? '';
 
   document.getElementById('result-desc').innerHTML = trA(type, 'desc', data?.desc ?? '');
+  document.getElementById('result-roast').innerHTML = trA(type, 'roast', data?.roast ?? '');
   document.getElementById('result-bug').innerHTML = trA(type, 'bug', data?.bug ?? '');
   document.getElementById('result-fix').innerHTML = trA(type, 'fix', data?.fix ?? '');
 
@@ -771,6 +772,7 @@ export function renderResultFromUrl() {
   document.getElementById('result-img').src = data.img;
 
   document.getElementById('result-desc').innerHTML = trA(type, 'desc', data.desc);
+  document.getElementById('result-roast').innerHTML = trA(type, 'roast', data.roast || '');
   document.getElementById('result-bug').innerHTML = trA(type, 'bug', data.bug || '');
   document.getElementById('result-fix').innerHTML = trA(type, 'fix', data.fix || '');
 
