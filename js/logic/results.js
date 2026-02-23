@@ -19,16 +19,24 @@ export async function shareResult() {
   const res = getLastResult();
   const archetype = res?.type || 'NOUSYS';
 
-  // Best case: quiz.js already updated the URL after finishing
-  let url = window.location.href;
+  // 1. Get the base directory safely (e.g., https://nousys.github.io/test/)
+  let baseUrl = window.location.href.split('?')[0]; // Strips off any current parameters
+  if (baseUrl.endsWith('index.html')) {
+    baseUrl = baseUrl.replace('index.html', ''); // Clean up if index.html is in the URL
+  }
+  if (!baseUrl.endsWith('/')) {
+    baseUrl += '/';
+  }
 
-  // Fallback: build URL from lastResult if needed
-  if (!res) {
-    const base = `${window.location.origin}${window.location.pathname}`;
-    url = `${base}?a=${encodeURIComponent(archetype)}`;
-  } else {
-    const base = `${window.location.origin}${window.location.pathname}`;
-    url = `${base}?a=${encodeURIComponent(archetype)}&e=${res.sE}&c=${res.sC}&t=${res.sT}&s=${res.sS}`;
+  // 2. Point to the distinct HTML file (e.g., ares.html)
+  let url = baseUrl;
+  if (archetype !== 'NOUSYS') {
+    url += `${archetype.toLowerCase()}.html`; 
+  }
+
+  // 3. Attach the specific user scores so the graphs can be drawn
+  if (res) {
+    url += `?e=${res.sE}&c=${res.sC}&t=${res.sT}&s=${res.sS}`;
     if (res.wing) url += `&w=${encodeURIComponent(res.wing)}`;
   }
 
