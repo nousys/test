@@ -57,12 +57,18 @@
   </div>
 
   <div id="menu-pop" role="menu" hidden>
-    <div class="archetype-list">
-      <a href="ares.html" class="settings-item archetype-link">Ares</a>
-      <a href="athena.html" class="settings-item archetype-link">Athena</a>
-      <a href="apollo.html" class="settings-item archetype-link">Apollo</a>
-      <a href="artemis.html" class="settings-item archetype-link">Artemis</a>
+    <button id="archetype-accordion-btn" class="settings-item" style="font-weight: 600; justify-content: space-between;">
+      Archetypes <span id="accordion-arrow">▼</span>
+    </button>
+
+    <div id="archetype-sublist" class="archetype-list" style="display: none; padding-left: 15px; background: rgba(0,0,0,0.2); border-radius: 8px;">
+      <a href="?a=Ares" class="settings-item archetype-link">Ares</a>
+      <a href="?a=Athena" class="settings-item archetype-link">Athena</a>
       </div>
+
+    <div class="settings-sep"></div>
+
+    <a href="#" class="settings-item" style="opacity: 0.6;">About Theory (Soon)</a>
   </div>
 </div>
 

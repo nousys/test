@@ -96,6 +96,26 @@ function init() {
     if (e.key === 'Escape') closeAllPopups();
   });
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordionBtn = document.getElementById('archetype-accordion-btn');
+    const sublist = document.getElementById('archetype-sublist');
+    const arrow = document.getElementById('accordion-arrow');
+
+    if (accordionBtn && sublist) {
+        accordionBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Keeps the main menu open
+            
+            if (sublist.style.display === 'none') {
+                sublist.style.display = 'flex';
+                arrow.textContent = '▲';
+            } else {
+                sublist.style.display = 'none';
+                arrow.textContent = '▼';
+            }
+        });
+    }
+});
+
   // Language items
   langMenu.querySelectorAll('[data-lang]').forEach((item) => {
     item.addEventListener('click', (e) => {
