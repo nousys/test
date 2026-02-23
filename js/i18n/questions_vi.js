@@ -156,9 +156,9 @@ export default {
   "c5": {
     "systemTag": "SYSTEM: CONTROL",
     "title": "Giếng độc",
-    "scene": "Nọc độc Hydra đen ngòm ngấm vào giếng làng, ăn mòn mặt đá. Áp lực dâng cao khiến vách nứt gầm rú, chực chờ đổ chất độc xuống khu phố hạ lưu.",
-    "leftOption": "Lần theo đường ống dẫn, đóng cọc gỗ để chặn dòng chảy. Đào kênh xả ra lòng sông cạn và dùng đá mới gia cố vết nứt theo kế hoạch.",
-    "rightOption": "Phá tung mảng tường đang rệu rã nhất rồi quan sát hướng bùn chảy. Liên tục đắp đất để nắn dòng, thấy chỗ nào nguy hiểm là xoay chuyển ngay lập tức.",
+    "scene": "Nọc độc Hydra đen ngòm tràn ra từ giếng làng, ăn mòn đá. Vết nứt trên vách kêu răng rắc khi áp lực dâng lên, chực tràn độc xuống khu phố thấp.",
+    "leftOption": "Lần theo các ống dẫn vào, chèn cọc gỗ để giảm áp lực. Đào một rãnh xả ra lòng sông cạn, rồi chèn đá mới để chống vết nứt.",
+    "rightOption": "Phá một khe ngay chỗ vách đang oằn nhất rồi nhìn chất độc chảy theo hướng nào trước. Mở thêm những khe mới và bẻ dòng liên tục, vừa đắp đất vừa lái dòng độc tránh xa nhà dân.",
     "leftLabel": "Kiểm soát biến số",
     "rightLabel": "Học hỏi khi hành động"
   },
@@ -169,7 +169,7 @@ export default {
     "leftOption": "Áp lưng vào đá, mượn tĩnh lặng để giữ đôi tay vững vàng. Điều hòa nhịp thở và quan sát bóng tối, giữ tâm trí tỉnh táo trong khoảng lặng.",
     "rightOption": "Giậm mạnh ủng xuống sỏi, gõ kiếm vào giáp chân đồng. Tự tạo tiếng động và sự va chạm để ép bản thân phải tỉnh táo, sẵn sàng hành động.",
     "leftLabel": "Giữ nhịp riêng",
-    "rightLabel": "Cộng hưởng năng lượng"
+    "rightLabel": "Tự tạo năng lượng"
   },
   "s5": {
     "systemTag": "SYSTEM: ADAPT",
@@ -182,7 +182,7 @@ export default {
   },
   "s6": {
     "systemTag": "SYSTEM: ADAPT",
-    "title": "Thử thách Gã khổng lồ Đồng",
+    "title": "Thử thách Gã khổng lồ Talos",
     "scene": "Khổng lồ đồng Talos rảo bước trên vách đá Crete, hơi nóng từ cơ thể hắn làm không khí biến dạng. Mũi thương gãy nát khi chạm vào cổ chân hắn, và khuôn mặt rực sáng của gã khổng lồ đang quay lại phía bạn.",
     "leftOption": "Trụ vững sau khiên, dùng cán thương gãy thúc liên hồi vào đúng khớp chân theo một nhịp độ duy nhất. Kiên trì với đòn đánh đã thuần thục, dồn áp lực cho đến khi khớp đồng phải khuỵu xuống.",
     "rightOption": "Vứt thương gãy, leo lên vách đá để chiếm ưu thế từ trên cao. Lao thẳng xuống vai hắn và xoay chuyển cuộc chiến, dùng tay không cạy mở những tấm giáp rực lửa trước khi hắn kịp hất văng bạn.",
@@ -192,7 +192,7 @@ export default {
   "c6": {
     "systemTag": "SYSTEM: CONTROL",
     "title": "Mê cung của Daedalus",
-    "scene": "Sâu trong mê cung của Daedalus, những bức tường đá nghiền ngẫm dịch chuyển không báo trước. Bụi mịt mù không gian, còn tiếng rống của Minotaur vang lên từ khắp mọi phía.",
+    "scene": "Sâu trong mê cung của Daedalus, những bức tường dịch chuyển không báo trước. Bụi mịt mù không gian, còn tiếng rống của Minotaur vang lên từ khắp mọi phía.",
     "leftOption": "Buộc dây thừng vào giá đuốc bên tường và giữ chặt trong tay khi di chuyển. Đánh dấu mỗi lối rẽ bằng phấn để không phí sức vào những ngõ cụt cũ.",
     "rightOption": "Lao thẳng vào hành lang gần nhất và thử các lối rẽ ngay khi chạm mặt. Thay đổi hướng đi khi đường hẹp lại hoặc không khí trở nên ngột ngạt, mượn mỗi lần rẽ sai để tìm ra lối thoát.",
     "leftLabel": "Kiểm soát biến số",
@@ -203,7 +203,7 @@ export default {
     "title": "Khu chợ của Hermes",
     "scene": "Khu chợ của những kẻ trộm là mớ hỗn độn người ngợm, tiếng người bán gào thét và tiếng thú vật rền rĩ. Khói gia vị làm cay mắt, những bàn tay lạ liên tục níu kéo vạt áo với những lời chào mời.",
     "leftOption": "Lách xuống dưới tấm bạt treo nơi tiếng ồn lắng xuống để tiếp tục di chuyển. Từ dải yên tĩnh đó, thực hiện giao dịch bằng những cử chỉ ngắn và ánh nhìn nhanh để giữ đầu óc tỉnh táo.",
-    "rightOption": "Chen thẳng vào tâm chợ, gào to giá của mình át cả tiếng lừa gầm gừ và đám đông. Tận dụng sức ép và sự náo loạn làm đà, mượn sự hỗn loạn để giữ sự tập trung cao độ khi mặc cả.",
+    "rightOption": "Chen thẳng vào tâm chợ, gào to giá của mình át cả tiếng lừa gầm gừ và đám đông. Tận dụng sức ép và sự náo loạn làm đà, mượn sự hỗn loạn để giữ tập trung cao độ khi mặc cả.",
     "leftLabel": "Giữ nhịp riêng",
     "rightLabel": "Cộng hưởng năng lượng"
   },

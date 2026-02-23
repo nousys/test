@@ -34,7 +34,7 @@
 
 <div id="app-settings">
   <!-- 1) RESTART button-->
-  <button id="restart-btn" type="button" aria-label="Restart" title="Restart">↻</button>
+  <button id="restart-btn" type="button" aria-label="Restart" title="Restart">Retake Test ↻</button>
 
   <!-- 2) LANGUAGE button (flag + code) -->
   <button id="lang-btn" type="button" aria-label="Language" aria-haspopup="menu" aria-expanded="false">
@@ -43,7 +43,7 @@
   </button>
 
   <!-- 3) MENU button (⋯) -->
-  <button id="settings-btn" type="button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false">⋯</button>
+  <button id="settings-btn" type="button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false">☰</button>
 
   <!-- Language popup (KEEP ID settings-menu so your CSS class names still work) -->
   <div id="settings-menu" role="menu" hidden>
@@ -57,10 +57,12 @@
 
   <!-- Menu popup (new) -->
   <div id="menu-pop" role="menu" hidden>
-    <div class="settings-title">Menu</div>
-    <button class="settings-item" type="button" disabled style="opacity:0.65; cursor:default;">
-      (coming soon)
-    </button>
+    <div class="archetype-list">
+      <a href="Ares.html" class="settings-item archetype-link">Ares</a>
+      <a href="Athena.html" class="settings-item archetype-link">Athena</a>
+      <a href="Apollo.html" class="settings-item archetype-link">Apollo</a>
+      <a href="Artemis.html" class="settings-item archetype-link">Artemis</a>
+      </div>
   </div>
 </div>
 
@@ -211,7 +213,8 @@
 
         <!-- Always shown -->
         <p id="premium-pitch" class="premium-pitch">
-            Unlock the Premium Guide to get deeper breakdowns, examples, and a full patch plan for your archetype.
+            How do you adapt with different goals or in different environments? The Premium Guide gives you the keys to hack your own mind and upgrade your OS.
+            It also show what your archetype looks like in real life, how it interacts with other archetypes, and how to level up or down the spectrum to access new strengths and freedoms.
         </p>
 
         <!-- Fake door -->
