@@ -631,6 +631,8 @@ p { line-height: 1.6; color: #cbd5e1; }
   font-family: inherit;
   white-space: nowrap; /* Forces text to stay on one line */
   width: auto; /* Allows the button to expand to fit the text */
+  font-size: 1rem;     /* Increased from 0.9rem for better visibility */
+  font-weight: 600;    /* Makes the text bolder */
 }
 
 #lang-btn:hover, #restart-btn:hover, #settings-btn:hover {
@@ -662,15 +664,30 @@ p { line-height: 1.6; color: #cbd5e1; }
 
 /* MOBILE FIRST (Default view for small screens) */
 @media (max-width: 768px) {
-  /* Turn buttons back into circles */
-  #restart-btn, #settings-btn {
+  /* Keep the Hamburger menu as a 40px circle */
+  #settings-btn {
     width: 40px;
-    padding: 0;
+    padding: 0; 
   }
   
-  /* Hide the text labels on mobile */
-  .desktop-text {
-    display: none;
+  /* Allow the Restart button to expand into a pill shape */
+  #restart-btn {
+    width: auto;
+    padding: 0 14px; 
+  }
+  
+  /* Hide the "Archetypes" text inside the settings button */
+  #settings-btn .desktop-text {
+    display: none !important; 
+  }
+
+  /* Force the "Retake Test" text to be visible */
+  #restart-btn .desktop-text {
+    display: inline-block !important; 
+  }
+
+  .mobile-icon {
+    display: inline-block;
   }
 }
 
