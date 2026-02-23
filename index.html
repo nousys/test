@@ -33,19 +33,20 @@
 <body>
 
 <div id="app-settings">
-  <!-- 1) RESTART button-->
-  <button id="restart-btn" type="button" aria-label="Restart" title="Restart">Retake Test ↻</button>
+  <button id="restart-btn" type="button" aria-label="Restart">
+    <span class="desktop-text">Retake Test</span> ↻
+  </button>
 
-  <!-- 2) LANGUAGE button (flag + code) -->
-  <button id="lang-btn" type="button" aria-label="Language" aria-haspopup="menu" aria-expanded="false">
-    <span id="lang-flag" aria-hidden="true">🇺🇸</span>
+  <button id="lang-btn" type="button" aria-label="Language">
+    <span id="lang-flag" aria-hidden="true">US</span>
     <span id="lang-code" aria-hidden="true">EN</span>
   </button>
 
-  <!-- 3) MENU button (⋯) -->
-  <button id="settings-btn" type="button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false">☰</button>
+  <button id="settings-btn" type="button" aria-label="Menu" aria-haspopup="menu">
+    <span class="mobile-icon">☰</span>
+    <span class="desktop-text">Archetypes ▼</span>
+  </button>
 
-  <!-- Language popup (KEEP ID settings-menu so your CSS class names still work) -->
   <div id="settings-menu" role="menu" hidden>
     <button class="settings-item" type="button" data-lang="en" role="menuitemradio">
       🇺🇸 English <span class="check">✓</span>
@@ -55,13 +56,12 @@
     </button>
   </div>
 
-  <!-- Menu popup (new) -->
   <div id="menu-pop" role="menu" hidden>
     <div class="archetype-list">
-      <a href="Ares.html" class="settings-item archetype-link">Ares</a>
-      <a href="Athena.html" class="settings-item archetype-link">Athena</a>
-      <a href="Apollo.html" class="settings-item archetype-link">Apollo</a>
-      <a href="Artemis.html" class="settings-item archetype-link">Artemis</a>
+      <a href="ares.html" class="settings-item archetype-link">Ares</a>
+      <a href="athena.html" class="settings-item archetype-link">Athena</a>
+      <a href="apollo.html" class="settings-item archetype-link">Apollo</a>
+      <a href="artemis.html" class="settings-item archetype-link">Artemis</a>
       </div>
   </div>
 </div>
@@ -90,7 +90,10 @@
                 <div class="inst-icon">⚖️</div>
                 <div class="inst-title">CALIBRATION</div>
                 <div class="inst-desc">
-                    <strong>1</strong> = Left option. <strong>5</strong> = Right option.<br>
+                    <strong>1</strong> = Left option. 
+                    <strong>5</strong> = Right option.<br>
+                    <strong>2</strong> = Lean left option 
+                    <strong>4</strong> = Lean right option.<br>
                     <strong>3</strong> is Neutral (avoid if possible).
                 </div>
             </div>
@@ -109,7 +112,6 @@
                 <div class="inst-title">SIMULATION</div>
                 <div class="inst-desc">
                     You <strong>cannot die</strong> here.<br>
-                    Choices cost <strong>Time</strong>, <strong>Honor</strong>, or <strong>Allies</strong>.
                 </div>
             </div>
         </div>

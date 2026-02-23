@@ -796,7 +796,9 @@ export function renderResultFromUrl() {
   document.getElementById('bar-t').style.width = `${maxT ? (sT / maxT) * 100 : 0}%`;
   document.getElementById('bar-s').style.width = `${maxS ? (sS / maxS) * 100 : 0}%`;
 
-  renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
+  if (sE != 0 && sC != 0 && sT != 0 && sS != 0) {
+    renderRadarChart({ sE, sC, sT, sS, max: Math.max(maxE, maxC, maxT, maxS, 1) });
+  }
   refreshPremiumUI();
 
   // Wing UI (from URL w=)

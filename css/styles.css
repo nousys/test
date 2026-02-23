@@ -629,6 +629,8 @@ p { line-height: 1.6; color: #cbd5e1; }
   gap: 8px;
   font-size: 0.9rem;
   font-family: inherit;
+  white-space: nowrap; /* Forces text to stay on one line */
+  width: auto; /* Allows the button to expand to fit the text */
 }
 
 #lang-btn:hover, #restart-btn:hover, #settings-btn:hover {
