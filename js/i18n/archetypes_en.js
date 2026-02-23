@@ -83,7 +83,7 @@ export default {
             <div class="report-section">
             <h3 class="report-header">💀 THE ROAST</h3>
             <p>You brag about spontaneity and “potential”. What you’re running is novelty addiction with a weak follow-through module.</p>
-            <p>The launch phase pays you early. A new project, a new person, a new routine, a new aesthetic—anything that resets the scoreboard. You get hope and early praise, then the work shows up: repeat cycles, small failures, admin, the long middle where nobody claps. Interest drops, and you slip out quietly. “Going with the flow” is the label you use so you don’t have to admit you bailed. Staying would force you to find out what you can do without the rush.</p>
+            <p>The launch phase pays you early. A new project, a new person, a new routine, a new aesthetic - anything that resets the scoreboard. You get hope and early praise, then the work shows up: repeat cycles, small failures, admin, the long middle where nobody claps. Interest drops, and you slip out quietly. “Going with the flow” is the label you use so you don’t have to admit you bailed. Staying would force you to find out what you can do without the rush.</p>
             </div>
     `,
     desc: `
