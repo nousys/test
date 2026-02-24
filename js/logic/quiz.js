@@ -398,10 +398,12 @@ function initQuiz() {
 
         <div class="q-cards">
           <button type="button" class="q-card q-card-left" data-value="1">
+            <div class="q-card-label">${tr('ui.option1', 'Option 1 (Left)')}</div>
             <div class="q-card-body">${leftOption}</div>
           </button>
 
           <button type="button" class="q-card q-card-right" data-value="5">
+            <div class="q-card-label">${tr('ui.option5', 'Option 5 (Right)')}</div>
             <div class="q-card-body">${rightOption}</div>
           </button>
         </div>
