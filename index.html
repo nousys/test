@@ -96,15 +96,16 @@
               <div class="inst-icon">⚖️</div>
               <div class="inst-title">HOW TO CHOOSE</div>
               <div class="inst-desc">
-                  <p style="margin-bottom: 12px; font-size: 0.9em;">Use the 1-5 buttons below the story to weigh your choice.</p>
+                  <p style="margin-bottom: 15px; font-size: 0.9em;">Use the 1-5 buttons below the story to weigh your choice.</p>
                   
                   <div class="visual-scale-guide">
                       <div class="guide-options">
-                          <span class="guide-left">← Option A</span>
-                          <span class="guide-right">Option B →</span>
+                          <div class="g-card">Option A</div>
+                          <div class="g-card">Option B</div>
                       </div>
                       
-                      <div class="guide-buttons">
+                      <div class="guide-buttons-container">
+                          <div class="g-line"></div>
                           <div class="g-btn">1</div>
                           <div class="g-btn">2</div>
                           <div class="g-btn">3</div>
@@ -114,9 +115,9 @@
                       
                       <div class="guide-labels">
                           <div class="g-lbl">Definitely<br>A</div>
-                          <div class="g-lbl">Lean<br>A</div>
+                          <div class="g-lbl" style="opacity: 0.6;">Lean<br>A</div>
                           <div class="g-lbl">Neutral</div>
-                          <div class="g-lbl">Lean<br>B</div>
+                          <div class="g-lbl" style="opacity: 0.6;">Lean<br>B</div>
                           <div class="g-lbl">Definitely<br>B</div>
                       </div>
                   </div>
@@ -128,9 +129,10 @@
               <div class="inst-title">INSTINCT</div>
               <div class="inst-desc">
                   Trust your <strong>first reaction</strong>. Do not overthink.<br><br>
-                  Choose what you would <em>actually</em> do under pressure, not what sounds heroic or "correct."
+                  Choose what you would <em>actually</em> do under pressure, not what sounds heroic.
               </div>
           </div>
+      </div>
       </div>
         <div style="margin: 1rem 0; font-size: 0.85rem; color: #888;">This test is only for entertainment purposes and does not provide a professional psychological assessment.</div>
         <button id="btn-start" type="button" class="btn" onclick="startQuiz()">Initialize System</button>
