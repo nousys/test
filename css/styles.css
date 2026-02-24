@@ -788,3 +788,55 @@ p { line-height: 1.6; color: #cbd5e1; }
   width: 100%;
   accent-color: var(--primary);
 }
+
+/* Visual Scale Guide Styles */
+.visual-scale-guide {
+    background: #f4f4f9;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.guide-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.guide-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.g-btn {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Make the 'Lean' buttons look slightly different to indicate middle-ground */
+.g-btn:nth-child(2), .g-btn:nth-child(4) {
+    background: #e9ecef; 
+}
+
+.guide-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+    color: #666;
+    line-height: 1.2;
+}
+
+.g-lbl {
+    flex: 1;
+}

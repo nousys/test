@@ -92,35 +92,46 @@
 
         <!-- 3 Instruction Blocks (Grid) -->
         <div class="instruction-grid">
-            <div class="instruction-card">
-                <div class="inst-icon">⚖️</div>
-                <div class="inst-title">CALIBRATION</div>
-                <div class="inst-desc">
-                    <strong>1</strong> = Left option. <br>
-                    <strong>5</strong> = Right option.<br>
-                    <strong>2</strong> = Lean left option <br>
-                    <strong>4</strong> = Lean right option.<br>
-                    <strong>3</strong> is Neutral (avoid if possible).
-                </div>
-            </div>
+          <div class="instruction-card">
+              <div class="inst-icon">⚖️</div>
+              <div class="inst-title">HOW TO CHOOSE</div>
+              <div class="inst-desc">
+                  <p style="margin-bottom: 12px; font-size: 0.9em;">Use the 1-5 buttons below the story to weigh your choice.</p>
+                  
+                  <div class="visual-scale-guide">
+                      <div class="guide-options">
+                          <span class="guide-left">← Option A</span>
+                          <span class="guide-right">Option B →</span>
+                      </div>
+                      
+                      <div class="guide-buttons">
+                          <div class="g-btn">1</div>
+                          <div class="g-btn">2</div>
+                          <div class="g-btn">3</div>
+                          <div class="g-btn">4</div>
+                          <div class="g-btn">5</div>
+                      </div>
+                      
+                      <div class="guide-labels">
+                          <div class="g-lbl">Definitely<br>A</div>
+                          <div class="g-lbl">Lean<br>A</div>
+                          <div class="g-lbl">Neutral</div>
+                          <div class="g-lbl">Lean<br>B</div>
+                          <div class="g-lbl">Definitely<br>B</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-            <div class="instruction-card">
-                <div class="inst-icon">⚡</div>
-                <div class="inst-title">INSTINCT</div>
-                <div class="inst-desc">
-                    Trust your <strong>first reaction</strong>. Do not overthink.<br>
-                    There are <strong>no wrong answers</strong>.
-                </div>
-            </div>
-
-            <div class="instruction-card">
-                <div class="inst-icon">💎</div>
-                <div class="inst-title">SIMULATION</div>
-                <div class="inst-desc">
-                    You <strong>cannot die</strong> here.<br>
-                </div>
-            </div>
-        </div>
+          <div class="instruction-card">
+              <div class="inst-icon">⚡</div>
+              <div class="inst-title">INSTINCT</div>
+              <div class="inst-desc">
+                  Trust your <strong>first reaction</strong>. Do not overthink.<br><br>
+                  Choose what you would <em>actually</em> do under pressure, not what sounds heroic or "correct."
+              </div>
+          </div>
+      </div>
         <div style="margin: 1rem 0; font-size: 0.85rem; color: #888;">This test is only for entertainment purposes and does not provide a professional psychological assessment.</div>
         <button id="btn-start" type="button" class="btn" onclick="startQuiz()">Initialize System</button>
     </div>
