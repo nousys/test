@@ -219,18 +219,52 @@ p { line-height: 1.6; color: #cbd5e1; }
 }
 
 /* Card highlight depending on selected value */
-.question-card:has(input[value="1"]:checked) .q-card-left,
-.question-card:has(input[value="2"]:checked) .q-card-left {
-  border-color: rgba(212, 175, 55, 0.50);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.14);
-  background: rgba(212, 175, 55, 0.08);
+/* --- Card Highlights Based on Selection Strength --- */
+
+/* Strong Left (1) */
+.question-card:has(input[value="1"]:checked) .q-card-left {
+  border-color: rgba(212, 175, 55, 0.80); /* Brighter Gold */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25); /* Stronger glow */
+  background: rgba(212, 175, 55, 0.12); /* Deeper background */
+  transform: scale(1.02); /* Slight pop-out effect */
 }
 
-.question-card:has(input[value="5"]:checked) .q-card-right,
+/* Lean Left (2) */
+.question-card:has(input[value="2"]:checked) .q-card-left {
+  border-color: rgba(212, 175, 55, 0.40); /* Softer Gold */
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.10); /* Subtle glow */
+  background: rgba(212, 175, 55, 0.05); /* Lighter background */
+}
+
+/* Strong Right (5) */
+.question-card:has(input[value="5"]:checked) .q-card-right {
+  border-color: rgba(212, 175, 55, 0.80); /* Brighter Gold */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25); /* Stronger glow */
+  background: rgba(212, 175, 55, 0.12); /* Deeper background */
+  transform: scale(1.02); /* Slight pop-out effect */
+}
+
+/* Lean Right (4) */
 .question-card:has(input[value="4"]:checked) .q-card-right {
-  border-color: rgba(212, 175, 55, 0.50);
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.14);
-  background: rgba(212, 175, 55, 0.08);
+  border-color: rgba(212, 175, 55, 0.40); /* Softer Gold */
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.10); /* Subtle glow */
+  background: rgba(212, 175, 55, 0.05); /* Lighter background */
+}
+
+/* Neutral (3) - Optional: Dim both cards slightly if they pick 3 */
+.question-card:has(input[value="3"]:checked) .q-card-left,
+.question-card:has(input[value="3"]:checked) .q-card-right {
+  opacity: 0.7;
+}
+
+/* Dim the unselected card to increase focus on the chosen one */
+.question-card:has(input[value="1"]:checked, input[value="2"]:checked) .q-card-right {
+  opacity: 0.5;
+  filter: grayscale(50%);
+}
+.question-card:has(input[value="4"]:checked, input[value="5"]:checked) .q-card-left {
+  opacity: 0.5;
+  filter: grayscale(50%);
 }
 
 /* --- 1-5 Scale (circular buttons + connecting line) --- */
