@@ -2,16 +2,6 @@
 import { getLang, setLang } from '../services/lang.js';
 
 function syncLangBadge() {
-  const current = getLang();
-  const flagEl = document.getElementById('lang-flag');
-  const codeEl = document.getElementById('lang-code');
-
-  if (flagEl) flagEl.textContent = (current === 'vi') ? '🇻🇳' : '🇺🇸';
-  if (codeEl) codeEl.textContent = (current === 'vi') ? 'VI' : 'EN';
-}
-
-function syncActiveLang() {
-  const current = getLang();
   const current = getLang(); // Returns 'en' or 'vi'
   const flagSpan = document.getElementById('lang-flag');
   const codeSpan = document.getElementById('lang-code');
@@ -27,6 +17,16 @@ function syncActiveLang() {
     flagSpan.className = 'fi fi-us';
     codeSpan.textContent = 'EN';
   }
+}
+
+function syncActiveLang() {
+  const current = getLang();
+  document.querySelectorAll('#settings-menu .settings-item[data-lang]').forEach((el) => {
+    const active = el.getAttribute('data-lang') === current;
+    el.classList.toggle('active', active);
+    el.setAttribute('aria-checked', active ? 'true' : 'false');
+  });
+  syncLangBadge();
 }
 
 function closeAllPopups() {
