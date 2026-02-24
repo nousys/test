@@ -12,12 +12,21 @@ function syncLangBadge() {
 
 function syncActiveLang() {
   const current = getLang();
-  document.querySelectorAll('#settings-menu .settings-item[data-lang]').forEach((el) => {
-    const active = el.getAttribute('data-lang') === current;
-    el.classList.toggle('active', active);
-    el.setAttribute('aria-checked', active ? 'true' : 'false');
-  });
-  syncLangBadge();
+  const current = getLang(); // Returns 'en' or 'vi'
+  const flagSpan = document.getElementById('lang-flag');
+  const codeSpan = document.getElementById('lang-code');
+
+  if (!flagSpan || !codeSpan) return;
+
+  if (current === 'vi') {
+    // Swap to Vietnam flag and VI text
+    flagSpan.className = 'fi fi-vn';
+    codeSpan.textContent = 'VI';
+  } else {
+    // Default to US flag and EN text
+    flagSpan.className = 'fi fi-us';
+    codeSpan.textContent = 'EN';
+  }
 }
 
 function closeAllPopups() {

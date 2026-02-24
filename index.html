@@ -6,6 +6,10 @@
     <title>NOUSYS: Decode Your Mind's OS</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF3S4BSFST"></script>
@@ -38,7 +42,7 @@
   </button>
 
   <button id="lang-btn" type="button" aria-label="Language">
-    <span id="lang-flag" aria-hidden="true">🇺🇸</span>
+    <span id="lang-flag" class="fi fi-us" aria-hidden="true"></span>
     <span id="lang-code" aria-hidden="true">EN</span>
   </button>
 
@@ -48,11 +52,12 @@
   </button>
 
   <div id="settings-menu" role="menu" hidden>
-    <button class="settings-item" type="button" data-lang="en" role="menuitemradio">
-      🇺🇸 English <span class="check">✓</span>
+    <button class="settings-item active" type="button" data-lang="en" role="menuitemradio">
+      <span class="fi fi-us"></span> English <span class="check">✓</span>
     </button>
+
     <button class="settings-item" type="button" data-lang="vi" role="menuitemradio">
-      🇻🇳 Tiếng Việt <span class="check">✓</span>
+      <span class="fi fi-vn"></span> Tiếng Việt <span class="check">✓</span>
     </button>
   </div>
 
