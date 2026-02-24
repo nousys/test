@@ -60,7 +60,7 @@ p { line-height: 1.6; color: #cbd5e1; }
 /* --- Intro instruction grid --- */
 .instruction-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin: 18px 0 10px;
 }
@@ -790,11 +790,13 @@ p { line-height: 1.6; color: #cbd5e1; }
 }
 
 /* Visual Scale Guide Styles */
+/* Dark Theme Visual Scale Guide */
 .visual-scale-guide {
-    background: #f4f4f9;
+    background: rgba(0, 0, 0, 0.2); /* Deep inset background */
     padding: 12px;
     border-radius: 8px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .guide-options {
@@ -802,38 +804,39 @@ p { line-height: 1.6; color: #cbd5e1; }
     justify-content: space-between;
     font-size: 0.8em;
     font-weight: bold;
-    color: #444;
-    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
 }
 
 .guide-buttons {
     display: flex;
     justify-content: space-between;
-    gap: 4px;
+    gap: 6px;
     margin-bottom: 6px;
 }
 
 .g-btn {
     flex: 1;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
     padding: 6px 0;
     font-size: 0.9em;
     font-weight: bold;
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* Make the 'Lean' buttons look slightly different to indicate middle-ground */
+/* Simulate the "Leaning" buttons with slight transparency */
 .g-btn:nth-child(2), .g-btn:nth-child(4) {
-    background: #e9ecef; 
+    background: rgba(255, 255, 255, 0.02); 
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .guide-labels {
     display: flex;
     justify-content: space-between;
     font-size: 0.7em;
-    color: #666;
+    color: rgba(255, 255, 255, 0.5);
     line-height: 1.2;
 }
 
