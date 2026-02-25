@@ -30,8 +30,10 @@ export async function shareResult() {
 
   // 2. Point to the distinct HTML file (e.g., ares.html)
   let url = baseUrl;
-  if (archetype !== 'NOUSYS') {
-    url += `${archetype.toLowerCase()}.html`; 
+  if (archetype && archetype !== 'NOUSYS') {
+    const formatted =
+      archetype[0].toUpperCase() + archetype.slice(1).toLowerCase();
+    url += `${formatted}.html`;
   }
 
   // 3. Attach the specific user scores so the graphs can be drawn
